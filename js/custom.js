@@ -564,8 +564,8 @@ All JavaScript fuctions Start
 	//  Counter Section function by = counterup.min.js
 	function counter_section(){
 		jQuery('.counter').counterUp({
-			delay: 10,
-			time: 3000
+			delay: 20,
+			time: 1500
 		});	
 	}	
 
