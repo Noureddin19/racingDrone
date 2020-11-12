@@ -4,7 +4,9 @@ Author: thewebmax team
 Version: 1.0  
 ==========================
 */
-
+html {
+	scroll-behavior: smooth;
+}
 
 
 /*======================================
