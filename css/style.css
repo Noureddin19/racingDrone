@@ -1688,7 +1688,7 @@ ol.list-num-count.list-outline-none>li:before {
 .wt-box[class*="border-"],
 .wt-info[class*="border-"],
 .wt-icon-box-wraper[class*="border-"] {
-	border-color: #eee;
+	border-color: black;
 }
 
 .wt-info.border-1,
@@ -1696,7 +1696,7 @@ ol.list-num-count.list-outline-none>li:before {
 .wt-info.border-3,
 .wt-info.border-4,
 .wt-info.border-5 {
-	border-top: none;
+	
 }
 
 
@@ -1816,7 +1816,9 @@ color:#111;
 .site-button-secondry:hover.site-btn-effect{
     text-shadow: -400px 0 0 #111111, 0 0 0   #111111;
 }
-
+.site-button-secondry:hover.site-btn-effect1{
+    text-shadow: -400px 0 0 #f7f4f4, 0 0 0   #f1eded;
+}
 .site-button {
 	outline: none;
 	color: #fff;
@@ -1827,6 +1829,20 @@ color:#111;
 	cursor: pointer;
 	display: inline-block;
 	background-color:#d72323 ;
+	border: none;
+	font-size: 14px;
+	font-weight:500;
+}
+.site-button1 {
+	outline: none;
+	color: black;
+	padding: 15px 40px;
+	letter-spacing: 1px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	display: inline-block;
+	background-color:white ;
 	border: none;
 	font-size: 14px;
 	font-weight:500;
@@ -9268,13 +9284,24 @@ Spin circle
 }
 
 .site-btn-effect {
-	text-shadow: 0 0 0 #fff, 400px 0 0 #fff;
+	text-shadow: 0 0 0 black, 400px 0 0 black;
 }
 
 .site-btn-effect:hover {
-	text-shadow: -400px 0 0 #fff, 0 0 0 #fff;
+	text-shadow: -400px 0 0 black, 0 0 0 black;
+}
+.site-btn-effect1 {
+	color: black !important;
+	transition: all .3s ease !important;
 }
 
+.site-btn-effect1 {
+	text-shadow: 0 0 0 black, 400px 0 0 black;
+}
+
+.site-btn-effect1:hover {
+	text-shadow: -400px 0 0 black, 0 0 0 black;
+}
 /*====Filter option====*/
 
 .filter-options {	position: relative;}
@@ -10120,7 +10147,7 @@ textarea.form-control2 {
 .wt-team-2 .team-social-center ul li a:after{position: absolute;right: -18px;	content: '';	width: 10px;	height: 1px;	background-color: #1a1a1a;	top: 10px;}
 .wt-team-2 .team-social-center ul li:last-child a:after{	display:none;}
 
-.wt-team-2 .wt-info{	position: static; padding:30px; border-style:solid; border-color:#ddd; border-width:0px 1px 1px 1px;}
+.wt-team-2 .wt-info{	position: static; padding:30px; border-style:solid; border-color:#ddd; border-width:1px;}
 .wt-team-2:hover .team-social-center{top:0px;}
 
 /*=========== Flat Icons ============*/
