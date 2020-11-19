@@ -6,18 +6,26 @@ function changePrice(){
 	if(document.getElementById("price700").innerHTML == "500"){
 		document.getElementById("price700").innerHTML = "750";
 		changeButton2();
+		$('#objectID').css('transition-duration','1s');
 	}else{
 		document.getElementById("price700").innerHTML = "500";
+		$('#objectID').css('transition-duration','1s');
+		
 		changeButton1()
 	}
 	
 
 }
 function changeButton1(){
-	document.getElementById("studentButton").innerHTML="I'm not a Student"
+	document.getElementById("studentButton").innerHTML="I'm not a Student";
 }
 function changeButton2(){
-	document.getElementById("studentButton").innerHTML="I'm a Student"
+	document.getElementById("studentButton").innerHTML="I'm a Student";
+}
+function changeLayout(){
+	if (document.getElementById("price700").style.textDecoration== true){
+		document.getElementById("price700").innerHTML
+	}
 }
 (function ($) {
 	
