@@ -1,6 +1,24 @@
 /* =====================================
 All JavaScript fuctions Start
 ======================================*/
+function changePrice(){
+	
+	if(document.getElementById("price700").innerHTML == "500"){
+		document.getElementById("price700").innerHTML = "750";
+		changeButton2();
+	}else{
+		document.getElementById("price700").innerHTML = "500";
+		changeButton1()
+	}
+	
+
+}
+function changeButton1(){
+	document.getElementById("studentButton").innerHTML="I'm not a Student"
+}
+function changeButton2(){
+	document.getElementById("studentButton").innerHTML="I'm a Student"
+}
 (function ($) {
 	
     'use strict';
@@ -568,10 +586,7 @@ All JavaScript fuctions Start
 			time: 1500
 		});	
 	}	
-function changePrice(){
-	document.getElementById("price700").innerHTML = "500";
-	console.log("saihou");
-}
+
 		
 	jQuery('.nav-tabs a').on('click', function() {
 		e.preventDefault();
