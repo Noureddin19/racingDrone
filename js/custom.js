@@ -568,7 +568,10 @@ All JavaScript fuctions Start
 			time: 1500
 		});	
 	}	
-
+function changePrice(){
+	document.getElementById("price700").innerHTML = "500";
+	console.log("saihou");
+}
 		
 	jQuery('.nav-tabs a').on('click', function() {
 		e.preventDefault();
