@@ -8,5 +8,5 @@
     }
     // Select the database
     $conn->select_db("myDbase");"<h1>Welcome ".$username." to out php website</h1>";
-    }
+
     ?>
