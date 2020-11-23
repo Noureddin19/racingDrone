@@ -28,22 +28,7 @@
         echo "<br>";
         echo "error in creating the table Ino".$conn->error;
     }
-    //step8 : i want to uinser record to tblinfo
-    //step9 : prapare the query
-    $stmt = $conn->prepare("INSERT into membership_form (membershipid, fullname, memberrole, birthdate, phonenumber) values (?, ?, ?, ?, ?)");
-    
-    
-    
-    $stmt->bind_param("sssss", $memberid, $fullname, $memberrole, $birthdate, $phonenumber);
-    
-
-    
-    //step10: where are the values
-    $f1 = "Naif";
-    $l1 = "Alfirm";
-    $stmt->execute();
-    
-    echo "Record inserted";
+ 
     
     ?>
     
