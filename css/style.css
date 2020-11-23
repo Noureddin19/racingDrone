@@ -3468,7 +3468,7 @@ box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); -webkit-box-shadow:box-shadow: 0px 0
 }
 .pricingtable-highlight {
 	position: relative;
-	z-index: 99;
+	
 }
 
 
