@@ -19,12 +19,17 @@ if(isset($_POST['submit'])){
     $bcn = $_REQUEST['bcn'];
     $bcc = $_REQUEST['bcc'];
     $dow = $_REQUEST['dow'];
-    $ins_query="insert into login(fullname,age)values('$uname','$age')";
+    $ins_query="insert into membership_form(fullname,age)values('$uname','$age')";
     echo $ins_query;
     echo $fs;
-    mysqli_query($conn, $ins_query)
-        or die(mysqli_error());
+   
+        try{
+            $pdo->exec($sql);
     $status = $uname. " your Record is added Successfully ";
+        }catch(PDOException $e) {
+            echo "database failed: " . $e->getMessage();
+    
+        }
 }
 ?>
 <!DOCTYPE html>

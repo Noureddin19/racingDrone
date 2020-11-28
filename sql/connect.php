@@ -5,13 +5,13 @@
     $password = "";
     $database ="myDbase";
     //step2: create connection to variables
-    $pdo = new PDO('mysql:host=localhost;dbname=myDbase', 'user', 'password');
-    
+    $pdo = new PDO('mysql:host=localhost;dbname=myDbase', $username, $password);
+    try{
     //step3: chech if connection is successful
-    if($pdo->connect_error){
-        die("connection failed ".$pdo->connect_error);
-    } else {
-        echo "<h1>Welcome ".$username." to out php website</h1>";
-    }
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
     
     ?>

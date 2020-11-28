@@ -21,13 +21,17 @@
 )";
     
     //step6 : run the query
-    if($conn->query($sql) == TRUE){
-        echo "<br>";
-        echo "<h3>Table Info created successfuly</h3>";
-    } else {
-        echo "<br>";
-        echo "error in creating the table Info ".$conn->error;
-    }
+   try{
+    $pdo->exec($sql);
+    echo "<br>";
+    echo "<h3>Table Info created successfuly</h3>";
+   }catch(PDOException $e) {
+    echo "table failed: " . $e->getMessage();
+
+}
+   
+       
+    
     
     
     ?>
