@@ -397,9 +397,9 @@
                         </ul>
 
                         <ul class="social-icons  wt-social-links footer-social-icon">
-                            <li><a href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
-                            <li><a href="https://twitter.com/riotulab" class="fa fa-twitter"></a></li>
-                            <li><a href="http://linkedin.com/in/anis-koubaa-84aa4344" class="fa fa-linkedin"></a></li>
+                            <li><a href="https://www.facebook.com/riotu.center" class="fa fa-facebook" target="_blank"></a></li>
+                            <li><a href="https://twitter.com/riotulab" class="fa fa-twitter" target="_blank"></a></li>
+                            <li><a href="http://linkedin.com/in/anis-koubaa-84aa4344" class="fa fa-linkedin" target="_blank"></a></li>
                         </ul>
                     </div>
                 </div>
