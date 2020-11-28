@@ -182,9 +182,11 @@
 
         </header>
         <!-- HEADER END -->
-
+            <div class=" container-fluid pr-0 pl-0 shadow-lg m" >
+                <img src="images/background/the-price-of-a-racing-drone-varies.jpeg" alt="">
+            </div>
         <!-- CONTENT START -->
-        <div class="page-content container p-5" id="home1" style="margin-top: 10%">
+        <div class="page-content container p-5" id="home1" >
 
         <h2>Prince Sultan University Racing League</h2>
         <br>
