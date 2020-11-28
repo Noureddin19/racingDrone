@@ -214,7 +214,7 @@
                                                               </div>
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Nationality</label>
-                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter Your Email" name="nationality" required>
+                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter Your Nationality" name="nationality" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
@@ -226,7 +226,7 @@
                                                               </div>
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Organization</label>
-                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter Your Email" name="org" required>
+                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter Your Organization" name="org" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
@@ -234,50 +234,50 @@
                                                               <br>
                                                               <h3>Drone Information</h3>
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">Flight controller name</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Flight controller name" name="fcn" required>
+                                                                  <label for="pwd">Flight Controller Name</label>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Flight Controller Name" name="fcn" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">Frame size</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Frame size" name="fs" required>
+                                                                  <label for="pwd">Frame Size</label>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Frame Size" name="fs" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">ECS amps</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your ECS amps" name="ea" required>
+                                                                  <label for="pwd">ECS Amps</label>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your ECS Amps" name="ea" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">Motor size and kv</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Motor size and kv" name="ms" required>
+                                                                  <label for="pwd">Motor Size and KV</label>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Motor Size and KV" name="ms" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">VTX antenna polarity</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your VTX antenna polarity" name="vtp" required>
+                                                                  <label for="pwd">VTX Antenna Polarity</label>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your VTX Antenna Polarity" name="vtp" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">Battery cells number</label>
+                                                                  <label for="pwd">Battery Cells Number</label>
                                                                   <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Battery cells number" name="bcn" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">Battery cells capacity</label>
+                                                                  <label for="pwd">Battery Cells Capacity</label>
                                                                   <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Battery cells capacity" name="bcc" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">Drone overall weight with battery</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Email" name="dow" required>
+                                                                  <label for="pwd">Drone Overall Weight with Battery</label>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Drone's Overall Weight" name="dow" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
