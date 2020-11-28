@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>phpone</title>
-</head>
-<body>
-    <p>This is a page to create a database and table along with insert record</p>
-    <?php
-    require(connect.php);
+<?php
+    require('connect.php');
     
-    require(createDB.php);
-    
+    require('createDB.php');
+   
     #step5 : create the table
     $sql = "CREATE TABLE IF NOT EXISTS membership_form(
-    membershipid VARCHAR(12) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    membershipid int(12) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     fullname VARCHAR(30),
     phonenumber VARCHAR(12),
     nationality VARCHAR(30),
@@ -25,10 +17,8 @@
     vtxantennapolarity VARCHAR(30),
     batterycellsnumber VARCHAR(2),
     batterycellscapacity VARCHAR(10),
-    overallweight FLOAT(20),
-
-
-    )";
+    overallweight FLOAT(20)
+)";
     
     //step6 : run the query
     if($conn->query($sql) == TRUE){
@@ -36,11 +26,9 @@
         echo "<h3>Table Info created successfuly</h3>";
     } else {
         echo "<br>";
-        echo "error in creating the table Ino".$conn->error;
+        echo "error in creating the table Info ".$conn->error;
     }
- 
+    
     
     ?>
     
-</body>
-</html>
