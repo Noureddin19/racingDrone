@@ -16,7 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>PSU Racing Drones Club</title>
+    <title>PSU Racing League - Registration</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
