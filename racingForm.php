@@ -16,7 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>PSU Racing Drones Club</title>
+    <title>PSU Racing League - Registration</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -188,7 +188,7 @@
         <!-- CONTENT START -->
         <div class="page-content container p-5" id="home1" >
 
-        <h2>Prince Sultan University Racing League</h2>
+        <h2>PSU Racing League Registration</h2>
         <br>
 
         <form action="Display.php" method="post" class="was-validated ">
@@ -289,6 +289,52 @@
 
 
         </div>
+
+        <!-- CLIENT LOGO SECTION START -->
+        <div class="section-full bg-gray p-t50 p-b50 client-logo-outer-one">
+                <div class="container-fluid">
+
+                    <div class="section-content p-tb30 owl-btn-vertical-center">
+                        <div class="owl-carousel home-client-carousel-2">
+
+                            
+
+                    
+
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo client-logo-media">
+                                        <a href="javascript:void(0);"><img src="images/client-logo/Club Logo.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="item">
+                                 <div class="ow-client-logo">
+                                     <div class="client-logo client-logo-media">
+                                         <a href="javascript:void(0);"><img
+                                                 src="images/client-logo/PSU Logo.png" alt=""></a>
+                                     </div>
+                                 </div>
+                             </div>
+                            
+                           
+
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo client-logo-media">
+                                        <a href="javascript:void(0);"><img src="images/client-logo/RIOTU Logo.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- CLIENT LOGO  SECTION End -->
+
         <!-- CONTENT END -->
 
         <!-- FOOTER START -->
