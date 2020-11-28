@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
     $bcn = $_REQUEST['bcn'];
     $bcc = $_REQUEST['bcc'];
     $dow = $_REQUEST['dow'];
-    $ins_query="insert into membership_form(fullname,age, email, flightcontrollername, organization, nationality, framesize, escamps, motorssizeandkv, vtxantennapolarity,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email', '$fcn','$org', '$nationality', '$fs','$ea', '$ms' , '$vtp','$bcn', '$bcc','$dow' )";
+    $ins_query="insert into membership_form(fullname,age, email, phonenumber, flightcontrollername, organization, nationality, framesize, escamps, motorssizeandkv, vtxantennapolarity,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email','$phoneNumber' '$fcn','$org', '$nationality', '$fs','$ea', '$ms' , '$vtp','$bcn', '$bcc','$dow' )";
     echo $ins_query;
     echo $fs;
    
