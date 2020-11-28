@@ -128,7 +128,7 @@
         <!-- HEADER START -->
         <header class="site-header header-style-4 mobile-full-width-menu nav-wide">
 
-            <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+            <div class="sticky-header main-bar-wraper  navbar-expand-lg color-fill">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
 
@@ -184,9 +184,13 @@
         <!-- HEADER END -->
 
         <!-- CONTENT START -->
-        <div class="page-content container p-5" id="home1" style="margin-top: 5%">
+        <div class="page-content container p-5" id="home1" style="margin-top: 10%">
+
+        <h2>Prince Sultan University Racing League</h2>
+        <br>
 
         <form action="Display.php" method="post" class="was-validated ">
+        <h3>Personal Information</h3>
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Full Name</label>
                                                                   <input type="text" class="form-control border" id="uname" placeholder="Enter Name" name="uname" required>
@@ -212,6 +216,9 @@
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
+
+                                                              <br>
+                                                              <h3>Drone Information</h3>
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Flight controller name</label>
                                                                   <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Flight controller name" name="fcn" required>
