@@ -4,7 +4,8 @@
     try{
         $pdo->exec($sql);
         echo "<i>Database created successfully!</i>";
-   
+        $pdo->query("use myDbase");
+
         
 
     

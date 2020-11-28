@@ -8,7 +8,6 @@
     membershipid int(12) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     fullname VARCHAR(30),
     phonenumber VARCHAR(12),
-    nationality VARCHAR(30),
     age VARCHAR(2),
     flightcontrollername VARCHAR(30),
     email VARCHAR(50),

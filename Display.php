@@ -1,5 +1,5 @@
 <?php
- require('sql\connect.php');
+ require('sql/connect.php');
     
 require('sql/createDB.php');
 require('sql/createCompetitionTable.php'); # allow you to add a php file
@@ -12,6 +12,7 @@ if(isset($_POST['submit'])){
     $email = $_REQUEST['email'];
     $age = $_REQUEST['age'];
     $fcn = $_REQUEST['fcn'];
+    $org = $_REQUEST['org'];
     $fs = $_REQUEST['fs'];
     $ea = $_REQUEST['ea'];
     $ms = $_REQUEST['ms'];
@@ -19,7 +20,7 @@ if(isset($_POST['submit'])){
     $bcn = $_REQUEST['bcn'];
     $bcc = $_REQUEST['bcc'];
     $dow = $_REQUEST['dow'];
-    $ins_query="insert into membership_form(fullname,age)values('$uname','$age')";
+    $ins_query="insert into membership_form(fullname,age, email, flightcontrollername, organization, nationality, framesize, escamps, motorssizeandkv, vtxantennapolarity,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email', '$fcn','$org', '$nationality', '$fs','$ea', '$ms' , '$vtp','$bcn', '$bcc','$dow' )";
     echo $ins_query;
     echo $fs;
    
@@ -31,6 +32,8 @@ if(isset($_POST['submit'])){
     
         }
 }
+header("Location: index.htm");
+exit();
 ?>
 <!DOCTYPE html>
 <html lang="en">
