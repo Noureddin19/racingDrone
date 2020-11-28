@@ -188,7 +188,7 @@
         <!-- CONTENT START -->
         <div class="page-content container p-5" id="home1" >
 
-        <h2>Prince Sultan University Racing League</h2>
+        <h2>PSU Racing League Registration</h2>
         <br>
 
         <form action="Display.php" method="post" class="was-validated ">
