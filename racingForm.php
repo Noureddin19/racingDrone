@@ -209,6 +209,7 @@
                                                                   <input type="email" class="form-control border" id="pwd" placeholder="Enter Your Email" name="email" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
+</div>
 
                                                                   <div class="form-group text-left">
                                                                   <label for="pwd">Nationality</label>
