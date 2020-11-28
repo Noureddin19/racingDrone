@@ -128,7 +128,7 @@
         <!-- HEADER START -->
         <header class="site-header header-style-4 mobile-full-width-menu nav-wide">
 
-            <div class="sticky-header main-bar-wraper  navbar-expand-lg color-fill">
+            <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
 
@@ -211,23 +211,10 @@
                                                                   <input type="email" class="form-control border" id="pwd" placeholder="Enter Your Email" name="email" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
-</div>
-
-                                                                  <div class="form-group text-left">
-                                                                  <label for="pwd">Nationality</label>
-                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter Your Email" name="nationality" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Age</label>
                                                                   <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Age" name="age" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Organization</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Age" name="org" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
