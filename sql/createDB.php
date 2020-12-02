@@ -1,10 +1,10 @@
 <?php
     //step4: create the database
-    $sql = "create DATABASE if not exists myDbase";
+    $sql = "create DATABASE if not exists psuracingdb";
     try{
         $pdo->exec($sql);
         echo "<i>Database created successfully!</i>";
-        $pdo->query("use myDbase");
+        $pdo->query("use psuracingdb");
 
         
 
