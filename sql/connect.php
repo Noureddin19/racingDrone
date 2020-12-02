@@ -1,9 +1,9 @@
 <?php
     //step1 : create connection variables
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database ="myDbase";
+    $servername = "mysql.racing.riotu-lab.org";
+    $username = "noureddine";
+    $password = "ccisAdmin2020";
+    $database ="psuracingdb";
     //step2: create connection to variables
     $pdo = new PDO("mysql:host=$servername", $username, $password);
     try{
