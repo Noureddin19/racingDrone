@@ -22,6 +22,8 @@ if(isset($_POST['submit'])){
    
         try{
             $pdo->exec($ins_query);
+            header("Location: index.html");
+            exit(); 
     $status = $uname. " your Record is added Successfully ";
         }catch(PDOException $e) {
             echo "database failed: " . $e->getMessage();
@@ -29,8 +31,7 @@ if(isset($_POST['submit'])){
         }
 }
 
-header("Location: index.html");
-exit();
+
 
 
 ?>
