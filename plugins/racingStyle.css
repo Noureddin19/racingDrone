@@ -52,13 +52,25 @@ header {
         display: none;
       }
     }
-    @media only screen and (min-width:600px) {
-      .backicon{
-        font-size: 25px;
-      }
-    }
     @media only screen and (max-width:600px) {
-      .backicon{
-        font-size: 25px;
-      }
+      .logo-header i {
+        font-size: 50px;
+        }
+    }
+    button.scrolleft {
+      height: 40px;
+      width: 40px;
+      background: #1d1b18;
+      border: none;
+      position: fixed;
+      left:  15px;
+      bottom: 15px;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      display: none;
+      text-align: center;
+      z-index: 999;
+      color: #fff;
     }
