@@ -9283,15 +9283,33 @@ Spin circle
 .site-btn-effect {
 	color: rgba(0, 0, 0, 0) !important;
 	transition: all .3s ease !important;
+	/* font-weight: bold; */
+	text-transform: uppercase;
 }
 
 .site-btn-effect {
-	text-shadow: 0 0 0 black, 400px 0 0 black;
+	text-shadow: 0 0 0 white, 400px 0 0 white;
 }
 
 .site-btn-effect:hover {
-	text-shadow: -400px 0 0 black, 0 0 0 black;
+	text-shadow: -400px 0 0 white, 0 0 0 white;
 }
+
+.site-btn-effect2 {
+	color: rgba(0, 0, 0, 0) !important;
+	transition: all .3s ease !important;
+	/* font-weight: bold; */
+	text-transform: uppercase;
+}
+
+.site-btn-effect2 {
+	text-shadow: 0 0 0 #d72323, 400px 0 0 #d72323;
+}
+
+.site-btn-effect2:hover {
+	text-shadow: -400px 0 0 #d72323, 0 0 0 #d72323;
+}
+
 .site-btn-effect1 {
 	color: black !important;
 	transition: all .3s ease !important;
