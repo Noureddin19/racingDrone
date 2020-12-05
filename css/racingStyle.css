@@ -52,3 +52,11 @@ header {
         display: none;
       }
     }
+    @media only screen and (max-width:600px) {
+      .logo-header i {
+        font-size: 50px;
+        }
+    }
+    button #leftS {
+      left:  15px;      
+    }

@@ -79,6 +79,7 @@
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
+    <link rel="stylesheet" href="css/racingStyle.css">
 
 
 
@@ -131,9 +132,11 @@
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
-
-                        <div class="logo-header   w-25 pb-3">
+                    
+                        <div class="logo-header  w-50 ">
                             <div class="logo-header-inner logo-header-one ">
+                            <a href="index.html"><i class="fa fa-chevron-left " style="color:white; font-size:25px"></i></a>
+
                                 <a href="index.htm">
                                     <img src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
                                     </a>
@@ -358,163 +361,118 @@
                 </div>
             </div>
             <!-- CLIENT LOGO  SECTION End -->
-
+            </div>
         <!-- CONTENT END -->
 
-        <!-- FOOTER START -->
-        <footer class="site-footer footer-large footer-dark text-white footer-style1">
+         <!-- FOOTER START -->
+         <footer class="site-footer footer-large footer-dark text-white footer-style1">
 
 
-            <!-- FOOTER BLOCKES START -->
-            <div class="footer-top" id="contactus">
-                <div class="container">
-                    <div class="row">
+<!-- FOOTER BLOCKES START -->
+<div class="footer-top" id="contactus">
+    <div class="container">
+        <div class="row">
 
-                        <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 mr-5">
 
-                            <div class="widget recent-posts-entry">
-                                <h3 class="widget-title">Get in Touch</h3>
-                                <ul class="widget_address">
-                                    <li><i class="fa fa-map-marker"></i>P.O.Box No. 66833 Rafha Street, Riyadh </li>
-                                    <li><i class="fa fa-envelope"></i>riotu@psu.edu.sa</li>
-                                    <li> <i class="fa fa-phone"></i>+966 50 861 2974</li>
-                                </ul>
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget widget_services">
-                                <h3 class="widget-title">Useful links</h3>
-                                <ul>
-                                    <li><a href="about-1.html">About</a></li>
-                                    <li><a href="our-prices.html">Pricing Plan </a></li>
-                                    <li><a href="Faq.html">FAQ</a></li>
-                                    <li><a href="team-single.html">Our Team </a></li>
-                                    <li><a href="services-1.html">Services </a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget recent-posts-entry">
-                                <h3 class="widget-title">Recent Post</h3>
-                                <div class="section-content">
-                                    <div class="widget-post-bx">
-                                        <div class="widget-post clearfix">
-                                            <div class="wt-post-media">
-                                                <img src="images/blog/recent-blog/pic1.jpg" alt="">
-                                            </div>
-                                            <div class="wt-post-info">
-                                                <div class="wt-post-meta">
-                                                    <ul>
-                                                        <li class="post-author">25 May</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="wt-post-header">
-                                                    <a href="javascript:;" class="post-title">Planning approved for
-                                                        restoration town hall.</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="widget-post clearfix">
-                                            <div class="wt-post-media">
-                                                <img src="images/blog/recent-blog/pic2.jpg" alt="">
-                                            </div>
-                                            <div class="wt-post-info">
-                                                <div class="wt-post-meta">
-                                                    <ul>
-                                                        <li class="post-author">28 Dec</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="wt-post-header">
-                                                    <a href="javascript:;" class="post-title">Planning approved for
-                                                        restoration town hall.</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget widget_newsletter">
-                                <h3 class="widget-title">Newsletter</h3>
-                                <p>Join our subscribers list to get the latest news, updates and special offers
-                                    delivered directly in your inbox.</p>
-                                <div class="newsletter-input">
-                                    <div class="input-group">
-                                        <input id="email" type="text" class="form-control" name="email"
-                                            placeholder="Enter your email">
-                                        <div class="input-group-append">
-                                            <button type="submit"
-                                                class="input-group-text nl-search-btn text-black site-bg-primary title-style-2">Subscribe</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- FOOTER COPYRIGHT -->
-
-            <div class="footer-middle">
-
-                <div class="container">
-                    <div class="footer-middle-content">
-                        <div class="logo-footer">
-                            <a href="index.html"><img src="images/logo-light.png" alt=""></a>
-                        </div>
-
-                        <ul class="copyrights-nav">
-                            <li><a href="javascript:void(0);">Terms &amp; Condition</a></li>
-                            <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                            <li><a href="contact-1.html">Contact Us</a></li>
-                        </ul>
-
-                        <ul class="social-icons  wt-social-links footer-social-icon">
-                            <li><a href="https://www.facebook.com/riotu.center" class="fa fa-facebook" target="_blank"></a></li>
-                            <li><a href="https://twitter.com/riotulab" class="fa fa-twitter" target="_blank"></a></li>
-                            <li><a href="http://linkedin.com/in/anis-koubaa-84aa4344" class="fa fa-linkedin" target="_blank"></a></li>
-                        </ul>
-                    </div>
+                <div class="widget recent-posts-entry">
+                    <h3 class="widget-title">Get in Touch</h3>
+                    <ul class="widget_address">
+                        <li><i class="fa fa-map-marker"></i>P.O.Box No. 66833 Rafha Street, Riyadh </li>
+                        <li><i class="fa fa-envelope"></i>racing@psu.edu.sa</li>
+                        <li> <i class="fa fa-phone"></i>0114948851</li>
+                    </ul>
                 </div>
 
+
             </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="wt-footer-bot-left d-flex justify-content-center">
-                        <span class="copyrights-text">© 2020 RIOTU.</span>
+
+
+            <div class="col-lg-3 col-md-6 ml-5">
+                <div class="widget widget_services">
+                    <h3 class="widget-title">Useful links</h3>
+                    <ul>
+                        <li><a href="www.riotu-lab.org">RIOTU Lab</a></li>
+                        <li><a href="www.psu.edu.sa">Prince Sultan University</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 ml-5">
+                <div class="widget recent-posts-entry">
+                    <h3 class="widget-title">Our Location</h3>
+                    <div class="section-content">
+                        <div class="widget-post-bx">
+                            <div class="widget-post clearfix">
+                                
+                               
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.731718429438!2d46.699132215759334!3d24.736089084112688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0292c1fb5529%3A0x3fbc5cb308e60dd8!2sPrince%20Sultan%20University!5e0!3m2!1sen!2ssa!4v1604594675336!5m2!1sen!2ssa" width="113%" height="200em" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="shadow-lg"></iframe>
+
+                                
+                            </div>
+                            <div class="widget-post clearfix">
+                                
+                               
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+         
 
-        </footer>
-        <!-- FOOTER END -->
-
-
-
-        <!-- BUTTON TOP START -->
-        <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
-
-
-
-    </div>
-
-    <!-- LOADING AREA START ===== -->
-    <div class="loading-area">
-        <div class="loading-box"></div>
-        <div class="loading-pic">
-            <div class="cssload-loader"></div>
         </div>
     </div>
+</div>
+<!-- FOOTER COPYRIGHT -->
+
+<div class="footer-middle">
+
+    <div class="container">
+        <div class="footer-middle-content">
+            <div class="logo-footer">
+                <a href="index.html"><img src="images/logo-light.png" alt=""></a>
+            </div>
+
+            <ul class="copyrights-nav">
+                <li><a href="javascript:void(0);">Terms &amp; Condition</a></li>
+                <li><a href="javascript:void(0);">Privacy Policy</a></li>
+                <li><a href="contact-1.html">Contact Us</a></li>
+            </ul>
+
+            <ul class="social-icons  wt-social-links footer-social-icon">
+                <li><a href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
+                <li><a href="https://twitter.com/riotulab" class="fa fa-twitter"></a></li>
+                <li><a href="http://linkedin.com/in/anis-koubaa-84aa4344" class="fa fa-linkedin"></a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="footer-bottom">
+    <div class="container">
+        <div class="wt-footer-bot-left d-flex justify-content-center">
+            <span class="copyrights-text">© 2020 RIOTU.</span>
+        </div>
+    </div>
+</div>
+
+
+</footer>
+<!-- FOOTER END -->
+
+<!-- BUTTON TOP START -->
+<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+</div>
+
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+<div class="loading-box"></div>
+<div class="loading-pic">
+<div class="cssload-loader"></div>
+</div>
+</div>
     <!-- LOADING AREA  END ====== -->
 
     <!-- JAVASCRIPT  FILES ========================================= -->
