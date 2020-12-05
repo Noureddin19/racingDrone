@@ -16,7 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>PSU Racing League - Registration</title>
+    <title>PSU Drone Racing League - Registration</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -188,8 +188,24 @@
         <!-- CONTENT START -->
         <div class="page-content container p-5" id="home1" >
 
-        <h2>PSU Racing League Registration</h2>
+        <h2>PSU Drone Racing League Registration</h2>
         <br>
+        <div class="rounded-0 text-dark">
+            <h3>Rules & Procedures</h3>
+            <div class="container text-dark">
+            <ol style="font-size: 1.2em;">
+                    <li>Must be 5” race drone</li>
+                    <li>Must complete 3 laps</li>
+                    <li>5 sec penalty for missing a gate</li>
+                    <li>Must be analog system</li>
+                    <li>4 racers at a time</li>
+                    <li>Flip over crash is ok</li>
+                    <li>Must be able to change VTX freq quickly</li>
+                    <li>must only use 25mw for races</li>
+                    <li>Fail safe must be set and working</li>
+                </ol>
+            </div>
+            </div>
 
         <form action="Display.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
