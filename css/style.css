@@ -8103,8 +8103,6 @@ button.scroltop {
 	color: #fff;
 }
 
-
-
 button.scroltop span {
 	display: block;
 	font-size: 24px;
@@ -9309,7 +9307,6 @@ Spin circle
 .site-btn-effect2:hover {
 	text-shadow: -400px 0 0 #d72323, 0 0 0 #d72323;
 }
-
 .site-btn-effect1 {
 	color: black !important;
 	transition: all .3s ease !important;

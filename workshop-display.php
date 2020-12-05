@@ -19,18 +19,17 @@ if(isset($_POST['submit'])){
     $ins_query="insert into workshop_form(fullname, email, phonenumber, city, country,student, affiliation, experience)values('$uname','$email', '$phoneNumber','$city', '$country', '$student','$aff', '$exp' )";
     echo $ins_query;
    
-   
+    
         try{
             $pdo->exec($ins_query);
-            header("Location: index.html");
-            exit(); 
     $status = $uname. " your Record is added Successfully ";
         }catch(PDOException $e) {
             echo "database failed: " . $e->getMessage();
     
         }
 }
-
+header("Location: club-index.html");
+exit();
 
 
 
