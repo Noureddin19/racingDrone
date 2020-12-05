@@ -332,12 +332,7 @@
                                      </div>
                                  </div>
                              </div>
-                             <div class="item">
-                                <div class="ow-client-logo">
-                                    <div class="client-logo client-logo-media">
-                                        <a href="javascript:void(0);"><img src="images/client-logo/az logo .png" alt=""></a>
-                                    </div>
-                                </div>
+                             
                             
                            
 
@@ -348,6 +343,13 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo client-logo-media">
+                                        <a href="javascript:void(0);"><img src="images/client-logo/az logo .png" alt=""></a>
+                                    </div>
+                                </div>
 
                            
                         </div>
