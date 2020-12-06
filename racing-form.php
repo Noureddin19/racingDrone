@@ -79,7 +79,7 @@
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
-    <link rel="stylesheet" href="css/racingStyle.css">
+    
 
 
 
@@ -128,7 +128,6 @@
 
         <!-- HEADER START -->
         <header class="site-header header-style-4 mobile-full-width-menu nav-wide">
-
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
@@ -138,7 +137,8 @@
                             <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
                                 <a href="index.php">
-                                    <img src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
+                                <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
+                                <img class="hidden-sm hidden-md hidden-lg" src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt="" width="55px;">
                                     </a>
                                 </div>
                             </div>  
@@ -151,7 +151,7 @@
                                     </div>
                                 </div>                                
                                  
-                             </div>  
+                            </div>  
                     </div>
                                                                                               
 
@@ -162,29 +162,14 @@
     
                             </div>
 
-                        </div>
+                    </div>
+                    
 
 
                        
-                        <!-- SITE Search -->
-                        <div id="search-toggle-block">
-                            <div id="search">
-                                <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                                    <div class="input-group">
-                                        <input class="form-control" value="" name="q" type="search"
-                                            placeholder="Type to search" />
-                                        <span class="input-group-append"><button type="button" class="search-btn"><i
-                                                    class="fa fa-search"></i></button></span>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
+                        
                 </div>
-
             </div>
-
         </header>
         <!-- HEADER END -->
             <div class=" container-fluid pr-0 pl-0 shadow-lg m" >

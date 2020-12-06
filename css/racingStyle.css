@@ -44,4 +44,12 @@ header {
     }
   
   
-   
+    @media (pointer: coarse) and (hover: none) {
+      header {
+        background: url('../media/video/promo.mp4') ;
+      }
+      header video {
+        display: none;
+      }
+    }
+    

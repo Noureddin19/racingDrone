@@ -11849,3 +11849,27 @@ transition: all 0.5s ease-in-out;
 .card1:hover .d-icon-box-content p{color:#fff;}
 
 .card1:hover .site-button-link:before{background-color:#fff}
+
+@media (min-width: 1200px) {
+	.hidden-lg {
+	  display: none !important;
+	}
+  }
+
+@media (min-width: 992px) {
+	.hidden-md {
+	  display: none !important;
+	}
+  }
+
+@media (min-width: 768px) {
+	.hidden-sm {
+	  display: none !important;
+	}
+  }
+
+  @media (max-width: 767px) {
+	.hidden-xs {
+	  display: none !important;
+	}
+  }
