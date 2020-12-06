@@ -128,7 +128,6 @@
 
         <!-- HEADER START -->
         <header class="site-header header-style-4 mobile-full-width-menu nav-wide">
-
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
@@ -151,7 +150,7 @@
                                     </div>
                                 </div>                                
                                  
-                             </div>  
+                            </div>  
                     </div>
                                                                                               
 
@@ -162,29 +161,14 @@
     
                             </div>
 
-                        </div>
+                    </div>
+                    
 
 
                        
-                        <!-- SITE Search -->
-                        <div id="search-toggle-block">
-                            <div id="search">
-                                <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                                    <div class="input-group">
-                                        <input class="form-control" value="" name="q" type="search"
-                                            placeholder="Type to search" />
-                                        <span class="input-group-append"><button type="button" class="search-btn"><i
-                                                    class="fa fa-search"></i></button></span>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
+                        
                 </div>
-
             </div>
-
         </header>
         <!-- HEADER END -->
             <div class=" container-fluid pr-0 pl-0 shadow-lg m" >
