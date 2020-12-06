@@ -131,19 +131,19 @@
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
-                    <div class="row mb-4">
+                    <div class="row mb-3">
                     <div class="logo-header col-sm-8 w-100 ">
                             <div class="logo-header-inner logo-header-one  ">
                             <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
-                                <a href="index.php">
+                                <a href="http://racing.riotu-lab.org/">
                                 <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
                                 <img class="hidden-sm hidden-md hidden-lg" src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt="" width="55px;">
                                     </a>
                                 </div>
                             </div>  
                                                        
-                            <div class="extra-nav header-2-nav col-sm-4 ">
+                            <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
                                 
                                 <div class="extra-cell ">
                                     <div class="header-nav-request">
