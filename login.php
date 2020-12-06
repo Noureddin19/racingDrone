@@ -207,7 +207,7 @@
                                                              
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Password</label>
-                                                                  <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Password" name="pn" required>
+                                                                  <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Password" name="pass" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please Enter Your Password</div>
                                                               </div>
