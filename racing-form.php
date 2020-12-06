@@ -132,10 +132,10 @@
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
-                    <div class="row">
+                    <div class="row mb-4">
                     <div class="logo-header col-sm-8 w-100 ">
-                            <div class="logo-header-inner logo-header-one ">
-                            <a href="index.php"><i class="fa fa-chevron-left " style="color:white; font-size:25px"></i></a>
+                            <div class="logo-header-inner logo-header-one  ">
+                            <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
                                 <a href="index.php">
                                     <img src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
@@ -143,9 +143,9 @@
                                 </div>
                             </div>  
                                                        
-                            <div class="extra-nav header-2-nav col-sm-4">
+                            <div class="extra-nav header-2-nav col-sm-4 ">
                                 
-                                <div class="extra-cell">
+                                <div class="extra-cell ">
                                     <div class="header-nav-request">
                                         <a href="mailto:riotu@psu.edu.sa" style="background-color: inherit">riotu@psu.edu.sa</a> 
                                     </div>
