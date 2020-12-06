@@ -199,16 +199,16 @@
         <h3>Log in</h3>
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Username</label>
-                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter Name" name="uname" required>
+                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter Your Username" name="uname" required>
                                                                   <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                                                  <div class="invalid-feedback">Please Enter Your Username</div>
                                                               </div>
                                                              
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Password</label>
-                                                                  <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Phone Number" name="pn" required>
+                                                                  <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Password" name="pn" required>
                                                                   <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                                                  <div class="invalid-feedback">Please Enter Your Password</div>
                                                               </div>
                                                              
 
