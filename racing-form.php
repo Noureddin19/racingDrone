@@ -131,7 +131,7 @@
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
-                    <div class="row mb-4">
+                    <div class="row mb-3">
                     <div class="logo-header col-sm-8 w-100 ">
                             <div class="logo-header-inner logo-header-one  ">
                             <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
@@ -143,7 +143,7 @@
                                 </div>
                             </div>  
                                                        
-                            <div class="extra-nav header-2-nav col-sm-4 ">
+                            <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
                                 
                                 <div class="extra-cell ">
                                     <div class="header-nav-request">
