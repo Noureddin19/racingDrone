@@ -147,7 +147,7 @@
                             <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
                                 
                                 <div class="extra-cell ">
-                                    <div class="header-nav-request">
+                                    <div class="header-nav-request ">
                                         <a href="mailto:racing@psu.edu.sa" style="background-color: inherit">racing@psu.edu.sa</a> 
                                     </div>
                                 </div>                                
