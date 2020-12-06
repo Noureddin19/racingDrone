@@ -1351,10 +1351,10 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                                <li><a href="https://twitter.com/Kamalaljundi?s=20" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
+                                                <li > <a href="https://www.linkedin.com/in/kamal-aljundi" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
                                                 
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                                <li><a href="https://www.instagram.com/kamalaljundi/" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
                                                
                                                 
                                             
@@ -1438,10 +1438,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                               
                                                
                                                 
                                             
@@ -1562,7 +1559,7 @@
                             <div class="widget-post clearfix">
                                 
                                
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.731718429438!2d46.699132215759334!3d24.736089084112688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0292c1fb5529%3A0x3fbc5cb308e60dd8!2sPrince%20Sultan%20University!5e0!3m2!1sen!2ssa!4v1604594675336!5m2!1sen!2ssa" width="113%" height="200em" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="shadow-lg"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.731718429438!2d46.699132215759334!3d24.736089084112688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0292c1fb5529%3A0x3fbc5cb308e60dd8!2sPrince%20Sultan%20University!5e0!3m2!1sen!2ssa!4v1604594675336!5m2!1sen!2ssa" width="150%" height="200em" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="shadow-lg"></iframe>
 
                                 
                             </div>
