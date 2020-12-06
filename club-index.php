@@ -1520,8 +1520,8 @@
                 <div class="widget widget_services">
                     <h3 class="widget-title">Useful links</h3>
                     <ul>
-                        <li><a href="www.riotu-lab.org">RIOTU Lab</a></li>
-                        <li><a href="www.psu.edu.sa">Prince Sultan University</a></li>
+                    <li><a target="_blank" href="https://www.riotu-lab.org">RIOTU Lab</a></li>
+                        <li><a target="_blank" href="https://www.psu.edu.sa">Prince Sultan University</a></li>
                     </ul>
                 </div>
             </div>

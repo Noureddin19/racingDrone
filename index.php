@@ -204,10 +204,9 @@
                                         <center>
                                             <ul class="team-social-bar text-center" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                            <li > <a href="https://www.linkedin.com/in/abdulhadi-“az”-azouz-85431285" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
                                                 
-                                                <li><a href="" target="_blank"><i class="fa fa-facebook fa-2x" style="color: #0072b1; margin: 5px"></i></a></li>
+                                                <li><a href="https://instagram.com/az_rc_ksa?igshid=1ghh0cf0h40t6" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
                                                
                                                 
                                             
@@ -371,8 +370,8 @@
                 <div class="widget widget_services">
                     <h3 class="widget-title">Useful links</h3>
                     <ul>
-                        <li><a href="www.riotu-lab.org">RIOTU Lab</a></li>
-                        <li><a href="www.psu.edu.sa">Prince Sultan University</a></li>
+                        <li><a target="_blank" href="https://www.riotu-lab.org">RIOTU Lab</a></li>
+                        <li><a target="_blank" href="https://www.psu.edu.sa">Prince Sultan University</a></li>
                     </ul>
                 </div>
             </div>
