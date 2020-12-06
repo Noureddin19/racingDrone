@@ -5,7 +5,7 @@
     $password = "ccisAdmin2020";
     $database ="psuracingdb";
     //step2: create connection to variables
-    $pdo = new PDO("mysql:host=$servername", $username, $password);
+    $pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     try{
     //step3: chech if connection is successful
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
