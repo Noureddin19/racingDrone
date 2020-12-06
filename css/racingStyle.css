@@ -44,21 +44,4 @@ header {
     }
   
   
-    @media (pointer: coarse) and (hover: none) {
-      header {
-        background: url('../media/video/promo.mp4') black no-repeat center center scroll;
-      }
-      header video {
-        display: none;
-      }
-    }
-    @media only screen and (min-width:600px) {
-      .backicon{
-        font-size: 25px;
-      }
-    }
-    @media only screen and (max-width:600px) {
-      .backicon{
-        font-size: 25px;
-      }
-    }
+   
