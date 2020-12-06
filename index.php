@@ -122,9 +122,9 @@
                         
                       <p class=" my-2 pt-5 textVid">PSU Drone Racing League
                     </p>
-                      <p class=" lead my-2 textVid">Prince Sultan University
+                      <p class=" lead my-2 textVid2">Prince Sultan University
                     </p>
-                    <p class=" lead my-2 textVid">21-23 January 2021
+                    <p class=" lead my-2 textVid2">21-23 January 2021
                     </p>
                     </div>
                   </div>
@@ -243,8 +243,8 @@
                               <div class="wt-info shadow-sm text-center">
                                   <div class="team-detail">
               
-                                      <h3 class="m-t0 team-name"><a>Belal Kawaf
-                                    </a>
+                                      <h3 class="m-t0 team-name">Belal Kawaf
+                                    
                                       </h3>
                                   </div>
                                   <div class="list-group">
@@ -274,7 +274,7 @@
                               <div class="wt-info shadow-sm">
                                   <div class="team-detail">
                                   
-                                      <h3 class="m-t0 team-name"><a >Rayyan AlAkkad</a></h3>
+                                      <h3 class="m-t0 team-name">Rayyan AlAkkad</h3>
                                   </div>
                                   <div class="list-group">
                                     <center>
@@ -340,6 +340,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo client-logo-media">
+                                        <a href="javascript:void(0);"><img src="images/client-logo/az logo .png" alt=""></a>
+                                    </div>
+                                </div>
 
                            
                         </div>
