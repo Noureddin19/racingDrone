@@ -436,11 +436,7 @@
                 <a href="index.html"><img src="images/logo-light.png" alt=""></a>
             </div>
 
-            <ul class="copyrights-nav">
-                <li><a href="javascript:void(0);">Terms &amp; Condition</a></li>
-                <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                <li><a href="contact-1.html">Contact Us</a></li>
-            </ul>
+            
 
             <ul class="social-icons  wt-social-links footer-social-icon">
                 <li><a href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
