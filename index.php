@@ -162,7 +162,7 @@
                 <div class="section-content mt-5">
                   <h2 class=" text-center">Competition Chairs</h2>
                 <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-5 col-sm-12 m-b30">
+                    <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
                         <div class="wt-team-2 shadow-sm">
                             <div class="wt-info shadow-sm text-center">
                                 <div class="team-detail">
@@ -191,7 +191,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-md-5 col-sm-12 m-b30">
+                    <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
                         <div class="wt-team-2 shadow-sm text-center">
 
                             
@@ -226,7 +226,7 @@
                 <div class="section-content mt-5">
                     <h2 class=" text-center">Organization Committee</h2>
                   <div class="row justify-content-center">
-                      <div class="col-lg-5 col-md-5 col-sm-12 m-b30">
+                      <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
                           <div class="wt-team-2 shadow-sm">
   
                              
@@ -257,7 +257,7 @@
                           </div>
                       </div>
   
-                      <div class="col-lg-5 col-md-5 col-sm-12 m-b30">
+                      <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
                           <div class="wt-team-2 shadow-sm text-center">
   
                               
