@@ -117,13 +117,14 @@
                 </video>
                 <div class="container ">
                   <div class="d-flex  text-center align-items-center">
-                    <div class="w-100 text-white">
-                      <h1 class="display-3 mt-5 textVid "  style="padding-top: 100px;">PSU Drone Racing League
-                    </h1>
-                      <h1 class="display-4 lead mt-2 textVid "  >Prince Sultan University
-                    </h1>
-                    <h2 class="display-4 lead mt-2 textVid  " >21-23 January 2021
-                    </h2>
+                    <div class="w-100 text-white my-5 py-5">
+                        
+                      <p class=" h1 display-4 my-2 pt-5 textVid">PSU Drone Racing League
+                    </p>
+                      <p class="display-4 lead my-2 textVid">Prince Sultan University
+                    </p>
+                    <p class="display-4 lead my-2 textVid">21-23 January 2021
+                    </p>
                     </div>
                   </div>
                 </div>
@@ -234,7 +235,7 @@
                               <div class="wt-info shadow-sm text-center">
                                   <div class="team-detail">
               
-                                      <h3 class="m-t0 team-name"><a >Bilel Kawaf
+                                      <h3 class="m-t0 team-name"><a>Belal Kawaf
                                     </a>
                                       </h3>
                                   </div>
