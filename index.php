@@ -114,7 +114,7 @@
                 
                 <div class="overlay"></div>
                 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="100%" height="100%">
-                  <source src="media/video/promo.mp4" type="video/mp4">
+                  <source src="media\video\Promo Nested.mp4" type="video/mp4">
                 </video>
                 <div class="container ">
                   <div class="d-flex  text-center align-items-center">
@@ -130,8 +130,11 @@
                   </div>
                 </div>
               </header>
+        </div>
             <!--  -->
-              <div class="section-content pt-5" style="background-color:#EEEEEE;">
+
+    <div class="container-fluid " style="background-color:#EEEEEE;">
+    <div class="section-content pt-5" style="background-color:#EEEEEE;">
                 <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30">
@@ -144,9 +147,11 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>
                 </div>
                 </div>
+    </div>
+              
 
-
-              <h2 class="text-center mt-5"> Registration Open</h2>
+            <div class="container">
+            <h2 class="text-center mt-5"> Registration Open</h2>
               <div class="row justify-content-center">
                
                       <div class="container  col-md-6 col-lg-6 col-sm-8 col-xs-3 text-center">
@@ -154,21 +159,28 @@
                             
                   </div>
                
-              </div>
+              </div>   
+            </div>
+              
                 
               
               
               
-                <div class="section-content mt-5">
+                <div class="container mt-5">
                   <h2 class=" text-center">Competition Chairs</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
-                        <div class="wt-team-2 shadow-sm">
-                            <div class="wt-info shadow-sm text-center">
+                <div class="row  justify-content-center">     
+
+                    <div class=" m-b30 col-sm-5 col-xs-8">
+                        <div class="wt-team-2 shadow-sm text-center ">
+                            <div class="wt-info shadow-sm ">
                                 <div class="team-detail">
-                                    <h3 class="m-t0 team-name">Anis Koubaa </h3><h5>Director of the Robotics and Internet-of-Things Lab</h5><h5>Prince Sultan University</h5>
+
+                                    <h3 class="m-t0 team-name">Anis Koubaa </h3>
+                                    <h5>Director of the Robotics and Internet-of-Things Lab
+ </h5>
                                     
-                                    
+                                    <h5>Prince Sultan University</h5>      
+
                                 </div>
                                 <div class="list-group">
                                     <div class="list-group">
@@ -187,18 +199,16 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
-                        <div class="wt-team-2 shadow-sm text-center">
-
-                            
-
+                    <div class=" m-b30 col-md-5 col-xs-8">
+                        <div class="wt-team-2 shadow-sm text-center ">
                             <div class="wt-info shadow-sm">
                                 <div class="team-detail">
-                                    <h3 class="m-t0 team-name">Abdelhedi Azzouz </h3><h5>UAV Expert at Zain/Part 107 Certified </h5><h5>Zain Drone</h5>
+                                    <h3 class="m-t0 team-name">Abdelhedi Azzouz </h3>
+                                    <h5>UAV Expert at Zain/Part 107 Certified </h5>
+                                    <h5>Zain Drone</h5>
                                 </div>
                                 <div class="list-group">
                                     <div class="list-group">
@@ -220,9 +230,8 @@
                         </div>
                     </div>
                     
-                    
-                    
                 </div>
+
                 <div class="section-content mt-5">
                     <h2 class=" text-center">Organization Committee</h2>
                   <div class="row justify-content-center">
@@ -292,7 +301,6 @@
                 
             </div>
 
-        </div>
     </div>
     <!-- OUR TEAM SECTION END -->
             
