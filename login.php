@@ -79,7 +79,7 @@
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
-    
+    <link rel="stylesheet" href="css/racingStyle.css">
 
 
 
@@ -128,22 +128,22 @@
 
         <!-- HEADER START -->
         <header class="site-header header-style-4 mobile-full-width-menu nav-wide">
+
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
-                    <div class="row mb-3">
+                    <div class="row mb-4">
                     <div class="logo-header col-sm-8 w-100 ">
                             <div class="logo-header-inner logo-header-one  ">
                             <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
-                                <a href="http://racing.riotu-lab.org/">
-                                <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
-                                <img class="hidden-sm hidden-md hidden-lg" src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt="" width="55px;">
+                                <a href="index.php">
+                                    <img src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
                                     </a>
                                 </div>
                             </div>  
                                                        
-                            <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
+                            <div class="extra-nav header-2-nav col-sm-4 ">
                                 
                                 <div class="extra-cell ">
                                     <div class="header-nav-request">
@@ -151,7 +151,7 @@
                                     </div>
                                 </div>                                
                                  
-                            </div>  
+                             </div>  
                     </div>
                                                                                               
 
@@ -162,14 +162,29 @@
     
                             </div>
 
-                    </div>
-                    
+                        </div>
 
 
                        
-                        
+                        <!-- SITE Search -->
+                        <div id="search-toggle-block">
+                            <div id="search">
+                                <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                                    <div class="input-group">
+                                        <input class="form-control" value="" name="q" type="search"
+                                            placeholder="Type to search" />
+                                        <span class="input-group-append"><button type="button" class="search-btn"><i
+                                                    class="fa fa-search"></i></button></span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
+
         </header>
         <!-- HEADER END -->
             <div class=" container-fluid pr-0 pl-0 shadow-lg m" >
@@ -178,118 +193,30 @@
         <!-- CONTENT START -->
         <div class="page-content container p-5" id="home1" >
 
-        <h2>PSU Drone Racing League Registration</h2>
-        <br>
-        <div class="rounded-0 text-dark">
-            <h3>Rules & Procedures</h3>
-            <div class="container text-dark">
-            <ol style="font-size: 1.2em;">
-                    <li>Must be 5” race drone</li>
-                    <li>Must complete 3 laps</li>
-                    <li>5 sec penalty for missing a gate</li>
-                    <li>Must be analog system</li>
-                    <li>4 racers at a time</li>
-                    <li>Flip over crash is ok</li>
-                    <li>Must be able to change VTX freq quickly</li>
-                    <li>must only use 25mw for races</li>
-                    <li>Fail safe must be set and working</li>
-                </ol>
-            </div>
-            </div>
+        
 
-        <form action="display.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
+        <form action="admin.php" method="post" class="was-validated ">
+        <h3>Log in</h3>
                                                               <div class="form-group text-left">
-                                                                  <label for="uname" class="left">Full Name</label>
+                                                                  <label for="uname" class="left">Username</label>
                                                                   <input type="text" class="form-control border" id="uname" placeholder="Enter Name" name="uname" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                              
                                                               <div class="form-group text-left">
-                                                                  <label for="pwd">Phone Number</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Phone Number" name="pn" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Email</label>
-                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter Your Email" name="email" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Nationality</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Nationality" name="nationality" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Age</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Age" name="age" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Organization</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Organization" name="org" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-
-                                                              <br>
-                                                              <h3>Drone Information</h3>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Flight Controller Name</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Flight Controller Name" name="fcn" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Frame Size</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Frame Size" name="fs" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">ECS Amps</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your ECS Amps" name="ea" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Motor Size and KV</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Motor Size and KV" name="ms" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">VTX Antenna Polarity</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your VTX Antenna Polarity" name="vtp" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Battery Cells Number</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Battery cells number" name="bcn" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Battery Cells Capacity</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Battery cells capacity" name="bcc" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
-                                                              </div>
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Drone Overall Weight with Battery</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Drone's Overall Weight" name="dow" required>
+                                                                  <label for="pwd">Password</label>
+                                                                  <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Phone Number" name="pn" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                              
+
+                                                              <br>
+                                                           
+                                                             
                                                               <center>
-                                                              <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Send</button>
+                                                              <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Log in</button>
                                                               </center>
                                                           </form>
 
@@ -421,10 +348,7 @@
                 <a href="index.html"><img src="images/logo-light.png" alt=""></a>
                 
             </div>
-            <ul class="copyrights-nav">
-                            <li><a href="login.php">Log in</a></li>
-                            
-                        </ul>
+           
             <ul class="social-icons  wt-social-links footer-social-icon">
                 <li><a href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
                 <li><a href="https://twitter.com/riotulab" class="fa fa-twitter"></a></li>
