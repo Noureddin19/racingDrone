@@ -352,7 +352,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 " style="margin-right: 10%">
+            <div class="col-lg-3 col-md-6 " style="margin-right: 15%">
 
                 <div class="widget recent-posts-entry">
                     <h3 class="widget-title">Get in Touch</h3>
@@ -367,7 +367,7 @@
             </div>
 
 
-            <div class="col-lg-3 col-md-6 "style="margin-right: 3.75%">
+            <div class="col-lg-3 col-md-6 "style="margin-right: 10%">
                 <div class="widget widget_services">
                     <h3 class="widget-title">Useful links</h3>
                     <ul>
