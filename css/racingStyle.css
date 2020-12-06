@@ -1,11 +1,11 @@
 header {
-    position: relative;
-    height: 58vh;
-    min-height: 25rem;
-    width: 100%;
-    overflow: hidden;
-  }
-  
+  position: relative;
+  height: 49vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
   header video {
     position: absolute;
     top: 10%;
@@ -30,8 +30,8 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    height: 80%;
-    width: 8%;
+    height: 100%;
+    width: 100%;
     background-color: black;
     opacity: 0.6;
     z-index: 1;
@@ -41,6 +41,13 @@ header {
     .textVid{
       font-family: 'Rajdhani', sans-serif;
       font-weight: 600;
+      font-size: 60px;
+    }
+    @media only screen and (max-width: 700px) {
+      .textVid{
+        font-size: 35px;
+
+      }
     }
   
   /*

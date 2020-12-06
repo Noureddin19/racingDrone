@@ -118,13 +118,13 @@
                 </video>
                 <div class="container ">
                   <div class="d-flex  text-center align-items-center">
-                    <div class="w-100 text-white my-5 py-5">
+                    <div class="w-100 text-white my-1 py-5">
                         
-                      <p class=" h1 display-4 my-2 pt-5 textVid">PSU Drone Racing League
+                      <p class=" my-2 pt-5 textVid">PSU Drone Racing League
                     </p>
-                      <p class="display-4 lead my-2 textVid">Prince Sultan University
+                      <p class=" lead my-2 textVid">Prince Sultan University
                     </p>
-                    <p class="display-4 lead my-2 textVid">21-23 January 2021
+                    <p class=" lead my-2 textVid">21-23 January 2021
                     </p>
                     </div>
                   </div>
