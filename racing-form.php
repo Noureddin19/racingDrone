@@ -79,7 +79,7 @@
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
-    <link rel="stylesheet" href="css/racingStyle.css">
+    
 
 
 
@@ -128,7 +128,6 @@
 
         <!-- HEADER START -->
         <header class="site-header header-style-4 mobile-full-width-menu nav-wide">
-
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
@@ -152,7 +151,7 @@
                                     </div>
                                 </div>                                
                                  
-                             </div>  
+                            </div>  
                     </div>
                                                                                               
 
@@ -163,29 +162,14 @@
     
                             </div>
 
-                        </div>
+                    </div>
+                    
 
 
                        
-                        <!-- SITE Search -->
-                        <div id="search-toggle-block">
-                            <div id="search">
-                                <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                                    <div class="input-group">
-                                        <input class="form-control" value="" name="q" type="search"
-                                            placeholder="Type to search" />
-                                        <span class="input-group-append"><button type="button" class="search-btn"><i
-                                                    class="fa fa-search"></i></button></span>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
+                        
                 </div>
-
             </div>
-
         </header>
         <!-- HEADER END -->
             <div class=" container-fluid pr-0 pl-0 shadow-lg m" >
@@ -376,7 +360,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 " style="margin-right: 10%">
+            <div class="col-lg-3 col-md-6 " style="margin-right: 15%">
 
                 <div class="widget recent-posts-entry">
                     <h3 class="widget-title">Get in Touch</h3>
@@ -391,12 +375,12 @@
             </div>
 
 
-            <div class="col-lg-3 col-md-6 "style="margin-right: 3.75%">
+            <div class="col-lg-3 col-md-6 "style="margin-right: 10%">
                 <div class="widget widget_services">
                     <h3 class="widget-title">Useful links</h3>
                     <ul>
-                        <li><a href="www.riotu-lab.org">RIOTU Lab</a></li>
-                        <li><a href="www.psu.edu.sa">Prince Sultan University</a></li>
+                    <li><a target="_blank" href="https://www.riotu-lab.org">RIOTU Lab</a></li>
+                        <li><a target="_blank" href="https://www.psu.edu.sa">Prince Sultan University</a></li>
                     </ul>
                 </div>
             </div>
@@ -435,19 +419,19 @@
         <div class="footer-middle-content">
             <div class="logo-footer">
                 <a href="index.html"><img src="images/logo-light.png" alt=""></a>
+                
             </div>
-
             <ul class="copyrights-nav">
-                <li><a href="javascript:void(0);">Terms &amp; Condition</a></li>
-                <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                <li><a href="contact-1.html">Contact Us</a></li>
-            </ul>
-
+                            <li><a href="login.php">Log in</a></li>
+                            
+                        </ul>
             <ul class="social-icons  wt-social-links footer-social-icon">
                 <li><a href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
                 <li><a href="https://twitter.com/riotulab" class="fa fa-twitter"></a></li>
                 <li><a href="http://linkedin.com/in/anis-koubaa-84aa4344" class="fa fa-linkedin"></a></li>
             </ul>
+
+           
         </div>
     </div>
 

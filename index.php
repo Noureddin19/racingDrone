@@ -205,10 +205,9 @@
                                         <center>
                                             <ul class="team-social-bar text-center" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                            <li > <a href="https://www.linkedin.com/in/abdulhadi-“az”-azouz-85431285" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
                                                 
-                                                <li><a href="" target="_blank"><i class="fa fa-facebook fa-2x" style="color: #0072b1; margin: 5px"></i></a></li>
+                                                <li><a href="https://instagram.com/az_rc_ksa?igshid=1ghh0cf0h40t6" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
                                                
                                                 
                                             
@@ -353,7 +352,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 " style="margin-right: 10%">
+            <div class="col-lg-3 col-md-6 " style="margin-right: 15%">
 
                 <div class="widget recent-posts-entry">
                     <h3 class="widget-title">Get in Touch</h3>
@@ -368,12 +367,12 @@
             </div>
 
 
-            <div class="col-lg-3 col-md-6 "style="margin-right: 3.75%">
+            <div class="col-lg-3 col-md-6 "style="margin-right: 10%">
                 <div class="widget widget_services">
                     <h3 class="widget-title">Useful links</h3>
                     <ul>
-                        <li><a href="www.riotu-lab.org">RIOTU Lab</a></li>
-                        <li><a href="www.psu.edu.sa">Prince Sultan University</a></li>
+                        <li><a target="_blank" href="https://www.riotu-lab.org">RIOTU Lab</a></li>
+                        <li><a target="_blank" href="https://www.psu.edu.sa">Prince Sultan University</a></li>
                     </ul>
                 </div>
             </div>
@@ -415,10 +414,9 @@
                     </div>
         
                     <ul class="copyrights-nav">
-                        <li><a href="javascript:void(0);">Terms &amp; Condition</a></li>
-                        <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                        <li><a href="contact-1.html">Contact Us</a></li>
-                    </ul>
+                            <li><a href="login.php">Log in</a></li>
+                            
+                        </ul>
         
                     <ul class="social-icons  wt-social-links footer-social-icon">
                         <li><a target="_blank" href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
