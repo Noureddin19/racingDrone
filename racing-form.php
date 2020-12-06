@@ -302,7 +302,7 @@
                                                               </div>
                                                              
                                                               <center>
-                                                              <button type="submit" name="submit" value ="submit" class="btn btn-primary text-dark text-center" style="background: inherit; border-color: red;">Send</button>
+                                                              <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Send</button>
                                                               </center>
                                                           </form>
 
