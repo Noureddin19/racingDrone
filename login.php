@@ -144,7 +144,7 @@
                                 </div>
                             </div>  
                                                        
-                            <div class="extra-nav header-2-nav col-sm-4 ">
+                            <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
                                 
                                 <div class="extra-cell ">
                                     <div class="header-nav-request">
