@@ -1063,7 +1063,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                              
+                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
                                                
                                                 
                                             
@@ -1090,7 +1090,7 @@
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
                                              
-                                               
+                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
                                                 
                                             
                                         </ul>
@@ -1115,7 +1115,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                               
+                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
                                                
                                                 
                                             
@@ -1141,7 +1141,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                              
+                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
                                                
                                                 
                                             
@@ -1252,7 +1252,7 @@
                                                 <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                       
                                                   
-                                                   
+                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
                                                     
                                                 
                                             </ul>
@@ -1277,7 +1277,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                             
+                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
                                                 
                                             
                                         </ul>
@@ -1301,7 +1301,7 @@
                                         <div class="list-group">
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
-                                                  
+                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
                                                
                                                
                                                 
@@ -1358,7 +1358,7 @@
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                               
                                                
-                                                
+                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
                                             
                                         </ul>
                                         
