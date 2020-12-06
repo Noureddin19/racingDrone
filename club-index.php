@@ -1278,7 +1278,10 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
+                                            <li><a href="https://twitter.com/KoutaibaSs?s=08" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
+                                                <li > <a href="https://www.linkedin.com/in/koutaiba-assaf-451776199/" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                                
+                                                <li><a href="https://instagram.com/kou_assaf?igshid=3ycpvl31kk29" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
                                                 
                                             
                                         </ul>
