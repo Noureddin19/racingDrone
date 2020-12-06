@@ -373,7 +373,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 mr-5">
+            <div class="col-lg-3 col-md-6 " style="margin-right: 10%">
 
                 <div class="widget recent-posts-entry">
                     <h3 class="widget-title">Get in Touch</h3>
@@ -388,7 +388,7 @@
             </div>
 
 
-            <div class="col-lg-3 col-md-6 ml-5">
+            <div class="col-lg-3 col-md-6 "style="margin-right: 3.75%">
                 <div class="widget widget_services">
                     <h3 class="widget-title">Useful links</h3>
                     <ul>
@@ -398,7 +398,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 ml-5">
+            <div class="col-lg-3 col-md-6 " style="margin-right: auto;">
                 <div class="widget recent-posts-entry">
                     <h3 class="widget-title">Our Location</h3>
                     <div class="section-content">
