@@ -216,7 +216,7 @@
                                                            
                                                              
                                                               <center>
-                                                              <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Send</button>
+                                                              <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Log in</button>
                                                               </center>
                                                           </form>
 
