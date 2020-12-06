@@ -420,6 +420,10 @@
                 <a href="index.html"><img src="images/logo-light.png" alt=""></a>
                 
             </div>
+            <ul class="copyrights-nav">
+                            <li><a href="login.php">Log in</a></li>
+                            
+                        </ul>
             <ul class="social-icons  wt-social-links footer-social-icon">
                 <li><a href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
                 <li><a href="https://twitter.com/riotulab" class="fa fa-twitter"></a></li>
