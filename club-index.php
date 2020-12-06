@@ -1305,8 +1305,10 @@
                                         <div class="list-group">
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
-                                            <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: white; margin: 5px"></i></a></li>
-                                               
+                                            <li><a href="https://twitter.com/ibraheemkhurfan?s=20" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
+                                            <li > <a href="https://www.linkedin.com/in/ibraheem-khurfan-534a69199" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                                
+                                                <li><a href="https://www.instagram.com/ibraheemkhurfan/" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
                                                
                                                 
                                             
