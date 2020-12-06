@@ -949,10 +949,10 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                                <li><a href="https://twitter.com/riotulab" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
+                                                <li > <a href="https://www.linkedin.com/in/anis-koubaa-84aa4344/" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
                                                 
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                                <li><a href="https://www.facebook.com/riotu.center" target="_blank"><i class="fa fa-facebook fa-2x" style="color: #0072b1; margin: 5px"></i></a></li>
                                                
                                                 
                                             
@@ -979,10 +979,9 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                            <li > <a href="https://www.linkedin.com/in/abdulhadi-“az”-azouz-85431285" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
                                                 
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                                <li><a href="https://instagram.com/az_rc_ksa?igshid=1ghh0cf0h40t6" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
                                                
                                                 
                                             
@@ -1064,10 +1063,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                              
                                                
                                                 
                                             
@@ -1093,10 +1089,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                             
                                                
                                                 
                                             
@@ -1122,10 +1115,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                               
                                                
                                                 
                                             
@@ -1151,10 +1141,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                              
                                                
                                                 
                                             
@@ -1182,7 +1169,7 @@
                                                 <li><a href="https://twitter.com/acnaif" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
                                                 <li > <a href="http://linkedin.com/in/naif-alfirm-5330a31a1" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
                                                 
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                                
                                                
                                                 
                                             
@@ -1207,10 +1194,10 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                                <li><a href="https://twitter.com/aldhbeg" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
+                                                <li > <a href="https://sa.linkedin.com/in/noureddin-farahat-38575a1a2" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
                                                 
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                                
                                                
                                                 
                                             
@@ -1264,10 +1251,7 @@
                                           
                                                 <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                       
-                                                    <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                    <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                    
-                                                    <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                                  
                                                    
                                                     
                                                 
@@ -1293,11 +1277,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
-                                               
+                                             
                                                 
                                             
                                         </ul>
@@ -1322,10 +1302,7 @@
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                               
                                                
                                                 
                                             
@@ -1379,11 +1356,7 @@
                                         <div class="list-group">
                                           
                                             <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
-                                                  
-                                                <li><a href="" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                              
                                                
                                                 
                                             
@@ -1436,14 +1409,16 @@
                                         </div>
                                         <div class="list-group">
                                           
-                                            <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
+                                        <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
                                                   
-                                               
-                                               
-                                                
-                                            
-                                        </ul>
-                                        
+                                                  <li><a href="https://twitter.com/Fariss4747?s=20" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
+                                                 
+                                                  
+                                                  <li><a href="https://www.instagram.com/Fs.280/" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
+                                                 
+                                                  
+                                              
+                                          </ul>
                                       </div>
                                     </div>
 
