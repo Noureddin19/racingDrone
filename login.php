@@ -79,7 +79,7 @@
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
-    <link rel="stylesheet" href="css/racingStyle.css">
+    
 
 
 
@@ -137,13 +137,14 @@
                             <div class="logo-header-inner logo-header-one  ">
                             <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
-                                <a href="index.php">
-                                    <img src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
+                                <a href="http://racing.riotu-lab.org/">
+                                <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
+                                <img class="hidden-sm hidden-md hidden-lg" src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt="" width="55px;">
                                     </a>
                                 </div>
                             </div>  
                                                        
-                            <div class="extra-nav header-2-nav col-sm-4 ">
+                            <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
                                 
                                 <div class="extra-cell ">
                                     <div class="header-nav-request ">
@@ -199,16 +200,16 @@
         <h3>Log in</h3>
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Username</label>
-                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter Name" name="uname" required>
+                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter Your Username" name="uname" required>
                                                                   <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                                                  <div class="invalid-feedback">Please Enter Your Username</div>
                                                               </div>
                                                              
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Password</label>
-                                                                  <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Phone Number" name="pn" required>
+                                                                  <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Password" name="pn" required>
                                                                   <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                                                  <div class="invalid-feedback">Please Enter Your Password</div>
                                                               </div>
                                                              
 
