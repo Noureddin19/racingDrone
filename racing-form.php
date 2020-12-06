@@ -79,7 +79,7 @@
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
-    <link rel="stylesheet" href="css/racingStyle.css">
+    
 
 
 
