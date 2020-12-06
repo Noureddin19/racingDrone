@@ -123,24 +123,27 @@ if($_SESSION['register']){
                 
                 <div class="overlay"></div>
                 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="100%" height="100%">
-                  <source src="media/video/promo.mp4" type="video/mp4">
+                  <source src="media\video\Promo Nested.mp4" type="video/mp4">
                 </video>
                 <div class="container ">
                   <div class="d-flex  text-center align-items-center">
-                    <div class="w-100 text-white my-5 py-5">
+                    <div class="w-100 text-white my-1 py-5">
                         
-                      <p class=" h1 display-4 my-2 pt-5 textVid">PSU Drone Racing League
+                      <p class=" my-2 pt-5 textVid">PSU Drone Racing League
                     </p>
-                      <p class="display-4 lead my-2 textVid">Prince Sultan University
+                      <p class=" lead my-2 textVid2">Prince Sultan University
                     </p>
-                    <p class="display-4 lead my-2 textVid">21-23 January 2021
+                    <p class=" lead my-2 textVid2">21-23 January 2021
                     </p>
                     </div>
                   </div>
                 </div>
               </header>
+        </div>
             <!--  -->
-              <div class="section-content pt-5" style="background-color:#EEEEEE;">
+
+    <div class="container-fluid " style="background-color:#EEEEEE;">
+    <div class="section-content pt-5" style="background-color:#EEEEEE;">
                 <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30">
@@ -153,9 +156,11 @@ if($_SESSION['register']){
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>
                 </div>
                 </div>
+    </div>
+              
 
-
-              <h2 class="text-center mt-5"> Registration Open</h2>
+            <div class="container">
+            <h2 class="text-center mt-5"> Registration Open</h2>
               <div class="row justify-content-center">
                
                       <div class="container  col-md-6 col-lg-6 col-sm-8 col-xs-3 text-center">
@@ -163,21 +168,28 @@ if($_SESSION['register']){
                             
                   </div>
                
-              </div>
+              </div>   
+            </div>
+              
                 
               
               
               
-                <div class="section-content mt-5">
+                <div class="container mt-5">
                   <h2 class=" text-center">Competition Chairs</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
-                        <div class="wt-team-2 shadow-sm">
-                            <div class="wt-info shadow-sm text-center">
+                <div class="row  justify-content-center">     
+
+                    <div class=" m-b30 col-sm-5 col-xs-8">
+                        <div class="wt-team-2 shadow-sm text-center ">
+                            <div class="wt-info shadow-sm ">
                                 <div class="team-detail">
-                                    <h3 class="m-t0 team-name">Anis Koubaa </h3><h5>Director of the Robotics and Internet-of-Things Lab</h5><h5>Prince Sultan University</h5>
+
+                                    <h3 class="m-t0 team-name">Anis Koubaa </h3>
+                                    <h5>Director of the Robotics and Internet-of-Things Lab
+ </h5>
                                     
-                                    
+                                    <h5>Prince Sultan University</h5>      
+
                                 </div>
                                 <div class="list-group">
                                     <div class="list-group">
@@ -196,18 +208,16 @@ if($_SESSION['register']){
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
-                        <div class="wt-team-2 shadow-sm text-center">
-
-                            
-
+                    <div class=" m-b30 col-md-5 col-xs-8">
+                        <div class="wt-team-2 shadow-sm text-center ">
                             <div class="wt-info shadow-sm">
                                 <div class="team-detail">
-                                    <h3 class="m-t0 team-name">Abdelhedi Azzouz </h3><h5>UAV Expert at Zain/Part 107 Certified </h5><h5>Zain Drone</h5>
+                                    <h3 class="m-t0 team-name">Abdelhedi Azzouz </h3>
+                                    <h5>UAV Expert at Zain/Part 107 Certified </h5>
+                                    <h5>Zain Drone</h5>
                                 </div>
                                 <div class="list-group">
                                     <div class="list-group">
@@ -229,9 +239,8 @@ if($_SESSION['register']){
                         </div>
                     </div>
                     
-                    
-                    
                 </div>
+
                 <div class="section-content mt-5">
                     <h2 class=" text-center">Organization Committee</h2>
                   <div class="row justify-content-center">
@@ -243,8 +252,8 @@ if($_SESSION['register']){
                               <div class="wt-info shadow-sm text-center">
                                   <div class="team-detail">
               
-                                      <h3 class="m-t0 team-name"><a>Belal Kawaf
-                                    </a>
+                                      <h3 class="m-t0 team-name">Belal Kawaf
+                                    
                                       </h3>
                                   </div>
                                   <div class="list-group">
@@ -274,7 +283,7 @@ if($_SESSION['register']){
                               <div class="wt-info shadow-sm">
                                   <div class="team-detail">
                                   
-                                      <h3 class="m-t0 team-name"><a >Rayyan AlAkkad</a></h3>
+                                      <h3 class="m-t0 team-name">Rayyan AlAkkad</h3>
                                   </div>
                                   <div class="list-group">
                                     <center>
@@ -301,7 +310,6 @@ if($_SESSION['register']){
                 
             </div>
 
-        </div>
     </div>
     <!-- OUR TEAM SECTION END -->
             
@@ -341,6 +349,12 @@ if($_SESSION['register']){
                                     </div>
                                 </div>
                             </div>
+                            <div class="item">
+                                <div class="ow-client-logo">
+                                    <div class="client-logo client-logo-media">
+                                        <a href="javascript:void(0);"><img src="images/client-logo/az logo .png" alt=""></a>
+                                    </div>
+                                </div>
 
                            
                         </div>
