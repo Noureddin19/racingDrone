@@ -1,3 +1,14 @@
+<?php 
+
+session_start();
+
+if($_SESSION['register']){
+    echo "<script type='text/javascript'>alert('Registered Successfully!');</script>";
+    $_SESSION['register'] = false;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -107,8 +118,6 @@
          
         
         <!-- CONTENT START -->
-        
-            
             
             <header>
                 

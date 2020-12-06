@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+$_SESSION['register'] = false;
+
 require('sql/connect.php');
 //require('sql/createDB.php');
 //require('sql/league-table.php'); # allow you to add a php file
@@ -36,9 +40,8 @@ if(isset($_POST['submit'])){
 }else{
     echo "reFills the form";
 }
+$_SESSION['register'] = true;
 header("Location: index.php");
 exit();
-
-
 
 ?>
