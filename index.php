@@ -77,18 +77,10 @@
                         <div class="logo-header   w-25 pb-3">
                             <div class="logo-header-inner logo-header-one ">
                                 <a href="index.html">
-                                    <img src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="400px;">
+                                    <img src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
                                     </a>
                                 </div>
                             </div>  
-                            
-                            <!-- NAV Toggle Button -->
-                            <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar icon-bar-first"></span>
-                                <span class="icon-bar icon-bar-two"></span>
-                                <span class="icon-bar icon-bar-three"></span>
-                            </button> 
                                                        
                             <div class="extra-nav header-2-nav">
                                 
