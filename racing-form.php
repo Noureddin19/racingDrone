@@ -184,12 +184,12 @@
             <h3>Rules & Procedures</h3>
             <div class="container text-dark">
             <ol style="font-size: 1.2em;">
-                    <li>Must be 5” race drone</li>
-                    <li>Must complete 3 laps</li>
-                    <li>5 sec penalty for missing a gate</li>
+                    <li>The racing drone must be 5"</li>
+                    <li>The race consists of 3 laps</li>
+                    <li>there 5 second penalty for missing a gate</li>
                     <li>Must be analog system</li>
-                    <li>4 racers at a time</li>
-                    <li>Flip over crash is ok</li>
+                    <li>4 racers per round</li>
+                    <li>Flip over crash is allowed</li>
                     <li>Must be able to change VTX freq quickly</li>
                     <li>must only use 25mw for races</li>
                     <li>Fail safe must be set and working</li>
