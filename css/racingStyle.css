@@ -1,6 +1,7 @@
+
 header {
   position: relative;
-  height: 80vh;
+  height: 110vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
@@ -11,8 +12,9 @@ header {
     top: 10%;
     left: 50%;
     min-width: 100%;
-    min-height: 200%;
-  
+    
+    width: auto;
+    height: 180%;
     z-index: 0;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -40,24 +42,33 @@ header {
     .textVid{
       font-family: 'Rajdhani', sans-serif;
       font-weight: 600;
-      font-size: 60px;
+      font-size: 90px;
     }
     .textVid2{
       font-family: 'Rajdhani', sans-serif;
       font-weight: 600;
-      font-size: 50px;
+      font-size: 70px;
     }
     @media only screen and (max-width: 700px) {
       .textVid{
-        font-size: 35px;
+        font-size: 40px;
 
       }
       .textVid2{
-        font-size: 30px;
+        font-size: 35px;
 
       }
+      header{
+        height: 52vh;
+    
+      }
+      header video {
+       
+        
+      }
     }
-  
+
+    
   /*
     @media (pointer: coarse) and (hover: none) {
       header {
