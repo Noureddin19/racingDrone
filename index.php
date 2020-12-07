@@ -23,7 +23,7 @@ if($_SESSION['register']){
     <meta name="description" content="" />
     
     <!-- FAVICONS ICON -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     
     <!-- PAGE TITLE HERE -->
