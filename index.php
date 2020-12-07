@@ -160,7 +160,7 @@ if($_SESSION['register']){
               
 
             <div class="container">
-            <h2 class="text-center mt-5"> Registration Open</h2>
+            <h2 class="text-center mt-5 "> Registration Open</h2>
               <div class="row justify-content-center">
                
                       <div class="container  col-md-6 col-lg-6 col-sm-8 col-xs-3 text-center">
@@ -175,7 +175,7 @@ if($_SESSION['register']){
               
               
               
-                <div class="container mt-5">
+                <div class="container mt-5 mb-5">
                   <h2 class=" text-center">Competition Chairs</h2>
                 <div class="row  justify-content-center">     
 
