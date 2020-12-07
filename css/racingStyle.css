@@ -1,6 +1,6 @@
 header {
   position: relative;
-  height: 49vh;
+  height: 80vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
@@ -11,9 +11,8 @@ header {
     top: 10%;
     left: 50%;
     min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    min-height: 200%;
+  
     z-index: 0;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -32,7 +31,7 @@ header {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    
     opacity: 0.6;
     z-index: 1;
   
