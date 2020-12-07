@@ -127,7 +127,7 @@ if($_SESSION['register']){
                 </video>
                 <div class="container ">
                   <div class="d-flex  text-center align-items-center">
-                    <div class="w-100 text-white my-1 py-5">
+                    <div class="w-100 text-white my-5 py-5">
                         
                       <p class=" my-2 pt-5 textVid">PSU Drone Racing League
                     </p>
@@ -432,9 +432,8 @@ if($_SESSION['register']){
                               <div class="wt-info shadow-sm text-center">
                                   <div class="team-detail">
               
-                                      <h3 class="m-t0 team-name">Belal Kawaf
-                                    
-                                      </h3>
+                                      <h3 class="m-t0 team-name">Belal Kawaf </h3>
+                                      <h5>Racing drone team leader </h5>
                                   </div>
                                   <div class="list-group">
                                     <center>
@@ -463,7 +462,8 @@ if($_SESSION['register']){
                               <div class="wt-info shadow-sm">
                                   <div class="team-detail">
                                   
-                                      <h3 class="m-t0 team-name">Rayyan AlAkkad</h3>
+                                      <h3 class="m-t0 team-name">Rayan AlAkkad</h3>
+                                      <h5>UAV Expert at RIOTU Lab </h5>
                                   </div>
                                   <div class="list-group">
                                     <center>
