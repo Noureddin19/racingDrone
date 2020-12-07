@@ -248,7 +248,7 @@
             </div>
             <div class="form-group text-left">
                 <label for="pwd">ESC Amps (in ampere)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your ECS Amps" name="ea">
+                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your ESC Amps" name="ea">
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
