@@ -170,7 +170,187 @@ if($_SESSION['register']){
                
               </div>   
             </div>
-              
+            <div class="section-full p-t80 p-b50">
+
+<div class="container mt-5">
+
+    <!-- TITLE START-->
+    <div class="section-head center wt-small-separator-outer mb-5">    
+        <h2>Rules & Regulations</h2>
+    </div>
+    <!-- TITLE END-->
+
+    <div class="section-content">
+        <div class="row justify-content-center d-flex how-it-drone3">
+
+            <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-left">
+
+                <div class="wt-box d-icon-box-two m-b40 mb-5">
+                    <div class="wt-icon-box-wraper right ">
+
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">01</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">Race drone size must be 5” </h3>
+                            </div>
+                            <div class="d-icon-box-content">
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
+                    <div class="wt-icon-box-wraper right">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">02</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one"> Flip over crash is ok</h3>
+                            </div> 
+
+                            <div class="d-icon-box-content">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
+                    <div class="wt-icon-box-wraper right">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">03</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">The system must be analog </h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
+                    <div class="wt-icon-box-wraper right">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">04</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">Only 4 racers at a time</h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-12 m-b30 how-it-drone2-outer">
+                <div class="how-it-drone2-border">
+                    <div class="how-it-drone2">
+                        <div class="how-it-drone-media2"><img src="images/how-it-work/pngeggs.png" width="200%" height="200%"
+                                alt="" class="wave-effects"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-right">
+
+                <div class="wt-box d-icon-box-two m-b40">
+                    <div class="wt-icon-box-wraper left">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">05</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">5 sec penalty for missing a gate </h3>
+                                
+                               
+                            </div>
+                            <div class="d-icon-box-content">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wt-box d-icon-box-two m-b40">
+                    <div class="wt-icon-box-wraper left">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">06</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">The pilot must be able to change VTX transmison power quickly
+</h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wt-box d-icon-box-two m-b40">
+                    <div class="wt-icon-box-wraper left">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">07</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">The pilot must only use 25mw ransmison power </h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-box d-icon-box-two m-b40">
+                    <div class="wt-icon-box-wraper left">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">08</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">Fail safe must be set and working</h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+<!-- HOW IT WORK  SECTION END -->
+
                 
               
               

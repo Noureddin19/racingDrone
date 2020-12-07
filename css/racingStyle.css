@@ -59,11 +59,11 @@ header {
 
       }
       header{
-        height: 52vh;
+        height: 70vh;
     
       }
       header video {
-       
+       height: 200%;
         
       }
     }
