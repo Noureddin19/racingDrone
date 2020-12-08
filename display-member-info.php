@@ -2,15 +2,6 @@
 <html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG4JCWDBMK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GG4JCWDBMK');
-</script>
 
     <!-- META -->
     <meta charset="utf-8">
@@ -143,7 +134,7 @@
                     <div class="row mb-3">
                     <div class="logo-header col-sm-8 w-100 ">
                             <div class="logo-header-inner logo-header-one  ">
-                            <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
+                            <a class="ml-2" onclick="goBack()"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
                                 <a href="http://racing.riotu-lab.org/">
                                 <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
@@ -187,165 +178,71 @@
         <!-- CONTENT START -->
         <div class="page-content container p-5" id="home1" >
 
-        <h2>PSU Drone Racing League Registration</h2>
-        <br>
-        <div class="rounded-0 text-dark">
-            <h3>Rules & Procedures</h3>
-            <div class="container text-dark">
-            <ol style="font-size: 1.2em;">
-                    <li>Racing drone must be 5"</li>
-                    <li>Each race consists of 3 laps</li>
-                    <li>There is a 5 second penalty for missing a gate</li>
-                    <li>Must be an analog system</li>
-                    <li>4 racers per round</li>
-                    <li>Flip over crash is allowed</li>
-                    <li>Must be able to change VTX freq quickly</li>
-                    <li>Must only use 25mw for races</li>
-                    <li>Fail safe must be set and working</li>
-                </ol>
-            </div>
-            </div>
-
-        <form action="display-member-info.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
-            <div class="form-group text-left">
-                <label for="uname" class="left">Full Name</label>
-                <input type="text" class="form-control border" id="uname" placeholder="Enter Name" name="uname" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            
-            <div class="form-group text-left">
-                <label for="phone">Phone Number</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="eg. 966xxxxxxxxx" name="pn" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="email">Email</label>
-                <input type="email" class="form-control border" id="pwd" placeholder="eg. email@example.com" name="email" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="nationality">Nationality</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Nationality" name="nationality" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="age">Age</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Age" name="age" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="org">Organization</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Organization" name="org" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
 
-            <br>
-            <h3>Drone Information</h3>
-            <p>This section is optional. If your planning to participate using the similator you can skip it</p>
-            <div class="form-group text-left">
-                <label for="pwd">Flight Controller Name</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Flight Controller Name" name="fcn">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">ESC Amps (in ampere)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your ESC Amps" name="ea">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">Motor Size and KV</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Motor Size and KV" name="ms">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">Battery Cells</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Battery cells number" name="bcn">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">Battery Capacity (in milliampere)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Battery cells capacity" name="bcc">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">Drone Overall Weight with Battery (in grams)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Drone's Overall Weight" name="dow">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            
-            <center>
-            <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Send</button>
-            </center>
-        </form>
+        <table class="table table-striped">
+  <thead>
+    <tr class="bg-dark text-white">
+      <th scope="col">Question</th>
+      <th scope="col">Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Full Name</th>
+      <td>
+        <?php
+            echo($_POST['uname']);
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <th>Phone Number</th>
+      <td>
+        <?php
+            echo($_POST['pn']);
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>
+        <?php
+            echo($_POST['email']);
+        ?> 
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nationality</th>
+      <td>
+        <?php
+            echo($_POST['nationality']);
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>
+        <?php
+            echo($_POST['age']);
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <th>Organization</th>
+      <td>
+        <?php
+            echo($_POST['org']);
+        ?>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
-        </div>
-
-        <!-- CLIENT LOGO SECTION START -->
-        <div class="section-full bg-gray p-t50 p-b50 client-logo-outer-one">
-                <div class="container-fluid">
-
-                    <div class="section-content p-tb30 owl-btn-vertical-center">
-                        <div class="owl-carousel home-client-carousel-2">
-
-                            
-
-                    
-
-                            <div class="item">
-                                <div class="ow-client-logo">
-                                    <div class="client-logo client-logo-media">
-                                        <a href="javascript:void(0);"><img src="images/client-logo/Club Logo.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                             <div class="item">
-                                 <div class="ow-client-logo">
-                                     <div class="client-logo client-logo-media">
-                                         <a href="javascript:void(0);"><img
-                                                 src="images/client-logo/PSU Logo.png" alt=""></a>
-                                     </div>
-                                 </div>
-                             </div>
-                             
-                            
-                           
-
-                            <div class="item">
-                                <div class="ow-client-logo">
-                                    <div class="client-logo client-logo-media">
-                                        <a href="javascript:void(0);"><img src="images/client-logo/RIOTU Logo.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="ow-client-logo">
-                                    <div class="client-logo client-logo-media">
-                                        <a href="javascript:void(0);"><img src="images/client-logo/az logo .png" alt=""></a>
-                                    </div>
-                                </div>
-
-                           
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- CLIENT LOGO  SECTION End -->
+        
             </div>
         <!-- CONTENT END -->
 
@@ -497,7 +394,7 @@
 
 
 
-
+<script src="js/goBack.js"></script>
 
 </body>
 
