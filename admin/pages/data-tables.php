@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
  
@@ -195,7 +196,47 @@ John Abraham</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered first">
-                                        
+                                    <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Exp</th>
+                    <th>1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                try{
+                    echo dirname('data-tables.php');
+                     include('../../sql/connect.php');
+                 
+                 }catch(PDOException $e) {
+                     echo "Error: " . $e->getMessage();
+                   }
+                try{
+                    $count =1;
+              
+                $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid desc;");
+                $stmt->execute();
+                
+                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
+                   <tr>
+                       <td><?php echo $count; ?></td>
+                       <td><?php echo $row["fullname"] ?></td>
+                       <td><?php echo $row["phonenumber"] ?></td>
+                       <td><?php echo $row["email"] ?></td>
+                       <td><?php echo $row["age"] ?></td>
+                       <td><?php echo $row["flightcontrollername"] ?></td>
+                   </tr>
+                    
+              <?php
+                  $count++;}
+                }catch(PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                  }
+                ?>
                                     </table>
                                 </div>
                             </div>
@@ -205,94 +246,9 @@ John Abraham</h5>
                     <!-- end basic table  -->
                     <!-- ============================================================== -->
                 </div>
-                <div class="row">
-                    <!-- ============================================================== -->
-                    <!-- data table  -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">Data Tables - Print, Excel, CSV, PDF Buttons</h5>
-                                <p>This example shows DataTables and the Buttons extension being used with the Bootstrap 4 framework providing the styling.</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table id="example" class="table table-striped table-bordered second" style="width:100%">
-                                        
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end data table  -->
-                    <!-- ============================================================== -->
-                </div>
-                <div class="row">
-                    <!-- ============================================================== -->
-                    <!-- data table rowgroup  -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">Data Tables - RowGroup extension </h5>
-                                <p>This example shows DataTables and the RowGroup extension being used with Bootstrap 4 providing the styling.</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table id="example2" class="table table-striped table-bordered" style="width:100%">
-                                        
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end data table rowgroup  -->
-                    <!-- ============================================================== -->
-                </div>
-                <div class="row">
-                    <!-- ============================================================== -->
-                    <!-- fixed header  -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">Data Tables - Fixed Header  </h5>
-                                <p>This example shows FixedHeader being styled by the Bootstrap 4 CSS framework.</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table id="example4" class="table table-striped table-bordered" style="width:100%">
-                                        
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end fixed header  -->
-                    <!-- ============================================================== -->
-                </div>
-                <div class="row">
-                    <!-- ============================================================== -->
-                    <!-- data table multiselects  -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">Data Tables - Multi item selection </h5>
-                                <p>This example shows DataTables and the Select extension being used with Bootstrap 4 providing the styling.</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table id="example3" class="table table-striped table-bordered" style="width:100%">
-                                        
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              
+                
+                
                     <!-- ============================================================== -->
                     <!-- end data table multiselects  -->
                     <!-- ============================================================== -->
