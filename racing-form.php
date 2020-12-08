@@ -287,7 +287,7 @@
             </div>
             
             <center>
-            <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Save</button>
+            <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Confirm</button>
             </center>
         </form>
 
