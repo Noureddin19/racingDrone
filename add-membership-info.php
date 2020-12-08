@@ -17,7 +17,6 @@ if(isset($_POST['submit'])){
     $age = $_REQUEST['age'];
     $fcn = $_REQUEST['fcn'];
     $org = $_REQUEST['org'];
-    $fs = $_REQUEST['fs'];
     $ea = $_REQUEST['ea'];
     $nationality =$_REQUEST['nationality'];
     $ms = $_REQUEST['ms'];

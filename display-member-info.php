@@ -117,6 +117,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG4JCWDBMK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GG4JCWDBMK');
+</script>
+
 
 </head>
 
@@ -134,7 +144,7 @@
                     <div class="row mb-3">
                     <div class="logo-header col-sm-8 w-100 ">
                             <div class="logo-header-inner logo-header-one  ">
-                            <a class="ml-2" onclick="goBack()"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
+                            <a class="ml-2" href="#" onclick="goBack()"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
                                 <a href="http://racing.riotu-lab.org/">
                                 <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
@@ -178,11 +188,26 @@
         <!-- CONTENT START -->
         <div class="page-content container p-5" id="home1" >
 
+        <div class="row">
+<div class="col-md-3"></div>
+  <div class="col-md-3">
+    <form action="add-membership-info.php">
+    <center><button type="submit" name="submit" value ="submit" class="site-button site-btn-effect border border-danger justify-content-center mt-4 px-0" style="width: 90%">Confirm</button></center>
+    </form>
+  </div>
+  <div class="col-md-3">
+    <center><button onclick="goBack()" class="site-button site-btn-effect2 bg-white border border-danger justify-content-center mt-4 px-0" style="width: 90%">Edit</button></center>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+
+<br>
+
         <h3>Personal Information</h3>
 
         <table class="table table-striped">
   <thead>
-    <tr class="bg-dark text-white">
+    <tr class="text-white" style="background-color: #101010">
       <th scope="col">Question</th>
       <th scope="col">Response</th>
     </tr>
@@ -212,8 +237,6 @@
         ?> 
       </td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>Nationality</th>
       <td>
@@ -241,7 +264,67 @@
   </tbody>
 </table>
 
+<br>
+<h3>Drone Information</h3>
 
+        <table class="table table-striped">
+  <thead>
+    <tr class="text-white" style="background-color: #101010">
+      <th scope="col">Question</th>
+      <th scope="col">Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Flight Controller Name</th>
+      <td>
+        <?php
+            echo($_POST['fcn']);
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <th>ESC Amps (in ampere)</th>
+      <td>
+        <?php
+            echo($_POST['ea']);
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <th>Motor Size and KV</th>
+      <td>
+        <?php
+            echo($_POST['ms']);
+        ?> 
+      </td>
+    </tr>
+    <tr>
+      <th>Battery Cells</th>
+      <td>
+        <?php
+            echo($_POST['bcn']);
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <th>Battery Capacity (in milliampere)</th>
+      <td>
+        <?php
+            echo($_POST['bcc']);
+        ?>
+      </td>
+    </tr>
+    <tr>
+      <th>Drone Overall Weight with Battery (in grams)</th>
+      <td>
+        <?php
+            echo($_POST['dow']);
+        ?>
+      </td>
+    </tr>
+  </tbody>
+</table>
         
             </div>
         <!-- CONTENT END -->
