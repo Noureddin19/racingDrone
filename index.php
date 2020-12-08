@@ -205,7 +205,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Racing drone must be 5"</h3>
+                                <h3 class="s-title-one">Racing drone size must be 5”</h3>
                             </div>
                             <div class="d-icon-box-content">
                                 
@@ -223,7 +223,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Each race consists of 3 laps</h3>
+                                <h3 class="s-title-one">There is a 5 second penalty for missing a gate</h3>
                             </div> 
 
                             <div class="d-icon-box-content">
@@ -241,7 +241,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">There is a 5 second penalty for missing a gate</h3>
+                                <h3 class="s-title-one">Must be an analog system</h3>
                             </div>
 
                             <div class="d-icon-box-content">
@@ -289,7 +289,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">There is a 5 second penalty for missing a gate</h3>
+                                <h3 class="s-title-one">Flip over crash is allowed</h3>
                                 
                                
                             </div>
@@ -308,7 +308,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">The pilot must be able to change VTX transmison power quickly
+                                <h3 class="s-title-one">The pilot must be able to change VTX transmission power quickly
 </h3>
                             </div>
 
@@ -326,7 +326,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">The pilot must only use 25mw ransmison power </h3>
+                                <h3 class="s-title-one">The pilot must only use 25mw ransmison power</h3>
                             </div>
 
                             <div class="d-icon-box-content">
