@@ -193,20 +193,20 @@
             <h3>Rules & Procedures</h3>
             <div class="container text-dark">
             <ol style="font-size: 1.2em;">
-                    <li>The racing drone must be 5"</li>
-                    <li>The race consists of 3 laps</li>
-                    <li>there 5 second penalty for missing a gate</li>
-                    <li>Must be analog system</li>
+                    <li>Racing drone must be 5"</li>
+                    <li>Each race consists of 3 laps</li>
+                    <li>There is a 5 second penalty for missing a gate</li>
+                    <li>Must be an analog system</li>
                     <li>4 racers per round</li>
                     <li>Flip over crash is allowed</li>
                     <li>Must be able to change VTX freq quickly</li>
-                    <li>must only use 25mw for races</li>
+                    <li>Must only use 25mw for races</li>
                     <li>Fail safe must be set and working</li>
                 </ol>
             </div>
             </div>
 
-        <form action="display.php" method="post" class="was-validated ">
+        <form action="display-member-info.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
             <div class="form-group text-left">
                 <label for="uname" class="left">Full Name</label>
