@@ -11,19 +11,19 @@ require('sql/connect.php');
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
     #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
-    $uname = $_REQUEST['uname'];
-    $phoneNumber = $_REQUEST['pn'];
-    $email = $_REQUEST['email'];
-    $age = $_REQUEST['age'];
-    $fcn = $_REQUEST['fcn'];
-    $org = $_REQUEST['org'];
-    $ea = $_REQUEST['ea'];
-    $nationality =$_REQUEST['nationality'];
-    $ms = $_REQUEST['ms'];
-    $vtp = $_REQUEST['vtp'];
-    $bcn = $_REQUEST['bcn'];
-    $bcc = $_REQUEST['bcc'];
-    $dow = $_REQUEST['dow'];
+    $uname = $_POST['uname'];
+    $phoneNumber = $_POST['pn'];
+    $email = $_POST['email'];
+    $age = $_POST['age'];
+    $fcn = $_POST['fcn'];
+    $org = $_POST['org'];
+    $ea = $_POST['ea'];
+    $nationality =$_POST['nationality'];
+    $ms = $_POST['ms'];
+    $vtp = $_POST['vtp'];
+    $bcn = $_POST['bcn'];
+    $bcc = $_POST['bcc'];
+    $dow = $_POST['dow'];
     $ins_query="insert into membership_form(fullname,age, email, phonenumber, flightcontrollername, organization, nationality, framesize, escamps, motorssizeandkv, vtxantennapolarity,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email','$phoneNumber', '$fcn','$org', '$nationality', '$fs','$ea', '$ms' , '$vtp','$bcn', '$bcc','$dow' )";
     
     
