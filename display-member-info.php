@@ -370,7 +370,10 @@ require('sql/connect.php');
         try{
             $pdo->exec($ins_query);
     $status = $uname. " your Record is added Successfully ";
+    ob_start();
     $_SESSION['register'] = true;
+    header("Location: index.php");
+
     exit();
    
         }catch(PDOException $e) {
