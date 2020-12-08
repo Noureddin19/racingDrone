@@ -14,8 +14,6 @@
     nationality VARCHAR(50),
     framesize VARCHAR(20),
     escamps VARCHAR(30),
-    motorssizeandkv VARCHAR(30),
-    vtxantennapolarity VARCHAR(30),
     batterycellsnumber VARCHAR(2),
     batterycellscapacity VARCHAR(10),
     overallweight FLOAT(20)
