@@ -372,7 +372,6 @@ require('sql/connect.php');
     $status = $uname. " your Record is added Successfully ";
     ob_start();
     $_SESSION['register'] = true;
-    header("Location: index.php");
 
     exit();
    
