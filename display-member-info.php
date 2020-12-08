@@ -191,7 +191,8 @@
         <div class="row">
 <div class="col-md-3"></div>
   <div class="col-md-3">
-    <form action="add-membership-info.php">
+    <form action="add-membership-info.php" method="$_POST">
+
     <center><button type="submit" name="submit" value ="submit" class="site-button site-btn-effect border border-danger justify-content-center mt-4 px-0" style="width: 90%">Confirm</button></center>
     </form>
   </div>
