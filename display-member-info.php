@@ -1,6 +1,7 @@
 <?php 
 session_start();
 $_SESSION['register'] = false;
+header("Location: index.php");
 
 require('sql/connect.php');
 // $_SESSION["unname"] = $_POST['uname'];
@@ -362,13 +363,15 @@ require('sql/connect.php');
     $bcn = $_POST['bcn'];
     $bcc = $_POST['bcc'];
     $dow = $_POST['dow'];
-    $ins_query="insert into membership_form(fullname,age, email, phonenumber, flightcontrollername, organization, nationality, escamps, motorssizeandkv,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email','$phoneNumber', '$fcn','$org', '$nationality', '$fs','$ea', '$ms' , '$vtp','$bcn', '$bcc','$dow' )";
+    $ins_query="insert into membership_form(fullname,age, email, phonenumber, flightcontrollername, organization, nationality, escamps, motorssizeandkv,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email','$phoneNumber', '$fcn','$org', '$nationality','$ea', '$ms' ,'$bcn', '$bcc','$dow' )";
     
     
    
         try{
             $pdo->exec($ins_query);
     $status = $uname. " your Record is added Successfully ";
+    $_SESSION['register'] = true;
+    exit();
    
         }catch(PDOException $e) {
             echo "database failed: " . $e->getMessage();
@@ -377,9 +380,7 @@ require('sql/connect.php');
 }else{
     echo "reFills the form";
 }
-$_SESSION['register'] = true;
-header("Location: index.php");
-exit();
+
 ?>
          <!-- FOOTER START -->
          <footer class="site-footer footer-large footer-dark text-white footer-style1">
