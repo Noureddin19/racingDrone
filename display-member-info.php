@@ -1,3 +1,22 @@
+<?php 
+session_start();
+$_SESSION['register'] = false;
+
+require('sql/connect.php');
+// $_SESSION["unname"] = $_POST['uname'];
+// $_SESSION['pn'] = $_POST['pn'];
+// $_SESSION['email'] = $_POST['email'];
+// $_SESSION['age'] = $_POST['age'];
+// $_SESSION['fcn'] = $_POST['fcn'];
+// $_SESSION['org'] = $_POST['org'];
+// $_SESSION['ea'] = $_POST['ea'];
+// $_SESSION['nationality'] =$_POST['nationality'];
+// $_SESSION['ms'] = $_POST['ms'];
+// $_SESSION['bcn'] = $_POST['bcn'];
+// $_SESSION['bcc'] = $_POST['bcc'];
+// $_SESSION['dow']= $_POST['dow'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -191,8 +210,7 @@
         <div class="row">
 <div class="col-md-3"></div>
   <div class="col-md-3">
-    <form action="add-membership-info.php" method="$_POST">
-
+    <form action="" method="post">    
     <center><button type="submit" name="submit" value ="submit" class="site-button site-btn-effect border border-danger justify-content-center mt-4 px-0" style="width: 90%">Confirm</button></center>
     </form>
   </div>
@@ -329,7 +347,40 @@
         
             </div>
         <!-- CONTENT END -->
-
+    <?php
+        if(isset($_POST['submit'])){
+    #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
+    $uname = $_POST['uname'];
+    $phoneNumber = $_POST['pn'];
+    $email = $_POST['email'];
+    $age = $_POST['age'];
+    $fcn = $_POST['fcn'];
+    $org = $_POST['org'];
+    $ea = $_POST['ea'];
+    $nationality =$_POST['nationality'];
+    $ms = $_POST['ms'];
+    $bcn = $_POST['bcn'];
+    $bcc = $_POST['bcc'];
+    $dow = $_POST['dow'];
+    $ins_query="insert into membership_form(fullname,age, email, phonenumber, flightcontrollername, organization, nationality, escamps, motorssizeandkv,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email','$phoneNumber', '$fcn','$org', '$nationality', '$fs','$ea', '$ms' , '$vtp','$bcn', '$bcc','$dow' )";
+    
+    
+   
+        try{
+            $pdo->exec($ins_query);
+    $status = $uname. " your Record is added Successfully ";
+   
+        }catch(PDOException $e) {
+            echo "database failed: " . $e->getMessage();
+    
+        }
+}else{
+    echo "reFills the form";
+}
+$_SESSION['register'] = true;
+header("Location: index.php");
+exit();
+?>
          <!-- FOOTER START -->
          <footer class="site-footer footer-large footer-dark text-white footer-style1">
 
