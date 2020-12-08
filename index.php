@@ -194,7 +194,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Race drone size must be 5” </h3>
+                                <h3 class="s-title-one">Racing drone must be 5"</h3>
                             </div>
                             <div class="d-icon-box-content">
                                 
@@ -212,7 +212,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one"> Flip over crash is ok</h3>
+                                <h3 class="s-title-one">Each race consists of 3 laps</h3>
                             </div> 
 
                             <div class="d-icon-box-content">
@@ -230,7 +230,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">The system must be analog </h3>
+                                <h3 class="s-title-one">There is a 5 second penalty for missing a gate</h3>
                             </div>
 
                             <div class="d-icon-box-content">
@@ -247,7 +247,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Only 4 racers at a time</h3>
+                                <h3 class="s-title-one">4 racers per round</h3>
                             </div>
 
                             <div class="d-icon-box-content">
@@ -278,7 +278,7 @@ if($_SESSION['register']){
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">5 sec penalty for missing a gate </h3>
+                                <h3 class="s-title-one">There is a 5 second penalty for missing a gate</h3>
                                 
                                
                             </div>
