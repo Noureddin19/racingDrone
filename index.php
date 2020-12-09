@@ -134,7 +134,7 @@ if($_SESSION['register']){
                 
                 <div class="overlay"></div>
                 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="100%" height="100%">
-                  <source src="media\video\Promo Nested.mp4" type="video/mp4">
+                  <source src="media\video\promo.mp4" type="video/mp4">
                 </video>
                 <div class="container ">
                   <div class="d-flex  text-center align-items-center">

@@ -11,18 +11,19 @@ require('sql/connect.php');
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
     #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
-    $uname = $_POST['uname'];
-    $phoneNumber = $_POST['pn'];
-    $email = $_POST['email'];
-    $age = $_POST['age'];
-    $fcn = $_POST['fcn'];
-    $org = $_POST['org'];
-    $ea = $_POST['ea'];
-    $nationality =$_POST['nationality'];
-    $ms = $_POST['ms'];
-    $bcn = $_POST['bcn'];
-    $bcc = $_POST['bcc'];
-    $dow = $_POST['dow'];
+    $uname = $_SESSION['uname'];
+    echo $uname;
+    $phoneNumber = $_SESSION['pn'];
+    $email = $_SESSION['email'];
+    $age = $_SESSION['age'];
+    $fcn = $_SESSION['fcn'];
+    $org = $_SESSION['org'];
+    $ea = $_SESSION['ea'];
+    $nationality =$_SESSION['nationality'];
+    $ms = $_SESSION['ms'];
+    $bcn = $_SESSION['bcn'];
+    $bcc = $_SESSION['bcc'];
+    $dow = $_SESSION['dow'];
     $ins_query="insert into membership_form(fullname,age, email, phonenumber, flightcontrollername, organization, nationality, escamps, motorssizeandkv,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email','$phoneNumber', '$fcn','$org', '$nationality','$ea', '$ms' ,'$bcn', '$bcc','$dow' )";
     
     
