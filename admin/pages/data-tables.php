@@ -42,6 +42,7 @@ header("location: ../../login.php");
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
                       
@@ -70,7 +71,7 @@ header("location: ../../login.php");
                                                 }
                                                      endwhile; ?>
                                         </div>
-                                    </div>
+                                        
                                 </li>
                                 <li>
                                     <div class="list-footer"> <a href="#">View all notifications</a></div>
