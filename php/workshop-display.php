@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
     
         }
 }
-header("Location: ../club-index.html");
+header("Location: ../club-index.php");
 exit();
 
 
