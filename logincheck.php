@@ -22,7 +22,7 @@ try {
             $pass = $result['password'];
         }
         
-        if( strcasecmp($un,"$uname")  && $pass == "$pwd"){
+        if( !(strcasecmp($un,"$uname"))  && $pass == "$pwd"){
             header('location: index.php');
             $_SESSION['login'] = true;
         }else{
