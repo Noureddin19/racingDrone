@@ -12,8 +12,6 @@ echo "dsaaaa";
 if(isset($_POST['submit'])){
     #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
     $uname = $_SESSION['uname'];
-    echo $uname;
-    echo "ASDWWWW";
     $phoneNumber = $_SESSION['pn'];
     $email = $_SESSION['email'];
     $age = $_SESSION['age'];
