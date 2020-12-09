@@ -209,7 +209,7 @@ $_SESSION['dow']= $_POST['dow'];
         <div class="row">
 <div class="col-md-3"></div>
   <div class="col-md-3">
-    <form action="add-membership-info.php" method="POST">
+    <form action="php/add-membership-info.php" method="POST">
     <center><button type="submit" name="submit" value ="submit" class="site-button site-btn-effect border border-danger justify-content-center mt-4 px-0" style="width: 90%">Submit</button></center>
     </form>
   </div>
