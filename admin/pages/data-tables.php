@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require('../../sql/connect.php');
+//require('../../sql/connect.php');
 if(!$_SESSION['logged']){
 header("location: ../../login.php");
 }else{
@@ -52,9 +52,12 @@ header("location: ../../login.php");
                                     <div class="notification-title"> Notification</div>
                                     <div class="notification-list">
                                         <?php  
-                                                $statment = "SELECT * FROM `notification`";                                               "
-                                                 $i=0;
-                                                while($i<=5): ?>
+                                                $statment = "SELECT * FROM `notification`";                                               
+                                                $i=0;
+                                               while($i <= 5):  
+                                               endwhile;
+                                                    
+                                                    ?>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="../assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
