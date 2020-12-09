@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
         try{
             $pdo->exec($ins_query);
     $status = $uname. " your Record is added Successfully ";
-    $notification = "new member ship register in the coopetiton";
+    $notification = " new member ship register in the coopetiton";
     $date = date("Y-m-d");
     $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
     $pdo->exec($nof_qury);
