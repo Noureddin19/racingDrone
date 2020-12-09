@@ -1,8 +1,12 @@
 <?php 
 session_start();
-echo"asda";
-if(!$_SESSION['login']){
+
+
+if(!$_SESSION['logged']){
+    
 header("../../index.php");
+}else{
+    echo "sdfsd";
 }
 ?>
 
