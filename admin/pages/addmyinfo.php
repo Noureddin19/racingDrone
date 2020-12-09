@@ -1,51 +1,4 @@
 
-<?php
-session_start();
-
-$_SESSION['register'] = false;
-
-try{
-    require('../../sql/connect.php');
-}catch(PDOException $e) {
-    echo "database failed: " . $e->getMessage();
-
-}
-//require('sql/createDB.php');
-//require('sql/league-table.php'); # allow you to add a php file
-#isset : allows you to check that #it is decleard # it is not null
-if(isset($_POST['submit'])){
-    #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
-    $uname = $_POST['uname'];
-    $phoneNumber = $_POST['pn'];
-    $email = $_POST['email'];
-    $age = $_POST['age'];
-    $fcn = $_POST['fcn'];
-    $org = $_POST['org'];
-    $ea = $_POST['ea'];
-    $nationality =$_POST['nationality'];
-    $ms = $_POST['ms'];
-    $bcn = $_POST['bcn'];
-    $bcc = $_POST['bcc'];
-    $dow = $_POST['dow'];
-    $ins_query="INSERT into membership_form(fullname,age, email, phonenumber, flightcontrollername, organization, nationality, escamps, motorssizeandkv,batterycellsnumber, batterycellscapacity, overallweight)values('$uname','$age', '$email','$phoneNumber', '$fcn','$org', '$nationality','$ea', '$ms' ,'$bcn', '$bcc','$dow' )";
-    
-    
-   
-        try{
-            $pdo->exec($ins_query);
-    
-   
-        }catch(PDOException $e) {
-            echo "database failed: " . $e->getMessage();
-    
-        }
-}
-$_SESSION['register'] = true;
-header("Location: ../index.php");
-exit();
-
-?>
-
 <html>
 <head>	
 <meta charset="utf-8">
@@ -168,7 +121,7 @@ exit();
 	<br/><br/>
 	
 	
-	<form action="addmyinfo.php" method="post" class="was-validated ">
+	<form action="add-display.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
             <div class="form-group text-left">
                 <label for="fullname" class="left">Full Name</label>
@@ -249,7 +202,7 @@ exit();
             </div>
 			
             <center>
-            <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
+            <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Add</button>
             </center>
         </form>
 </body>
