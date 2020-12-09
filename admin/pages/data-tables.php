@@ -1,3 +1,11 @@
+<?php 
+session_start();
+echo"asda";
+if(!$_SESSION['login']){
+header("../../index.php");
+}
+?>
+
 
 <!doctype html>
 <html lang="en">

@@ -26,7 +26,7 @@ try {
             header('location: ../index.php');
             $_SESSION['login'] = true;
         }else{
-            header('location: login.php');
+            header('location: ../login.php');
             $_SESSION['login'] = false;
         }
         
