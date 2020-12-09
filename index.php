@@ -633,6 +633,7 @@ if($_SESSION['register']){
                         </ul>
         
                     <ul class="social-icons  wt-social-links footer-social-icon">
+                        <li><a target="_blank" href="https://instagram.com/psurdc?igshid=uafj76h5r67m" class="fa fa-instagram"></a></li>
                         <li><a target="_blank" href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
                         <li><a target="_blank" href="https://twitter.com/riotulab" class="fa fa-twitter"></a></li>
                         <li><a target="_blank" href="http://linkedin.com/in/anis-koubaa-84aa4344" class="fa fa-linkedin"></a></li>
