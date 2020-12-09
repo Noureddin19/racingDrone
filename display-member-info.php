@@ -4,18 +4,18 @@ $_SESSION['register'] = false;
 header("Location: index.php");
 
 require('sql/connect.php');
-// $_SESSION["unname"] = $_POST['uname'];
-// $_SESSION['pn'] = $_POST['pn'];
-// $_SESSION['email'] = $_POST['email'];
-// $_SESSION['age'] = $_POST['age'];
-// $_SESSION['fcn'] = $_POST['fcn'];
-// $_SESSION['org'] = $_POST['org'];
-// $_SESSION['ea'] = $_POST['ea'];
-// $_SESSION['nationality'] =$_POST['nationality'];
-// $_SESSION['ms'] = $_POST['ms'];
-// $_SESSION['bcn'] = $_POST['bcn'];
-// $_SESSION['bcc'] = $_POST['bcc'];
-// $_SESSION['dow']= $_POST['dow'];
+$_SESSION["unname"] = $_POST['uname'];
+$_SESSION['pn'] = $_POST['pn'];
+$_SESSION['email'] = $_POST['email'];
+$_SESSION['age'] = $_POST['age'];
+$_SESSION['fcn'] = $_POST['fcn'];
+$_SESSION['org'] = $_POST['org'];
+$_SESSION['ea'] = $_POST['ea'];
+$_SESSION['nationality'] =$_POST['nationality'];
+$_SESSION['ms'] = $_POST['ms'];
+$_SESSION['bcn'] = $_POST['bcn'];
+$_SESSION['bcc'] = $_POST['bcc'];
+$_SESSION['dow']= $_POST['dow'];
 
 ?>
 <!DOCTYPE html>
