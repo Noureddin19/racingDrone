@@ -5,7 +5,7 @@
     #step5 : create the table
     $sql = "CREATE TABLE IF NOT EXISTS membership_form(
     username VARCHAR(30),
-    notification VARCHAR(12),
+    notification VARCHAR(12)
 )";
     
     //step6 : run the query
