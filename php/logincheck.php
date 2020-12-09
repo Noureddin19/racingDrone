@@ -24,7 +24,7 @@ try {
         }
         
         if( !(strcasecmp($un,"$uname"))  && $pass == "$pwd"){
-            header('location: ../index.php');
+            header('location: ../admin/pages/data-tables.php');
             $_SESSION['login'] = true;
             $_SESSION['logged'] = true;
         }else{
