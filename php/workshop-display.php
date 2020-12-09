@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
     $exp = $_REQUEST['exp'];
     
     $ins_query="insert into workshop_form(fullname, email, phonenumber, city, country,student, affiliation, experience)values('$uname','$email', '$phoneNumber','$city', '$country', '$student','$aff', '$exp' )";
-    echo $ins_query;
+    
    
     
         try{
