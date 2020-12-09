@@ -1,8 +1,4 @@
-
 <?php
-session_start();
-
-$_SESSION['register'] = false;
 
 try{
     require('../../sql/connect.php');
@@ -33,15 +29,15 @@ if(isset($_POST['submit'])){
    
         try{
             $pdo->exec($ins_query);
-            $_SESSION['register'] = true;
-           
-   
+     
         }catch(PDOException $e) {
             echo "database failed: " . $e->getMessage();
     
         }
 }
-header("Location: data-tables.php");
+
+header('location: data-tables.php');
+
 
 
 ?>

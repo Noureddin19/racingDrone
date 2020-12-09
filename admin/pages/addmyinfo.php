@@ -125,38 +125,38 @@
         <h3>Personal Information</h3>
             <div class="form-group text-left">
                 <label for="fullname" class="left">Full Name</label>
-                <input type="text" class="form-control border" id="fullname" placeholder="Enter Name" name="fullname" value="<?php echo $fullname ?>" required>
+                <input type="text" class="form-control border" id="fullname" placeholder="Enter Name" name="fullname"  required>
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             
             <div class="form-group text-left">
                 <label for="phone">Phone Number</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="eg. 966xxxxxxxxx" name="pn" value="<?php echo $phoneNumber?>" required>
+                <input type="text" class="form-control border" id="pwd" placeholder="eg. 966xxxxxxxxx" name="pn"  required>
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="email">Email</label>
-                <input type="email" class="form-control border" id="pwd" placeholder="eg. email@example.com" name="email" value="<?php echo $email ?>" required>
+                <input type="email" class="form-control border" id="pwd" placeholder="eg. email@example.com" name="email"  required>
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="nationality">Nationality</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Nationality" name="nationality" value="<?php echo $nationality ?>" required>
+                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Nationality" name="nationality"  required>
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="age">Age</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Age" name="age" value="<?php echo $age?>" required>
+                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Age" name="age"  required>
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="org">Organization</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Organization" name="org" value="<?php echo $org?>" required>
+                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Organization" name="org"  required>
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
@@ -166,37 +166,37 @@
             <p>This section is optional. If your planning to participate using the similator you can skip it</p>
             <div class="form-group text-left">
                 <label for="pwd">Flight Controller Name</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Flight Controller Name" name="fcn" value="<?php echo $fcn?>" >
+                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Flight Controller Name" name="fcn"  >
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="pwd">ESC Amps (in ampere)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your ESC Amps" name="ea" value="<?php echo $ea?>" >
+                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your ESC Amps" name="ea"  >
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="pwd">Motor Size and KV</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Motor Size and KV" name="ms" value="<?php echo $ms?>">
+                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Motor Size and KV" name="ms" >
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="pwd">Battery Cells</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Battery cells number" name="bcn" value="<?php echo $bcn?>">
+                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Battery cells number" name="bcn" >
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="pwd">Battery Capacity (in milliampere)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Battery cells capacity" name="bcc" value="<?php echo $bcc?>">
+                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Battery cells capacity" name="bcc" >
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
             <div class="form-group text-left">
                 <label for="pwd">Drone Overall Weight with Battery (in grams)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Drone's Overall Weight" name="dow" value="<?php echo $dow?>">
+                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Drone's Overall Weight" name="dow" >
                 <div class="valid-feedback">Valid</div>
                 <div class="invalid-feedback">Required</div>
             </div>
