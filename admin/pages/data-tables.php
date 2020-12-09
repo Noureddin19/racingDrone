@@ -206,6 +206,7 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
+                                <a  href="addmyinfo.php<?php echo $row['membershipid'];?>" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
@@ -224,7 +225,6 @@ header("location: ../../login.php");
                     <th>batterycellsnumber</th>
                     <th>batterycellscapacity</th>
                     <th>overallweight</th>
-                    <th>Add</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 
@@ -263,7 +263,7 @@ header("location: ../../login.php");
                        <td><?php echo $row["batterycellsnumber"] ?></td>
                        <td><?php echo $row["batterycellscapacity"] ?></td>
                        <td><?php echo $row["overallweight"] ?></td>
-                       <td><a  href="addmyinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-success">Add</td>
+                      
                        <td><a  href="editinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-primary">Edit</td>
                        <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?membershipid=<?php echo $row['membershipid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
