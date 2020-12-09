@@ -62,7 +62,8 @@ header("location: ../../login.php");
                                                     </div>
                                                 </div>
                                             </a>
-                                               <?php endwhile; ?>
+                                               <?php $i++;
+                                                     endwhile; ?>
                                         </div>
                                     </div>
                                 </li>
