@@ -6,8 +6,6 @@ $_SESSION['register'] = false;
 require('sql/connect.php');
 //require('sql/createDB.php');
 //require('sql/league-table.php'); # allow you to add a php file
-echo "dsaaaa";
-
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
     #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
