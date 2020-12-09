@@ -29,7 +29,10 @@ if(isset($_POST['submit'])){
    
         try{
             $pdo->exec($ins_query);
-     
+            $notification = " new-racer";
+            $date = date("Y-m-d");
+            $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
+            $pdo->exec($nof_qury);
         }catch(PDOException $e) {
             echo "database failed: " . $e->getMessage();
     
