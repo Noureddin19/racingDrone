@@ -21,8 +21,8 @@ try {
             $un = $result['username'];
             $pass = $result['password'];
         }
-        
-        if( !(strcasecmp($un,"$uname"))  && $pass == "$pwd"){
+
+        if($un == "$uname" && $pass == "$pwd"){
             header('location: index.php');
             $_SESSION['login'] = true;
         }else{
