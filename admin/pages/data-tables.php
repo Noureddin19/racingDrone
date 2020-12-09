@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../sql/connect.php');
 if(!$_SESSION['logged']){
 header("location: ../../login.php");
 }else{
@@ -50,35 +51,14 @@ header("location: ../../login.php");
                                 <li>
                                     <div class="notification-title"> Notification</div>
                                     <div class="notification-list">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action active">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
-                                                        <div class="notification-date">2 min ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php  echo $_SESSION["userName"];?></span>is now following you
-                                                        <div class="notification-date">2 days ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
-                                                        <div class="notification-date">2 min ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                        <?php  
+                                                $statment = "SELECT * FROM `notification`";                                               "
+                                                 $i=0;
+                                                while($i<=5): ?>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="../assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php  ?></span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
