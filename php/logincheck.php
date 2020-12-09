@@ -9,7 +9,7 @@ include("../sql/connect.php");
 if(isset($_POST['submit'])) {    
     $uname = $_POST['uname'];
     $pwd = $_POST['pass'];
-    $_POST["userName"] = $_POST['uname'];
+    $_SESSION["userName"] = $_POST['uname'];
 }
      
     // if all the fields are filled (not empty)             
