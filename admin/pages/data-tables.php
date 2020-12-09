@@ -52,17 +52,22 @@ header("location: ../../login.php");
                                     <div class="notification-title"> Notification</div>
                                     <div class="notification-list">
                                         <?php  
-                                                $statment = "SELECT * FROM `notification` ORDER BY `creation` DESC";                                               
+                                                $statment = $pdo->prepare ("SELECT * FROM `notification` ORDER BY `creation` DESC");                                               
+                                                $statment->execute();
                                                 $i=0;
-                                               while($i <= 5):?>
+                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                                ?>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php $statment["username"] ?></span><?php $statment["notification"] ?>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php echo $row["username"]; ?></span><?php echo $row["notification"]; ?>
                                                         
                                                     </div>
                                                 </div>
                                             </a>
                                                <?php $i++;
+                                                if($i == 5){
+                                                    break;
+                                                }
                                                      endwhile; ?>
                                         </div>
                                     </div>
@@ -214,7 +219,6 @@ header("location: ../../login.php");
                 <?php
                 try{
                     echo dirname('data-tables.php');
-                     include('../../sql/connect.php');
                  
                  }catch(PDOException $e) {
                      echo "Error: " . $e->getMessage();
