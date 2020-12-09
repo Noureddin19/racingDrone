@@ -23,7 +23,7 @@ if(isset($_POST['Submit'])) {
             echo "<font color='red'>Last Name should not be empty.</font><br/>";
         }
         
-        if(empty($email)) {
+        if(empty($email)){
             echo "<font color='red'>Email field is empty.</font><br/>";
         }
         
