@@ -1,6 +1,6 @@
 <?php 
 session_start();
-//require('../../sql/connect.php');
+require('../../sql/connect.php');
 if(!$_SESSION['logged']){
 header("location: ../../login.php");
 }else{
@@ -52,20 +52,17 @@ header("location: ../../login.php");
                                     <div class="notification-title"> Notification</div>
                                     <div class="notification-list">
                                         <?php  
-                                                $statment = "SELECT * FROM `notification`";                                               
+                                                $statment = "SELECT * FROM `notification` ORDER BY `creation` DESC";                                               
                                                 $i=0;
-                                               while($i <= 5):  
-                                               endwhile;
-                                                    
-                                                    ?>
+                                               while($i <= 5):?>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php  ?></span>accepted your invitation to join the team.
-                                                        <div class="notification-date">2 min ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php $statment["username"] ?></span><?php $statment["notification"] ?>
+                                                        
                                                     </div>
                                                 </div>
                                             </a>
+                                               <?php endwhile; ?>
                                         </div>
                                     </div>
                                 </li>
