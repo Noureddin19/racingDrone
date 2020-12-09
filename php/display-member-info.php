@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-require('sql/connect.php');
+require('../sql/connect.php');
 $_SESSION["uname"] = $_POST['uname'];
 $_SESSION['pn'] = $_POST['pn'];
 $_SESSION['email'] = $_POST['email'];

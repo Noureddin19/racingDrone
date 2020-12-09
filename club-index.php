@@ -826,7 +826,7 @@
                                                       <!-- Modal body -->
                                                       <div class="modal-body bg-white mt-4 z-index-2000000" >
                                               
-                                                          <form action="workshop-display.php" class="was-validated " method="POST">
+                                                          <form action="php/workshop-display.php" class="was-validated " method="POST">
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Full Name</label>
                                                                   <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="uname" required>

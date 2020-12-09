@@ -3,7 +3,7 @@ session_start();
 
 $_SESSION['register'] = false;
 
-require('sql/connect.php');
+require('../sql/connect.php');
 //require('sql/createDB.php');
 //require('sql/league-table.php'); # allow you to add a php file
 #isset : allows you to check that #it is decleard # it is not null
@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
     echo "reFills the form";
 }
 $_SESSION['register'] = true;
-header("Location: index.php");
+header("Location: ../index.php");
 exit();
 
 ?>

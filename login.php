@@ -219,7 +219,7 @@ session_start();
 
         ?>
 
-        <form action="logincheck.php" method="post" class="was-validated ">
+        <form action="php/logincheck.php" method="post" class="was-validated ">
         <h3>Log in</h3>
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Username</label>

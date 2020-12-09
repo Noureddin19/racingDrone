@@ -3,7 +3,7 @@
 session_start();
 $_SESSION['login'] = true;
 
-include("sql/connect.php");
+include("../sql/connect.php");
  
 if(isset($_POST['submit'])) {    
     $uname = $_POST['uname'];
@@ -23,7 +23,7 @@ try {
         }
         
         if( !(strcasecmp($un,"$uname"))  && $pass == "$pwd"){
-            header('location: index.php');
+            header('location: ../index.php');
             $_SESSION['login'] = true;
         }else{
             header('location: login.php');

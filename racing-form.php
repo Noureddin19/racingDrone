@@ -205,7 +205,7 @@
             </div>
             </div>
 
-        <form action="display-member-info.php" method="post" class="was-validated ">
+        <form action="php/display-member-info.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
             <div class="form-group text-left">
                 <label for="uname" class="left">Full Name</label>

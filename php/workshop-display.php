@@ -1,8 +1,8 @@
 <?php
- require('sql/connect.php');
+ require('../sql/connect.php');
     
-require('sql/createDB.php');
-require('sql/createWorkshopTable.php'); # allow you to add a php file
+//require('sql/createDB.php');
+//require('sql/createWorkshopTable.php'); # allow you to add a php file
 $status = ""; # for user that message is successfully recorded in database
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     
         }
 }
-header("Location: club-index.html");
+header("Location: ../club-index.html");
 exit();
 
 
