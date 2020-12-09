@@ -40,7 +40,7 @@ header("../../index.php");
         <!-- ============================================================== -->
          <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../index.html">Concept</a>
+                <a class="navbar-brand" href="../index.html">Admin</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -114,7 +114,7 @@ John Abraham</h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="../../club-index.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -151,7 +151,7 @@ John Abraham</h5>
                                             <a class="nav-link" href="general-table.html">General Tables</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="data-tables.html">Data Tables</a>
+                                            <a class="nav-link" href="data-tables.php">Data Tables</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -210,12 +210,25 @@ John Abraham</h5>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
+                    <th>id</th>
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
                     <th>Age</th>
-                    <th>Exp</th>
-                    <th>1</th>
+                    <th>flightcontrollername</th>
+                    <th>organization</th>
+                    
+                    <th>escamps</th>
+                    <th>nationality</th>
+                    <th>motorssizeandkv</th>
+                   
+                    <th>batterycellsnumber</th>
+                    <th>batterycellscapacity</th>
+                    <th>overallweight</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                
+                </th>
                 </tr>
             </thead>
             <tbody>
@@ -230,7 +243,7 @@ John Abraham</h5>
                 try{
                     $count =1;
               
-                $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid desc;");
+                $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
@@ -241,6 +254,18 @@ John Abraham</h5>
                        <td><?php echo $row["email"] ?></td>
                        <td><?php echo $row["age"] ?></td>
                        <td><?php echo $row["flightcontrollername"] ?></td>
+                       <td><?php echo $row["organization"] ?></td>
+                       
+                       <td><?php echo $row["escamps"] ?></td>
+                       <td><?php echo $row["nationality"] ?></td>
+                       <td><?php echo $row["motorssizeandkv"] ?></td>
+                       
+                       <td><?php echo $row["batterycellsnumber"] ?></td>
+                       <td><?php echo $row["batterycellscapacity"] ?></td>
+                       <td><?php echo $row["overallweight"] ?></td>
+                    
+                       <td><a  href="editinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-success">Edit</td>
+                       <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?membershipid=<?php echo $row['membershipid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     
               <?php
