@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
     echo "reFills the form";
 }
 $_SESSION['register'] = true;
-//header("Location: index.php");
+header("Location: index.php");
 exit();
 
 ?>
