@@ -1,10 +1,7 @@
 <?php 
 session_start();
-
-
 if(!$_SESSION['logged']){
-    
-header("../../index.php");
+header("location: ../../login.php");
 }else{
     echo "sdfsd";
 }
