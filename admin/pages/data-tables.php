@@ -6,7 +6,7 @@ if(!$_SESSION['logged']){
     
 header("../../index.php");
 }else{
-    echo "sdfsd";
+    header("../../index.php");
 }
 ?>
 

@@ -211,12 +211,12 @@ session_start();
         <div class="page-content container p-5" id="home1" >
 
         <?php 
-        echo $_SESSION['login'];
-        if(!($_SESSION['login']===true)){
-            
+        if( isset($_SESSION['login'])){
+        if(!($_SESSION['login'])){
+
             $_SESSION['login'] = true;
             echo "<script type='text/javascript'>alert('Invalid login: incorrect username or password');</script>";
-        }
+        }}
 
         ?>
 
