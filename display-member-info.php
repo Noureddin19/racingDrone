@@ -2,7 +2,7 @@
 session_start();
 
 require('sql/connect.php');
-$_SESSION["unname"] = $_POST['uname'];
+$_SESSION["uname"] = $_POST['uname'];
 $_SESSION['pn'] = $_POST['pn'];
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['age'] = $_POST['age'];
