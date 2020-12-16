@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -205,6 +211,8 @@
             </div>
             </div>
 
+
+
         <form action="display-member-info.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
             <div class="form-group text-left">
@@ -289,6 +297,15 @@
             <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Confirm</button>
             </center>
         </form>
+        
+        <?php 
+
+// if(!$_SESSION['register']){
+//     $_SESSION['register'] = true;
+//     echo "<script type='text/javascript'>alert('Invalid registration: email already exists');</script>";
+// }
+
+?>
 
 
         </div>
