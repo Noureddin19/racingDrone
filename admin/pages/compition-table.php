@@ -1,10 +1,9 @@
 <?php 
 session_start();
+
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
 header("location: ../../login.php");
-}else{
-    echo "sdfsd";
 }
 ?>
 
@@ -26,6 +25,110 @@ header("location: ../../login.php");
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
+    <link rel="icon" href="../../mages/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
+
+    <!-- PAGE TITLE HERE -->
+    <title>Admin - Table</title>
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- BOOTSTRAP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!-- FONTAWESOME STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
+
+    <!-- OWL CAROUSEL STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css">
+
+    <!-- SLICK SLIDER STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../../css/slick-theme.css">
+
+    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
+    <!-- MAGNIFIC POPUP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
+    <!-- LOADER STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
+    <!-- MAIN STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <!-- FLATICON STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
+    <!-- THEME COLOR CHANGE STYLE SHEET -->
+    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- BOOTSTRAP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!-- FONTAWESOME STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
+
+    <!-- OWL CAROUSEL STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../ss/owl.carousel.min.css">
+
+    <!-- SLICK SLIDER STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+
+    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
+    <!-- MAGNIFIC POPUP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
+    <!-- LOADER STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
+    <!-- MAIN STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <!-- FLATICON STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
+    <!-- THEME COLOR CHANGE STYLE SHEET -->
+    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
+    
+
+
+
+
+
+
+
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
+    <!-- REVOLUTION NAVIGATION STYLE -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+
+
+
+
+
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
+    <!-- REVOLUTION NAVIGATION STYLE -->
+    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -94,6 +197,7 @@ header("location: ../../login.php");
                 </div>
             </nav>
         </div>
+
         <!-- ============================================================== -->
         <!-- end navbar -->
         <!-- ============================================================== -->
@@ -132,17 +236,6 @@ header("location: ../../login.php");
                            
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-fw fa-table"></i>Admins</a>
-                                <div id="submenu-4" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="admin-table.php">Admin Table</a>
-                                        </li>
-                                       
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Content</a>
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
@@ -156,6 +249,21 @@ header("location: ../../login.php");
                                     </ul>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Content</a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">club content</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">compition contnet</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </li>
+                           
                           
                           
                           
@@ -164,6 +272,104 @@ header("location: ../../login.php");
                 </nav>
             </div>
         </div>
+        <?php
+// including the database connection file
+
+
+if(isset($_POST['update']))
+{	
+	
+	$content = $_POST['contents'];
+	
+   
+	
+	// checking empty fields
+	if(empty($content)) {			
+			echo "<font color='red'>refill the content.</font><br/>";
+			
+	} else {	
+		//updating the table
+		
+		$stmt = $pdo->prepare("UPDATE club_content_table SET content='$content' WHERE type='$type';");
+		$stmt->execute();
+		header('Location: compition-table.php');
+		//redirectig to the display page. In our case, it is myinof.php
+		
+	}
+}
+
+
+
+//getting id from url
+//selecting data associated with this particular id
+try{
+
+
+$stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
+$stmt->execute();
+
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
+	$type = $row['type'];
+	$content = $row['content'];
+  
+}
+
+ 
+}catch(PDOException $e) {
+	echo "Error: " . $e->getMessage();
+  }
+?>
+        <div class="container ">
+                                              
+                                              <!-- Button to Open the Modal -->
+                                            
+                                            
+                                              <!-- The Modal -->
+                                              <div class="modal fade" id="myModal1" >
+                                                <div class="modal-dialog" >
+                                                  <div class="modal-content">
+                                                  
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header" >
+                                                     
+                                                      <h3 class="modal-title" >Edit</h3>
+                                                        
+                                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                      
+                                                    </div>
+                                                    
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body bg-white mt-4 z-index-2000000" >
+                                            
+                                                        <form action="admin-table.php" class="was-validated " method="POST">
+                                                            <div class="form-group text-left">
+                                                                <label for="uname" class="left">type</label>
+                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="types" value="<?php echo $type ?>"  disabled>
+                                                                <div class="valid-feedback">Valid.</div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                           
+                                                            <div class="form-group text-left">
+                                                                <label for="pwd">content</label>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $content ?>" required>
+                                                                <div class="valid-feedback">Valid.</div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                            
+                                                           
+                                                          
+                                                          
+
+                                                            <button type="submit" class="btn btn-primary text-dark text-center" style="background: inherit; border-color: red;" name="update">Send</button>
+                                                        </form>
+                                                    </div>
+                                              
+                                              
+                                                      
+                                                      </div>
+                                                  
+                                                 </div>
+                                            </div>
         <!-- ============================================================== -->
         <!-- end left sidebar -->
         <!-- ============================================================== -->
@@ -204,69 +410,42 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo.php<?php echo $row['membershipid'];?>" class="btn btn-success">Add</a>
+                                <a  href="addmyinfo.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>id</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Age</th>
-                    <th>flightcontrollername</th>
-                    <th>organization</th>
-                    
-                    <th>escamps</th>
-                    <th>nationality</th>
-                    <th>motorssizeandkv</th>
-                   
-                    <th>batterycellsnumber</th>
-                    <th>batterycellscapacity</th>
-                    <th>overallweight</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Catagory</th>
                     <th>Edit</th>
                     <th>Delete</th>
-                
-                </th>
+                    
+               
                 </tr>
             </thead>
             <tbody>
                 <?php
+                
                 try{
-                    echo dirname('data-tables.php');
-                 
-                 }catch(PDOException $e) {
-                     echo "Error: " . $e->getMessage();
-                   }
-                try{
-                    $count =1;
+                
               
-                $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid;");
+                $stmt = $pdo->prepare("SELECT * FROM adminTable ORDER BY username;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
-                       <td><?php echo $count; ?></td>
-                       <td><?php echo $row["fullname"] ?></td>
-                       <td><?php echo $row["phonenumber"] ?></td>
-                       <td><?php echo $row["email"] ?></td>
-                       <td><?php echo $row["age"] ?></td>
-                       <td><?php echo $row["flightcontrollername"] ?></td>
-                       <td><?php echo $row["organization"] ?></td>
-                       
-                       <td><?php echo $row["escamps"] ?></td>
-                       <td><?php echo $row["nationality"] ?></td>
-                       <td><?php echo $row["motorssizeandkv"] ?></td>
-                       
-                       <td><?php echo $row["batterycellsnumber"] ?></td>
-                       <td><?php echo $row["batterycellscapacity"] ?></td>
-                       <td><?php echo $row["overallweight"] ?></td>
                       
-                       <td><a  href="editinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-primary">Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?membershipid=<?php echo $row['membershipid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                       <td><?php echo $row["username"] ?></td>
+                       <td><?php echo $row["password"] ?></td>
+                       <td><?php echo $row["category"] ?></td>
+                       
+                      
+                       <td><a href="editinfo-admin.php?username=<?php echo $row['username']; ?>" class="btn btn-primary text-white" >Edit</td>
+                       <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?username=<?php echo $row['username']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     
               <?php
-                  $count++;}
+                }
                 }catch(PDOException $e) {
                     echo "Error: " . $e->getMessage();
                   }

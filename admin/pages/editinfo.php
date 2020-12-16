@@ -38,8 +38,11 @@ if(isset($_POST['update']))
 	} else {	
 		//updating the table
 		
-		$stmt = $pdo->prepare("UPDATE membership_form SET fullname='$fullname', age='$age', email='$email', phonenumber='$phoneNumber', flightcontrollername='$fcn', organization='$org', escamps='$ea',
-		nationality='$nationality', motorssizeandkv='$ms', batterycellsnumber='$bcn', batterycellscapacity='$bcc', overallweight='$dow'  WHERE membershipid='$id';");
+		$stmt = $pdo->prepare("UPDATE membership_form SET fullname='$fullname',
+         age='$age', email='$email', phonenumber='$phoneNumber', flightcontrollername='$fcn', 
+         organization='$org', escamps='$ea',
+		nationality='$nationality', motorssizeandkv='$ms', batterycellsnumber='$bcn', 
+        batterycellscapacity='$bcc', overallweight='$dow'  WHERE membershipid='$id';");
 		$stmt->execute();
 		header('Location: data-tables.php');
 		//redirectig to the display page. In our case, it is myinof.php

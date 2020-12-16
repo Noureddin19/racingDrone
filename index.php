@@ -1,6 +1,7 @@
 <?php 
 
 session_start();
+require('sql/connect.php');
 
 if($_SESSION['register']){
     echo "<script type='text/javascript'>alert('Registered Successfully!');</script>";
@@ -158,10 +159,23 @@ if($_SESSION['register']){
                 <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30">
-                    <h2 class=" text-center">PSU Drone Racing League</h2>
-                    <p>Prince Sultan University (PSU) is glad to organize and host the first edition of PSU Drone Racing League in its premises.</p>
-                    <p>The objective of this competition is to gather racing drones' professionals and hobbiests in Saudi Arabia and promote the racing drones as a sport activity in the Kingdom.</p>
-                    <p>The PSU Drone Racing League is an event authorized by the General Authority of Civil Aviation (GACA) in Saudi Arabia. </p>
+                    <h2 class=" text-center"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='about-header'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?></h2>
+                    <p><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='about'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?></p>
+                    
                     
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>
@@ -190,30 +204,43 @@ if($_SESSION['register']){
         <h2>Rules & Regulations</h2>
     </div>
     <!-- TITLE END-->
-
+    <?php ?>
     <div class="section-content">
         <div class="row justify-content-center d-flex how-it-drone3">
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-left">
 
+            <?php  
+                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id`");                                               
+                                                $statment->execute();
+                                                $i=0;
+                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                                ?>
+                                           
+                                           <div class="wt-icon-box-wraper right ">
+
+<div class="icon-md inline-icon">
+    <span class="icon-cell site-text-secondry"><i
+            class="number-style"><?php echo "0".$row['id']; ?></i></span>
+</div>
+<div class="icon-content">
+    <div class="d-icon-box-title title-style-2 site-text-secondry">
+        <h3 class="s-title-one"><?php echo $row['rule']; ?></h3>
+    </div>
+    <div class="d-icon-box-content">
+        
+    </div>
+</div>
+
+</div>
+</div>
+                                               <?php $i++;
+                                                if($i == 4){
+                                                    break;
+                                                }
+                                                     endwhile; ?>
                 <div class="wt-box d-icon-box-two m-b40 mb-5">
-                    <div class="wt-icon-box-wraper right ">
-
-                        <div class="icon-md inline-icon">
-                            <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">01</i></span>
-                        </div>
-                        <div class="icon-content">
-                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Racing drone size must be 5”</h3>
-                            </div>
-                            <div class="d-icon-box-content">
-                                
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+               
 
                 <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
                     <div class="wt-icon-box-wraper right">

@@ -810,7 +810,7 @@
                                               
                                               
                                                 <!-- The Modal -->
-                                                <div class="modal fade " id="myModal1" >
+                                                <div class="modal fade" id="myModal1" >
                                                   <div class="modal-dialog" >
                                                     <div class="modal-content">
                                                     
