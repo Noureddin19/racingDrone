@@ -142,7 +142,20 @@ header("location: ../../login.php");
                                     </ul>
                                 </div>
                             </li>
-                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Content</a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">club content</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">compition contnet</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </li>
                           
                           
                           
