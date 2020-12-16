@@ -1,6 +1,7 @@
 <?php 
 
 session_start();
+require('sql/connect.php');
 
 if($_SESSION['register']){
     echo "<script type='text/javascript'>alert('Registered Successfully!');</script>";
@@ -158,10 +159,23 @@ if($_SESSION['register']){
                 <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30">
-                    <h2 class=" text-center">PSU Drone Racing League</h2>
-                    <p>Prince Sultan University (PSU) is glad to organize and host the first edition of PSU Drone Racing League in its premises.</p>
-                    <p>The objective of this competition is to gather racing drones' professionals and hobbiests in Saudi Arabia and promote the racing drones as a sport activity in the Kingdom.</p>
-                    <p>The PSU Drone Racing League is an event authorized by the General Authority of Civil Aviation (GACA) in Saudi Arabia. </p>
+                    <h2 class=" text-center"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='about-header'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?></h2>
+                    <p><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='about'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?></p>
+                    
                     
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>

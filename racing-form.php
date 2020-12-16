@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+require('sql/connect.php');
 
 ?>
 
