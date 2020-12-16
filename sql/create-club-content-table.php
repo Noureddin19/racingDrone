@@ -3,7 +3,7 @@
     
    
     #step5 : create the table
-    $sql = "CREATE TABLE IF NOT EXISTS membership_form(
+    $sql = "CREATE TABLE IF NOT EXISTS club-content-table(
     id int(12) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     type VARCHAR(30),
     content VARCHAR(12),
