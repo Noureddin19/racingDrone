@@ -1,3 +1,13 @@
+<?php 
+session_start();
+require('../../sql/connect.php');
+if(!$_SESSION['logged']){
+header("location: ../../login.php");
+}else{
+    echo "sdfsd";
+}
+?>
+
 
 <!doctype html>
 <html lang="en">
@@ -26,83 +36,58 @@
          <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-         <div class="dashboard-header">
+        <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../index.html">Concept</a>
+                <a class="navbar-brand" href="../index.php">Admin</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item">
-                            <div id="custom-search" class="top-search-bar">
-                                <input class="form-control" type="text" placeholder="Search..">
-                            </div>
-                        </li>
+                      
                         <li class="nav-item dropdown notification">
                             <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
                                 <li>
                                     <div class="notification-title"> Notification</div>
                                     <div class="notification-list">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action active">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
-                                                        <div class="notification-date">2 min ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                        <?php  
+                                                $statment = $pdo->prepare ("SELECT * FROM `notification` ORDER BY `creation` DESC");                                               
+                                                $statment->execute();
+                                                $i=0;
+                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                                ?>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">
-John Abraham</span>is now following you
-                                                        <div class="notification-date">2 days ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php echo $row["username"]; ?></span><?php echo $row["notification"]; ?>
+                                                        
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
-                                                        <div class="notification-date">2 min ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
-                                                        <div class="notification-date">2 min ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                               <?php $i++;
+                                                if($i == 5){
+                                                    break;
+                                                }
+                                                     endwhile; ?>
                                         </div>
-                                    </div>
+                                        
                                 </li>
                                 <li>
                                     <div class="list-footer"> <a href="#">View all notifications</a></div>
                                 </li>
                             </ul>
                         </li>
-                        
-                                <li>
-                                    <div class="conntection-footer"><a href="#">More</a></div>
-                                </li>
-                            </ul>
-                        </li>
+                    
                         <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">
-John Abraham</h5>
+                                    <h5 class="mb-0 text-white nav-user-name"><?php  echo $_SESSION["userName"];?></h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="../../club-index.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -136,17 +121,28 @@ John Abraham</h5>
                                 <div id="submenu-5" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="general-table.html">General Tables</a>
+                                            <a class="nav-link" href="general-table.php">General Tables</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="data-tables.html">Data Tables</a>
+                                            <a class="nav-link" href="data-tables.php">Data Tables</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                            
                             
-                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-fw fa-table"></i>Admins</a>
+                                <div id="submenu-4" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Admin Table</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </li>
+                           
                           
                           
                           
@@ -195,22 +191,35 @@ John Abraham</h5>
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
+                                <a  href="addmyinfo.php<?php echo $row['membershipid'];?>" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
+                    <th>id</th>
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
                     <th>Age</th>
-                    <th>Exp</th>
-                    <th>1</th>
+                    <th>flightcontrollername</th>
+                    <th>organization</th>
+                    
+                    <th>escamps</th>
+                    <th>nationality</th>
+                    <th>motorssizeandkv</th>
+                   
+                    <th>batterycellsnumber</th>
+                    <th>batterycellscapacity</th>
+                    <th>overallweight</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                
+                </th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 try{
                     echo dirname('data-tables.php');
-                     include('../../sql/connect.php');
                  
                  }catch(PDOException $e) {
                      echo "Error: " . $e->getMessage();
@@ -218,7 +227,7 @@ John Abraham</h5>
                 try{
                     $count =1;
               
-                $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid desc;");
+                $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
@@ -229,6 +238,18 @@ John Abraham</h5>
                        <td><?php echo $row["email"] ?></td>
                        <td><?php echo $row["age"] ?></td>
                        <td><?php echo $row["flightcontrollername"] ?></td>
+                       <td><?php echo $row["organization"] ?></td>
+                       
+                       <td><?php echo $row["escamps"] ?></td>
+                       <td><?php echo $row["nationality"] ?></td>
+                       <td><?php echo $row["motorssizeandkv"] ?></td>
+                       
+                       <td><?php echo $row["batterycellsnumber"] ?></td>
+                       <td><?php echo $row["batterycellscapacity"] ?></td>
+                       <td><?php echo $row["overallweight"] ?></td>
+                      
+                       <td><a  href="editinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-primary">Edit</td>
+                       <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?membershipid=<?php echo $row['membershipid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     
               <?php

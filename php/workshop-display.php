@@ -1,8 +1,8 @@
 <?php
- require('sql/connect.php');
+ require('../sql/connect.php');
     
-require('sql/createDB.php');
-require('sql/createWorkshopTable.php'); # allow you to add a php file
+//require('sql/createDB.php');
+//require('sql/createWorkshopTable.php'); # allow you to add a php file
 $status = ""; # for user that message is successfully recorded in database
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
@@ -17,18 +17,22 @@ if(isset($_POST['submit'])){
     $exp = $_REQUEST['exp'];
     
     $ins_query="insert into workshop_form(fullname, email, phonenumber, city, country,student, affiliation, experience)values('$uname','$email', '$phoneNumber','$city', '$country', '$student','$aff', '$exp' )";
-    echo $ins_query;
+    
    
     
         try{
             $pdo->exec($ins_query);
     $status = $uname. " your Record is added Successfully ";
+    $notification = " new-worker";
+    $date = date("Y-m-d h:i");
+    $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
+    $pdo->exec($nof_qury);
         }catch(PDOException $e) {
             echo "database failed: " . $e->getMessage();
     
         }
 }
-header("Location: club-index.html");
+header("Location: ../club-index.php");
 exit();
 
 

@@ -210,9 +210,16 @@ session_start();
         <!-- CONTENT START -->
         <div class="page-content container p-5" id="home1" >
 
+        <?php 
+        if( isset($_SESSION['login'])){
+        if(!($_SESSION['login'])){
+
+            $_SESSION['login'] = true;
+            echo "<script type='text/javascript'>alert('Invalid login: incorrect username or password');</script>";
+        }}
 
 
-        <form action="logincheck.php" method="post" class="was-validated ">
+        <form action="php/logincheck.php" method="post" class="was-validated ">
         <h3>Log in</h3>
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Username</label>

@@ -2,12 +2,14 @@
 //including the database connection file
 session_start();
 $_SESSION['login'] = true;
+$_SESSION['logged'] = False;
 
-include("sql/connect.php");
+include("../sql/connect.php");
  
 if(isset($_POST['submit'])) {    
     $uname = $_POST['uname'];
     $pwd = $_POST['pass'];
+    $_SESSION["userName"] = $_POST['uname'];
 }
      
     // if all the fields are filled (not empty)             
@@ -21,12 +23,13 @@ try {
             $un = $result['username'];
             $pass = $result['password'];
         }
-
-        if($un == "$uname" && $pass == "$pwd"){
-            header('location: index.php');
+        
+        if( !(strcasecmp($un,"$uname"))  && $pass == "$pwd"){
+            header('location: ../admin/pages/data-tables.php');
             $_SESSION['login'] = true;
+            $_SESSION['logged'] = true;
         }else{
-            header('location: login.php');
+            header('location: ../login.php');
             $_SESSION['login'] = false;
         }
         
