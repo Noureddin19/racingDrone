@@ -236,11 +236,14 @@ header("location: ../../login.php");
                            
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-fw fa-table"></i>Admins</a>
-                                <div id="submenu-4" class="collapse submenu" style="">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Content</a>
+                                <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="admin-table.php">Admin Table</a>
+                                            <a class="nav-link" href="club-content.php">club content</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="compition-table.php">compition contnet</a>
                                         </li>
                                        
                                     </ul>
@@ -276,9 +279,8 @@ header("location: ../../login.php");
 if(isset($_POST['update']))
 {	
 	
-	$username = $_POST['username'];
-	$pass = $_POST['password'];
-	$category = $_POST['category'];
+	$content = $_POST['username'];
+	
    
 	
 	// checking empty fields
@@ -298,7 +300,7 @@ if(isset($_POST['update']))
 	} else {	
 		//updating the table
 		
-		$stmt = $pdo->prepare("UPDATE adminTable SET username='$username', password='$pass', category='$category' WHERE username='$username';");
+		$stmt = $pdo->prepare("UPDATE club_content_table SET content='$content' WHERE type='$username';");
 		$stmt->execute();
 		header('Location: admin-tables.php');
 		//redirectig to the display page. In our case, it is myinof.php
@@ -309,12 +311,11 @@ if(isset($_POST['update']))
 
 
 //getting id from url
-$uname = $_GET['username']; 
 //selecting data associated with this particular id
 try{
 
 
-$stmt = $pdo->prepare("SELECT * FROM adminTable WHERE username='$username';");
+$stmt = $pdo->prepare("SELECT * FROM club_content_table WHERE type='$username';");
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
