@@ -236,11 +236,14 @@ header("location: ../../login.php");
                            
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-fw fa-table"></i>Admins</a>
-                                <div id="submenu-4" class="collapse submenu" style="">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Content</a>
+                                <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="admin-table.php">Admin Table</a>
+                                            <a class="nav-link" href="club-content.php">club content</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="compition-table.php">compition contnet</a>
                                         </li>
                                        
                                     </ul>
@@ -276,31 +279,20 @@ header("location: ../../login.php");
 if(isset($_POST['update']))
 {	
 	
-	$username = $_POST['username'];
-	$pass = $_POST['password'];
-	$category = $_POST['category'];
+	$content = $_POST['contents'];
+	
    
 	
 	// checking empty fields
-	if(empty($username) || empty($pass) || empty($category)) {	
+	if(empty($content)) {			
+			echo "<font color='red'>refill the content.</font><br/>";
 			
-		if(empty($username)) {
-			echo "<font color='red'>Name field is empty.</font><br/>";
-		}
-		
-		if(empty($pass)) {
-			echo "<font color='red'>Second Name Field.</font><br/>";
-		}
-		
-		if(empty($category)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}		
 	} else {	
 		//updating the table
 		
-		$stmt = $pdo->prepare("UPDATE adminTable SET username='$username', password='$pass', category='$category' WHERE username='$username';");
+		$stmt = $pdo->prepare("UPDATE club_content_table SET content='$content' WHERE type='$type';");
 		$stmt->execute();
-		header('Location: admin-tables.php');
+		header('Location: compition-table.php');
 		//redirectig to the display page. In our case, it is myinof.php
 		
 	}
@@ -309,20 +301,16 @@ if(isset($_POST['update']))
 
 
 //getting id from url
-$uname = $_GET['username']; 
 //selecting data associated with this particular id
 try{
 
 
-$stmt = $pdo->prepare("SELECT * FROM adminTable WHERE username='$username';");
+$stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-	$username = $row['username'];
-	$pass = $row['password'];
-	$category = $row['category'];
-	
-	  
+	$type = $row['type'];
+	$content = $row['content'];
   
 }
 
@@ -355,24 +343,19 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                             
                                                         <form action="admin-table.php" class="was-validated " method="POST">
                                                             <div class="form-group text-left">
-                                                                <label for="uname" class="left">Username</label>
-                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="username" value="<?php echo $username ?>" required>
+                                                                <label for="uname" class="left">type</label>
+                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="types" value="<?php echo $type ?>"  disabled>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
                                                            
                                                             <div class="form-group text-left">
-                                                                <label for="pwd">Password</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="password" value="<?php echo $pass ?>" required>
+                                                                <label for="pwd">content</label>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $content ?>" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
-                                                            <div class="form-group text-left">
-                                                                <label for="pwd">Category</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter Category" name="category" value="<?php echo $category ?>" required>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
+                                                            
                                                            
                                                           
                                                           
