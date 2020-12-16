@@ -218,6 +218,7 @@ session_start();
             echo "<script type='text/javascript'>alert('Invalid login: incorrect username or password');</script>";
         }}
 
+        ?>
 
         <form action="php/logincheck.php" method="post" class="was-validated ">
         <h3>Log in</h3>
@@ -246,15 +247,6 @@ session_start();
 
 
         </div>
-
-        <?php 
-
-if(!$_SESSION['login']){
-    $_SESSION['login'] = true;
-    echo "<script type='text/javascript'>alert('Invalid login: incorrect username or password');</script>";
-}
-
-?>
 
         <!-- CLIENT LOGO SECTION START -->
         <div class="section-full bg-gray p-t50 p-b50 client-logo-outer-one">

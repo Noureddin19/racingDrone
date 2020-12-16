@@ -213,7 +213,7 @@ session_start();
 
 
 
-        <form action="php/registercheck.php" method="post" class="was-validated ">
+        <form action="display-member-info.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
             <div class="form-group text-left">
                 <label for="uname" class="left">Full Name</label>
@@ -300,10 +300,10 @@ session_start();
         
         <?php 
 
-if(!$_SESSION['login']){
-    $_SESSION['login'] = true;
-    echo "<script type='text/javascript'>alert('Invalid registration: email already exists');</script>";
-}
+// if(!$_SESSION['register']){
+//     $_SESSION['register'] = true;
+//     echo "<script type='text/javascript'>alert('Invalid registration: email already exists');</script>";
+// }
 
 ?>
 
