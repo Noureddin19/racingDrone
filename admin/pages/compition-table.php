@@ -414,11 +414,10 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Catagory</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>type</th>
+                    <th>contnet</th>
+                    <th>submit</th>
+                    
                     
                
                 </tr>
@@ -429,19 +428,18 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM adminTable ORDER BY username;");
+                $stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
                       
-                       <td><?php echo $row["username"] ?></td>
-                       <td><?php echo $row["password"] ?></td>
-                       <td><?php echo $row["category"] ?></td>
+                       <td><?php echo $row["type"] ?></td>
+                       <td><input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $row["content"] ?>" required></td>
+
                        
                       
-                       <td><a href="editinfo-admin.php?username=<?php echo $row['username']; ?>" class="btn btn-primary text-white" >Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?username=<?php echo $row['username']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                       <td><a  class="btn btn-primary text-white"  data-toggle="modal" data-target="#myModal1">Edit</td>
                    </tr>
                     
               <?php
