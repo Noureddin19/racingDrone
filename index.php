@@ -204,7 +204,7 @@ if($_SESSION['register']){
         <h2>Rules & Regulations</h2>
     </div>
     <!-- TITLE END-->
-
+    <?php ?>
     <div class="section-content">
         <div class="row justify-content-center d-flex how-it-drone3">
 
