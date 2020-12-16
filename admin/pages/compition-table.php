@@ -251,10 +251,10 @@ header("location: ../../login.php");
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="club-content.php">club content</a>
+                                            <a class="nav-link" href="#">club content</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="compition-table.php">compition contnet</a>
+                                            <a class="nav-link" href="#">compition contnet</a>
                                         </li>
                                        
                                     </ul>
