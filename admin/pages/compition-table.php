@@ -251,10 +251,10 @@ header("location: ../../login.php");
                                 <div id="submenu-6" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="club-content.php">club content</a>
+                                            <a class="nav-link" href="#">club content</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="compition-table.php">compition contnet</a>
+                                            <a class="nav-link" href="#">compition contnet</a>
                                         </li>
                                        
                                     </ul>
@@ -427,11 +427,10 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo-admin.php<?php echo $row['id'];?>" class="btn btn-success">Add</a>
+                                <a  href="addmyinfo.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-
                     <th>Username</th>
                     <th>Password</th>
                     <th>Catagory</th>
@@ -447,7 +446,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM adminTable ORDER BY id;");
+                $stmt = $pdo->prepare("SELECT * FROM adminTable ORDER BY username;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
@@ -458,8 +457,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                        <td><?php echo $row["category"] ?></td>
                        
                       
-                       <td><a href="editinfo-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-primary text-white" >Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="delete-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                       <td><a href="editinfo-admin.php?username=<?php echo $row['username']; ?>" class="btn btn-primary text-white" >Edit</td>
+                       <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?username=<?php echo $row['username']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     
               <?php
