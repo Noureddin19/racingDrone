@@ -5,15 +5,15 @@ require('../../sql/connect.php');
 if(isset($_POST['update']))
 {	
 	
-	$username = $_POST['username'];
+	$user = $_POST['username'];
 	$pass = $_POST['password'];
 	$category = $_POST['category'];
    
 	
 	// checking empty fields
-	if(empty($username) || empty($pass) || empty($category)) {	
+	if(empty($user) || empty($pass) || empty($category)) {	
 			
-		if(empty($username)) {
+		if(empty($user)) {
 			echo "<font color='red'>Name field is empty.</font><br/>";
 		}
 		
@@ -27,7 +27,7 @@ if(isset($_POST['update']))
 	} else {	
 		//updating the table
 		
-		$stmt = $pdo->prepare("UPDATE adminTable SET username='$username', password='$pass', category='$category' WHERE username='$username';");
+		$stmt = $pdo->prepare("UPDATE adminTable SET username='$user', password='$pass', category='$category' WHERE username='$username';");
 		$stmt->execute();
 		header('Location: admin-table.php');
 		//redirectig to the display page. In our case, it is myinof.php
@@ -47,7 +47,7 @@ $stmt = $pdo->prepare("SELECT * FROM adminTable WHERE username='$username';");
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-	$username = $row['username'];
+	$user = $row['username'];
 	$pass = $row['password'];
 	$category = $row['category'];
 	
@@ -186,7 +186,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         <h3>Personal Information</h3>
         <div class="form-group text-left">
                                                                 <label for="uname" class="left">Username</label>
-                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="username" value="<?php echo $username ?>" required>
+                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="username" value="<?php echo $user ?>" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
