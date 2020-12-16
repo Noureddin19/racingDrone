@@ -396,11 +396,11 @@
                                         </div>
                                         <div class="icon-content">
                                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Take Course</h3>
+                                                <h3 class="s-title-one">Take the Course</h3>
                                             </div>
 
                                             <div class="d-icon-box-content">
-                                                <p>The students must take a drone building course before joining the club</p>
+                                                <p>Students must take a drone building course before joining the club</p>
                                             </div>
                                         </div>
 
@@ -415,7 +415,7 @@
                                         </div>
                                         <div class="icon-content">
                                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Fly With Expert Pilot </h3>
+                                                <h3 class="s-title-one">Fly With an Expert</h3>
                                             </div>
 
                                             <div class="d-icon-box-content">
@@ -433,11 +433,11 @@
                                         </div>
                                         <div class="icon-content">
                                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Place Of Training</h3>
+                                                <h3 class="s-title-one">Place of Training</h3>
                                             </div>
 
                                             <div class="d-icon-box-content">
-                                                <p>The football field is the only place allowed to fly a drone inside PSU</p>
+                                                <p>The football field is the only place allowed for flying drones inside PSU</p>
                                             </div>
                                         </div>
                                     </div>
@@ -454,7 +454,7 @@
                                             </div>
 
                                             <div class="d-icon-box-content">
-                                                <p>The maximum altitued for flying is 20m</p>
+                                                <p>The maximum altitude for flying is 20m</p>
                                             </div>
                                         </div>
                                     </div>
@@ -481,7 +481,7 @@
                                         </div>
                                         <div class="icon-content">
                                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Don't Enter</h3>
+                                                <h3 class="s-title-one">Stay Safe</h3>
                                             </div>
                                             <div class="d-icon-box-content">
                                                 <p>No one is allowed to enter or walk on the football field, while someone is flying a drone</p>
@@ -521,7 +521,7 @@
                                             </div>
 
                                             <div class="d-icon-box-content">
-                                                <p>No one is allowed to fly a drone inside PSU without the club membership card</p>
+                                                <p>No one is allowed to fly a drone inside PSU without a club membership card</p>
                                             </div>
                                         </div>
                                     </div>
@@ -538,7 +538,7 @@
                                             </div>
 
                                             <div class="d-icon-box-content">
-                                                <p>Drone safety check must be completed prior to flying </p>
+                                                <p>Drone safety check must be completed prior to flying</p>
                                             </div>
                                         </div>
                                         
@@ -571,18 +571,18 @@
                                         <div>Photo gallery</div>
                                         <div class="sep-leaf-right"></div>
                                     </div>
-                                    <h2>Visit our best photo gallery</h2>
+                                    <!-- <h2>Photo gallery</h2> -->
                                 </div>
                                 <!-- TITLE END-->
                             </div>
 
 
-                            <div class="col-lg-7 col-md-6 wt-separator-two-part-right text-left">
+                            <!-- <div class="col-lg-7 col-md-6 wt-separator-two-part-right text-left">
                                 <p>There are many variations of passages of lorem Ipsum available, but the majority have
                                     suffered alteration in some form, by injected humour, or randomised words which
                                     don't look even slightly.</p>
 
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
@@ -727,7 +727,7 @@
                                             <div class="sep-leaf-right"></div>
                                         </div>
                                         <h2>We're about Skill and Competence.</h2>
-                                        <p>The PSU Racing Drones Club aspires to become a platform for students to devlop their skills 
+                                        <p>The PSU Racing Drone Club aspires to become a platform for students to devlop their skills 
                                             in building and flying racing drones
                                             so they can live up to their fullest potential and compete on a national level.</p>
                                     </div>

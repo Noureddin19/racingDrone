@@ -210,24 +210,37 @@ if($_SESSION['register']){
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-left">
 
+            <?php  
+                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id`");                                               
+                                                $statment->execute();
+                                                $i=0;
+                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                                ?>
+                                           
+                                           <div class="wt-icon-box-wraper right ">
+
+<div class="icon-md inline-icon">
+    <span class="icon-cell site-text-secondry"><i
+            class="number-style"><?php echo "0".$row['id']; ?></i></span>
+</div>
+<div class="icon-content">
+    <div class="d-icon-box-title title-style-2 site-text-secondry">
+        <h3 class="s-title-one"><?php echo $row['rule']; ?></h3>
+    </div>
+    <div class="d-icon-box-content">
+        
+    </div>
+</div>
+
+</div>
+</div>
+                                               <?php $i++;
+                                                if($i == 4){
+                                                    break;
+                                                }
+                                                     endwhile; ?>
                 <div class="wt-box d-icon-box-two m-b40 mb-5">
-                    <div class="wt-icon-box-wraper right ">
-
-                        <div class="icon-md inline-icon">
-                            <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">01</i></span>
-                        </div>
-                        <div class="icon-content">
-                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Racing drone size must be 5”</h3>
-                            </div>
-                            <div class="d-icon-box-content">
-                                
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+               
 
                 <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
                     <div class="wt-icon-box-wraper right">
