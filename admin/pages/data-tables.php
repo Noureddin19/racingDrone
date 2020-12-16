@@ -136,7 +136,7 @@ header("location: ../../login.php");
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Admin Table</a>
+                                            <a class="nav-link" href="admin-table.php">Admin Table</a>
                                         </li>
                                        
                                     </ul>

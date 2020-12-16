@@ -1,14 +1,14 @@
 <?php
 include '../../sql/connect.php';
-$id = $_GET['membershipid']; // get is super global
+$id = $_GET['id']; // get is super global
 
 
 
 
 try{
-$stmt = $pdo->prepare("DELETE FROM membership_form where membershipid='$id';");
+$stmt = $pdo->prepare("DELETE FROM adminTable where id='$id';");
 $stmt->execute();
-header('Location: data-tables.php');
+header('Location: admin-table.php');
 }catch(PDOException $e) {
 	echo "Error: " . $e->getMessage();
   }

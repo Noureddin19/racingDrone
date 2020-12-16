@@ -5,15 +5,16 @@ require('../../sql/connect.php');
 if(isset($_POST['update']))
 {	
 	
-	$user = $_POST['username'];
+    $usernamed = $_POST['user'];
+   
 	$pass = $_POST['password'];
 	$category = $_POST['category'];
-   
+   $id= $_POST['id1'];
 	
 	// checking empty fields
-	if(empty($user) || empty($pass) || empty($category)) {	
+	if(empty($username) || empty($pass) || empty($category)) {	
 			
-		if(empty($user)) {
+		if(empty($username)) {
 			echo "<font color='red'>Name field is empty.</font><br/>";
 		}
 		
@@ -27,8 +28,8 @@ if(isset($_POST['update']))
 	} else {	
 		//updating the table
 		
-		$stmt = $pdo->prepare("UPDATE adminTable SET username='$user', password='$pass', category='$category' WHERE username='$username';");
-		$stmt->execute();
+		$stmt = $pdo->prepare("UPDATE adminTable SET username='$usernamed', password='$pass', category='$category' WHERE id='$id';");
+        $stmt->execute();
 		header('Location: admin-table.php');
 		//redirectig to the display page. In our case, it is myinof.php
 		
@@ -38,19 +39,19 @@ if(isset($_POST['update']))
 
 
 //getting id from url
-$username = $_GET['username']; 
+$id = $_GET['id']; 
 //selecting data associated with this particular id
 try{
 
 
-$stmt = $pdo->prepare("SELECT * FROM adminTable WHERE username='$username';");
+$stmt = $pdo->prepare("SELECT * FROM adminTable WHERE id='$id';");
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-	$user = $row['username'];
+	$username = $row['username'];
 	$pass = $row['password'];
 	$category = $row['category'];
-	
+	$id2 = $row['id'];
 	  
   
 }
@@ -185,8 +186,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	<form action="editinfo-admin.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
         <div class="form-group text-left">
-                                                                <label for="uname" class="left">Username</label>
-                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="username" value="<?php echo $user ?>" required>
+                                                                <label for="user" class="left">Username</label>
+                                                                <input type="text" class="form-control border" id="user" placeholder="Enter your name" name="user" value="<?php echo $username ?>" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
@@ -203,6 +204,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
+                                                            <td><input type="hidden" name="id1" value=<?php echo $_GET['id'];?>></td>
            
             <button type="submit" name="update" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
           
