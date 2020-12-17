@@ -351,7 +351,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                                            
                                                             <div class="form-group text-left">
                                                                 <label for="pwd">content</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $content ?>" required>
+                                                                <input type="textarea" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $content ?>" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
