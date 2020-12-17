@@ -1,7 +1,9 @@
 <?php 
 session_start();
 require('../../sql/connect.php');
+echo "<h1>".$_SESSION['logged']."</h1>";
 if(!$_SESSION['logged']){
+
 header("location: ../../login.php");
 }else{
     echo "sdfsd";

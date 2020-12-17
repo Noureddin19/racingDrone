@@ -29,7 +29,7 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>sponsors-table</title>
+    <title>compition-table</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,7 +75,7 @@ header("location: ../../login.php");
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Sponsors Table</h2>
+                            <h2 class="pageheader-title">Data Tables</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
@@ -101,41 +101,89 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <form action="php/upload.php" method="post" class="was-validated " enctype='multipart/form-data'>
-                                                
-                                    Select Image File to Upload:
-                                    <input type="file" name="fileToUpload">
-                                    <input type="submit" name="submit" value="Upload">
-                                    
-                                </form>
+                                <form method="post">
+                                        <input type="submit" name="test" id="test" value="Delete all" class="btn btn-danger"/><br/>
+                                    </form>
+                                    <?php
+                                    function testfun()
+                                    {
+                                        $stmt = "DELETE FROM notification;";
+                                        $pdo->exec($stmt);
+                                    }
+
+                                    if(array_key_exists('test',$_POST)){
+                                    testfun();
+                                    }
+
+                                    ?>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>image</th>
-                    <th>name</th>
-                    <th>action</th>
+                    <th>type</th>
+                    <th>content</th>
+                    
                     
                     
                
                 </tr>
             </thead>
             <tbody>
-
+            
                 <?php
-
-                            foreach(glob("../../images/sponsors/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
-                                echo '<tr>
-                                <td><img src="'.$image.'" alt="" style="height: 100px;"></td>
-                                <td>'.basename($image).'</td>
-                                <td><a onClick="return confirm("Do you want to delete?")" class="btn btn-danger text-white">Delete</td> <!-- Task 3 -->
-                            </tr>';
-                            } 
-
-                            ?>
                 
-</tbody>
+                try{
+                
+              
+                    $statment = $pdo->prepare ("SELECT * FROM `notification` ORDER BY `creation` DESC");                                               
+                    $statment->execute();
+                
+                while($row = $statment->fetch(PDO::FETCH_ASSOC)){ ?>
+                   <tr>
+                   
+                      <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
+                      <td><?php  if(empty($row["username"])){
+                                                        echo "Someone";
+                                                    }else if($row["username"] ="d"){
+                                                        echo $_SESSION["userName"];
+                                                    }
+                                                    
+                                                    
+                                                    else{
+                                                        echo $row["username"];
+                                                    } ?></td>
+                      
+                       <td><input type="text" class="form-control border" id="pwd"  name="contents" disabled value="<?php 
+                                                    
+                                                    if($row["notification"] == '0'){
+                                                        echo "A new Racer has been registerd";
+                                                    }else if($row["notification"] == '1'){
+                                                        echo "A new member has registerd for the workshop";
+                                                    }else if($row["notification"] == '2'){
+                                                        echo "updated a member's info"; 
+                                                    }else if($row["notification"] == '3'){
+                                                        echo "deletd a member"; 
+                                                    }
+
+                                                    
+                                                    
+                                                    ?>" >
+
+                       </td>
+
+                       
+                      
+                       
+                   </tr>
+                
+                </form>
                        
                     
+              <?php
+                }
+                }catch(PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                  }
+                ?>
                                     </table>
                                 </div>
                             </div>

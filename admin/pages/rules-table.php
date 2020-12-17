@@ -15,7 +15,7 @@ header("location: ../../login.php");
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Data Tables</title>
+    <title>rules table</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -75,7 +75,7 @@ header("location: ../../login.php");
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Data Tables</h2>
+                            <h2 class="pageheader-title">rules table</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
@@ -98,7 +98,7 @@ header("location: ../../login.php");
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Basic Table</h5>
+                            <h5 class="card-header">rules table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                 <a  href="addmyinfo.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
@@ -106,7 +106,7 @@ header("location: ../../login.php");
                                     <thead>
                 <tr>
                     <th>type</th>
-                    <th>contnet</th>
+                    <th>content</th>
                     <th>submit</th>
                     
                     
@@ -119,16 +119,16 @@ header("location: ../../login.php");
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM compition_content_table ;");
+                $stmt = $pdo->prepare("SELECT * FROM rules ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
                    
-                      <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
-                      <td><?php echo $row["type"] ?></td>
+                      <form action="php/update-rules-table.php?id=<?php echo $row['id']; ?>" method="POST">
+                      <td><?php echo $row["id"] ?></td>
 
-                       <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>
+                       <td><input type="text" class="form-control border" id="pwd"  name="rule" value="<?php echo $row["rule"] ?>" required>
 
                        </td>
 
