@@ -227,7 +227,7 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="php/addmyinfo-admin.php<?php echo $row['id'];?>" class="btn btn-success">Add</a>
+                                <a  href="addmyinfo-admin.php<?php echo $row['id'];?>" class="btn btn-success">Add</a>
          <table class="table table-striped table-bordered first">
                                     <thead>
                     <tr>
@@ -258,7 +258,7 @@ header("location: ../../login.php");
                        <td><?php echo $row["category"] ?></td>
                        
                       
-                       <td><a href="php/editinfo-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-primary text-white" >Edit</td>
+                       <td><a href="editinfo-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-primary text-white" >Edit</td>
                        <td><a onClick="return confirm('Do you want to delete?')" href="php/delete-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     </tbody>
