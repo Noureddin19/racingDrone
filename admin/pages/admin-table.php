@@ -269,6 +269,7 @@ header("location: ../../login.php");
                 </nav>
             </div>
         </div>
+    
         <?php
 // including the database connection file
 
@@ -508,6 +509,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             <!-- end footer -->
             <!-- ============================================================== -->
         </div>
+    </div>
     </div>
     <!-- ============================================================== -->
     <!-- end main wrapper -->
