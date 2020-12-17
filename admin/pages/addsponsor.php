@@ -121,18 +121,17 @@
 	<br/><br/>
 	
 	
-	<form action="php/upload.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
+	<form action="php/upload.php" method="post" class="was-validated " enctype='multipart/form-data'>
+        <h3>File Upload</h3>
         <div class="form-group text-left">
                                                            
                                                             
-                                                                Select Image File to Upload:
-                                                                <input type="file" name="file">
-                                                                <input type="submit" name="submit" value="Upload">
-                                                            
-                                                            <td><input type="hidden" name="id1" value=<?php echo $_GET['id'];?>></td>
+            Select Image File to Upload:
+            <input type="file" name="fileToUpload">
+            <input type="submit" name="submit" value="Upload">
+        
+            <td><input type="hidden" name="id1" value=<?php echo $_GET['id'];?>></td>
            
-            <button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Send</button>
           
         </form>
 </body>
