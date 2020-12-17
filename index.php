@@ -290,14 +290,11 @@ if($_SESSION['register']){
                     <div class="wt-icon-box-wraper left">
                         <div class="icon-md inline-icon">
                             <span class="icon-cell site-text-secondry"><i
-                                    class="number-style"><?php if($row['id']>$i){continue;}else{
-                                        echo "0".$row['id'];
-                                    } ?></i></span>
+                                    class="number-style"><?php echo "0".$row['id']; ?></i></span>
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one"><?php if($row['id']>$i){continue;}else{
-                                         echo $row['rule'];}?></h3>
+                                <h3 class="s-title-one"><?php echo $row['rule']; ?></h3>
                                 
                                
                             </div>
