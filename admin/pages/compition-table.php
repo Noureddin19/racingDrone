@@ -107,54 +107,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         <div class="container ">
                                               
                                               <!-- Button to Open the Modal -->
-                                            
-                                            
-                                              <!-- The Modal -->
-                                              <div class="modal fade" id="myModal1" >
-                                                <div class="modal-dialog" >
-                                                  <div class="modal-content">
-                                                  
-                                                    <!-- Modal Header -->
-                                                    <div class="modal-header" >
-                                                     
-                                                      <h3 class="modal-title" >Edit</h3>
-                                                        
-                                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                      
-                                                    </div>
-                                                    
-                                                    <!-- Modal body -->
-                                                    <div class="modal-body bg-white mt-4 z-index-2000000" >
-                                            
-                                                        <form action="admin-table.php" class="was-validated " method="POST">
-                                                            <div class="form-group text-left">
-                                                                <label for="uname" class="left">type</label>
-                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="types" value="<?php echo $type ?>"  disabled>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                           
-                                                            <div class="form-group text-left">
-                                                                <label for="pwd">content</label>
-                                                                <textarea  class="form-control border" id="pwd" placeholder="Enter password" name="contents"  required><?php echo $content ?></textarea>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                            
-                                                           
-                                                          
-                                                          
-
-                                                            <button type="submit" class="btn btn-primary text-dark text-center" style="background: inherit; border-color: red;" name="update">Send</button>
-                                                        </form>
-                                                    </div>
-                                              
-                                              
-                                                      
-                                                      </div>
-                                                  
-                                                 </div>
-                                            </div>
+                                                                                          
         <!-- ============================================================== -->
         <!-- end left sidebar -->
         <!-- ============================================================== -->

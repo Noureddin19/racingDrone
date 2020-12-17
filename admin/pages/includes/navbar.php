@@ -24,7 +24,11 @@
                                                 ?>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php echo $row["username"]; ?></span><?php echo $row["notification"]; ?>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php echo $row["username"]; ?></span><?php 
+                                                    
+                                                    echo $row["notification"];
+                                                    
+                                                    ?>
                                                         
                                                     </div>
                                                 </div>
