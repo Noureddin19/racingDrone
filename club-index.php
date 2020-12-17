@@ -723,28 +723,60 @@ require('sql/connect.php');
 
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30 ">
                                     <div class="counter-box">
-                                        <h2 class="counter">18</h2>
+                                        <h2 class="counter"> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='members'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></h2>
                                         <span class="site-text-primary title-style-2">Members</span>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30 ">
                                     <div class="counter-box">
-                                        <h2 class="counter">50</h2>
+                                        <h2 class="counter"> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='flight-hours'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></h2>
                                         <span class="site-text-primary title-style-2">flight hours</span>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30 ">
                                     <div class="counter-box">
-                                        <h2 class="counter">3</h2>
+                                        <h2 class="counter"> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='workshops'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></h2>
                                         <span class="site-text-primary title-style-2">work shops</span>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30 ">
                                     <div class="counter-box">
-                                        <h2 class="counter">7</h2>
+                                        <h2 class="counter"> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='racing-drones'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></h2>
                                         <span class="site-text-primary title-style-2">Racing Drones</span>
                                     </div>
                                 </div>
@@ -791,13 +823,35 @@ require('sql/connect.php');
                                     <div class="left wt-small-separator-outer text-white">
                                         <div class="wt-small-separator text-white">
                                             <div class="sep-leaf-left"></div>
-                                            <div>Our Vision</div>
+                                            <div><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='vision'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></div>
                                             <div class="sep-leaf-right"></div>
                                         </div>
-                                        <h2>We're about Skill and Competence.</h2>
-                                        <p>The PSU Racing Drone Club aspires to become a platform for students to devlop their skills 
-                                            in building and flying racing drones
-                                            so they can live up to their fullest potential and compete on a national level.</p>
+                                        <h2><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='vision-title'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></h2>
+                                        <p><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='vision-text'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></p>
                                     </div>
                                     <!-- TITLE END-->
                                 </div>
