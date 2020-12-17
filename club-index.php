@@ -366,11 +366,16 @@ require('sql/connect.php');
                                                 <div class="sep-leaf-right"></div>
                                             </div>
                                             
-                                            <p>The Racing Drone Club team is founded in 2020 under the
-                                                umbrella of the Robotics and Internet of Things Lab in
-                                                Prince Sultan University. the purpose of the club is to gather
-                                                all racing drone hobbiests and pilots in Prince Sultan
-                                                University under one oraganized club.
+                                            <p>
+                                            <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='section1-text'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?>
+                                         
                                             </p>
 
 
