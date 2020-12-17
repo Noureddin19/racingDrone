@@ -1,4 +1,5 @@
 <?php
+
 include '../../../sql/connect.php';
 $id = $_GET['membershipid']; // get is super global
 
@@ -13,7 +14,8 @@ try{
 $status = $uname. " your Record is added Successfully ";
 $notification = "3";
 $date = date("Y-m-d h:i");
-$nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
+
+$nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('d', '$notification', '$date')";
 $pdo->exec($nof_qury);
 }catch(PDOException $e) {
   echo "database failed: " . $e->getMessage();
