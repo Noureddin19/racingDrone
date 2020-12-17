@@ -204,9 +204,9 @@ header("location: ../../login.php");
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
-       <?php
-       <?php include 'includes\side.html';?>
-       ?>
+       
+       <?php include 'includes/side.html';?>
+       
         <?php
 // including the database connection file
 
