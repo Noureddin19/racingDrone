@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+require('sql/connect.php');
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -346,7 +355,14 @@
                                         <div class="left wt-small-separator-outer">
                                             <div class="wt-small-separator site-text-primary">
                                                 <div class="sep-leaf-left"></div>
-                                                <div>About</div>
+                                                <div><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='section1-about'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?></div>
                                                 <div class="sep-leaf-right"></div>
                                             </div>
                                             
