@@ -29,48 +29,13 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>Admin - Table</title>
+    <title>compition-table</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-
-
-
-
-
-
-
-
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-
-
-
-
-
-
-
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    
 </head>
 
 <body>
@@ -79,132 +44,23 @@ header("location: ../../login.php");
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
          <!-- ============================================================== -->
-         <?php require 'includes/navbar.php';?>
-
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <?php require 'includes/navbar.php';?>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
         <?php require 'includes/side.html';?>
-
-        <?php
-// including the database connection file
-
-
-if(isset($_POST['update']))
-{	
-	
-	$username = $_POST['username'];
-	$pass = $_POST['password'];
-	$category = $_POST['category'];
-   
-	
-	// checking empty fields
-	if(empty($username) || empty($pass) || empty($category)) {	
-			
-		if(empty($username)) {
-			echo "<font color='red'>Name field is empty.</font><br/>";
-		}
-		
-		if(empty($pass)) {
-			echo "<font color='red'>Second Name Field.</font><br/>";
-		}
-		
-		if(empty($category)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}		
-	} else {	
-		//updating the table
-		
-		$stmt = $pdo->prepare("UPDATE adminTable SET username='$username', password='$pass', category='$category' WHERE username='$username';");
-		$stmt->execute();
-		header('Location: admin-tables.php');
-		//redirectig to the display page. In our case, it is myinof.php
-		
-	}
-}
-
-
-
-//getting id from url
-$uname = $_GET['username']; 
-//selecting data associated with this particular id
-try{
-
-
-$stmt = $pdo->prepare("SELECT * FROM adminTable WHERE username='$username';");
-$stmt->execute();
-
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-	$username = $row['username'];
-	$pass = $row['password'];
-	$category = $row['category'];
-	
-	  
-  
-}
-
- 
-}catch(PDOException $e) {
-	echo "Error: " . $e->getMessage();
-  }
-?>
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+      
         <div class="container ">
                                               
                                               <!-- Button to Open the Modal -->
-                                            
-                                            
-                                              <!-- The Modal -->
-                                              <div class="modal fade" id="myModal1" >
-                                                <div class="modal-dialog" >
-                                                  <div class="modal-content">
-                                                  
-                                                    <!-- Modal Header -->
-                                                    <div class="modal-header" >
-                                                     
-                                                      <h3 class="modal-title" >Edit</h3>
-                                                        
-                                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                      
-                                                    </div>
-                                                    
-                                                    <!-- Modal body -->
-                                                    <div class="modal-body bg-white mt-4 z-index-2000000" >
-                                            
-                                                        <form action="admin-table.php" class="was-validated " method="POST">
-                                                            <div class="form-group text-left">
-                                                                <label for="uname" class="left">Username</label>
-                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="username" value="<?php echo $username ?>" required>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                           
-                                                            <div class="form-group text-left">
-                                                                <label for="pwd">Password</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="password" value="<?php echo $pass ?>" required>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                            <div class="form-group text-left">
-                                                                <label for="pwd">Category</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter Category" name="category" value="<?php echo $category ?>" required>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                           
-                                                          
-                                                          
-
-                                                            <button type="submit" class="btn btn-primary text-dark text-center" style="background: inherit; border-color: red;" name="update">Send</button>
-                                                        </form>
-                                                    </div>
-                                              
-                                              
-                                                      
-                                                      </div>
-                                                  
-                                                 </div>
-                                            </div>
+                                                                                          
         <!-- ============================================================== -->
         <!-- end left sidebar -->
         <!-- ============================================================== -->
@@ -249,11 +105,10 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Catagory</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>type</th>
+                    <th>content</th>
+                    <th>submit</th>
+                    
                     
                
                 </tr>
@@ -264,20 +119,26 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM adminTable ORDER BY username;");
+                $stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
-                      
-                       <td><?php echo $row["username"] ?></td>
-                       <td><?php echo $row["password"] ?></td>
-                       <td><?php echo $row["category"] ?></td>
+                   
+                      <form action="php/update-club.php?type=<?php echo $row['type']; ?>" method="POST">
+                      <td><?php echo $row["type"] ?></td>
+
+                       <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>
+
+                       </td>
+
                        
                       
-                       <td><a href="editinfo-admin.php?username=<?php echo $row['username']; ?>" class="btn btn-primary text-white" >Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?username=<?php echo $row['username']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                       <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
                    </tr>
+                
+                </form>
+                       
                     
               <?php
                 }
@@ -303,6 +164,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 </div>
             </div>
             
+            <!-- ============================================================== -->
         </div>
     </div>
     <!-- ============================================================== -->
