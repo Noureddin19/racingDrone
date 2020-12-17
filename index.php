@@ -141,11 +141,32 @@ if($_SESSION['register']){
                   <div class="d-flex  text-center align-items-center">
                     <div class="w-100 text-white my-5 py-5">
                         
-                      <p class=" my-2 pt-5 textVid">PSU Drone Racing League
+                      <p class=" my-2 pt-5 textVid"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='about-header'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?>
                     </p>
-                      <p class=" lead my-2 textVid2">Prince Sultan University
+                      <p class=" lead my-2 textVid2"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='place'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?>
                     </p>
-                    <p class=" lead my-2 textVid2">21-23 January 2021
+                    <p class=" lead my-2 textVid2"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='date'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?>
                     </p>
                     </div>
                   </div>
