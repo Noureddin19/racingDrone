@@ -526,7 +526,7 @@ if($_SESSION['register']){
 
                         <?php
 
-                        foreach(glob("images/client-logo/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+                        foreach(glob("images/sponsors/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
                             // echo '<img src="'.$image.'">';
                             echo '<div class="item">
                             <div class="ow-client-logo">
