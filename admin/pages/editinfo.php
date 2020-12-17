@@ -45,17 +45,16 @@ if(isset($_POST['update']))
         batterycellscapacity='$bcc', overallweight='$dow'  WHERE membershipid='$id';");
         $stmt->execute();
         try{
-            $pdo->exec($ins_query);
-    $status = $uname. " your Record is added Successfully ";
-    $notification = "2";
-    $date = date("Y-m-d h:i");
-    $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
-    $pdo->exec($nof_qury);
-        }catch(PDOException $e) {
-            echo "database failed: " . $e->getMessage();
-    
-        }
-
+          
+            $status = $uname. " your Record is added Successfully ";
+            $notification = "2";
+            $date = date("Y-m-d h:i");
+            $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
+            $pdo->exec($nof_qury);
+                }catch(PDOException $e) {
+                    echo "database failed: " . $e->getMessage();
+            
+                }
 		header('Location: data-tables.php');
 		//redirectig to the display page. In our case, it is myinof.php
 		

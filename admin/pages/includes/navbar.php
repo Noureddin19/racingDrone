@@ -24,16 +24,23 @@
                                                 ?>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php echo $row["username"]; ?></span><?php 
+                                                
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name"><?php
+                                                    if(empty($row["username"])){
+                                                        echo "Someone";
+                                                    }else{
+                                                        echo $row["username"];
+                                                    }
+                                                    ?></span><?php 
                                                     
                                                     if($row["notification"] == '0'){
-                                                        echo "A new Racer has registerd";
+                                                        echo "A new Racer has been registerd";
                                                     }else if($row["notification"] == '1'){
                                                         echo "A new member has registerd for the workshop";
                                                     }else if($row["notification"] == '2'){
-                                                        echo $row["username"]." updated a member's info"; 
+                                                        echo "updated a member's info"; 
                                                     }else if($row["notification"] == '3'){
-                                                        echo $row["username"]." deletd a member"; 
+                                                        echo "deletd a member"; 
                                                     }
 
                                                     
