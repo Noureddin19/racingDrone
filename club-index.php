@@ -25,7 +25,14 @@ require('sql/connect.php');
     <link rel="shortcut icon" type="image/x-icon" href="images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>PSU Racing Drones Club</title>
+    <title> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='title'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?></title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -111,7 +118,14 @@ require('sql/connect.php');
                                 
                                 <div class="extra-cell">
                                     <div class="header-nav-request">
-                                        <a href="mailto:racing@psu.edu.sa" style="background-color: inherit">racing@psu.edu.sa</a> 
+                                        <a href="mailto:<?php echo $row['content'];?>" style="background-color: inherit"> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='email'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?></a> 
                                     </div>
                                 </div>                                
                                  

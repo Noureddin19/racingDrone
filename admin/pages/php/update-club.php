@@ -11,6 +11,6 @@ $new_contents = $_POST["contents"];
 $type = $_GET["type"];
 $stmt = $pdo->prepare("UPDATE club_content_table SET content='$new_contents' WHERE type='$type';");
         $stmt->execute();
-		header('Location: ../compition-table.php');
+		header('Location: ../club-content.php');
 
 ?>
