@@ -119,13 +119,13 @@ header("location: ../../login.php");
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
+                $stmt = $pdo->prepare("SELECT * FROM compition_content_table ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
                    
-                      <form action="php/update-club.php?type=<?php echo $row['type']; ?>" method="POST">
+                      <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
                       <td><?php echo $row["type"] ?></td>
 
                        <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>

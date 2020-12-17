@@ -15,7 +15,7 @@ header("location: ../../login.php");
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sponsors Tables</title>
+    <title>Data Tables</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -28,6 +28,13 @@ header("location: ../../login.php");
     <link rel="icon" href="../../mages/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
+    <!-- PAGE TITLE HERE -->
+    <title>sponsors-table</title>
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     
 </head>
 
@@ -37,7 +44,7 @@ header("location: ../../login.php");
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
          <!-- ============================================================== -->
-         <!-- navbar -->
+        <!-- navbar -->
         <!-- ============================================================== -->
         <?php require 'includes/navbar.php';?>
         <!-- ============================================================== -->
@@ -49,104 +56,11 @@ header("location: ../../login.php");
         <?php require 'includes/side.html';?>
         <!-- end left sidebar -->
         <!-- ============================================================== -->
-        <?php
-// including the database connection file
-
-
-if(isset($_POST['update']))
-{	
-	
-	$content = $_POST['contents'];
-	
-   
-	
-	// checking empty fields
-	if(empty($content)) {			
-			echo "<font color='red'>refill the content.</font><br/>";
-			
-	} else {	
-		//updating the table
-		
-		$stmt = $pdo->prepare("UPDATE club_content_table SET content='$content' WHERE type='$type';");
-		$stmt->execute();
-		header('Location: compition-table.php');
-		//redirectig to the display page. In our case, it is myinof.php
-		
-	}
-}
-
-
-
-//getting id from url
-//selecting data associated with this particular id
-try{
-
-
-$stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
-$stmt->execute();
-
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-	$type = $row['type'];
-	$content = $row['content'];
-  
-}
-
- 
-}catch(PDOException $e) {
-	echo "Error: " . $e->getMessage();
-  }
-?>
+      
         <div class="container ">
                                               
                                               <!-- Button to Open the Modal -->
-                                            
-                                            
-                                              <!-- The Modal -->
-                                              <div class="modal fade" id="myModal1" >
-                                                <div class="modal-dialog" >
-                                                  <div class="modal-content">
-                                                  
-                                                    <!-- Modal Header -->
-                                                    <div class="modal-header" >
-                                                     
-                                                      <h3 class="modal-title" >Edit</h3>
-                                                        
-                                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                      
-                                                    </div>
-                                                    
-                                                    <!-- Modal body -->
-                                                    <div class="modal-body bg-white mt-4 z-index-2000000" >
-                                            
-                                                        <form action="admin-table.php" class="was-validated " method="POST">
-                                                            <div class="form-group text-left">
-                                                                <label for="uname" class="left">type</label>
-                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="types" value="<?php echo $type ?>"  disabled>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                           
-                                                            <div class="form-group text-left">
-                                                                <label for="pwd">content</label>
-                                                                <input type="textarea" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $content ?>" required>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                            
-                                                           
-                                                          
-                                                          
-
-                                                            <button type="submit" class="btn btn-primary text-dark text-center" style="background: inherit; border-color: red;" name="update">Send</button>
-                                                        </form>
-                                                    </div>
-                                              
-                                              
-                                                      
-                                                      </div>
-                                                  
-                                                 </div>
-                                            </div>
+                                                                                          
         <!-- ============================================================== -->
         <!-- end left sidebar -->
         <!-- ============================================================== -->
@@ -161,7 +75,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Data Tables</h2>
+                            <h2 class="pageheader-title">Sponsors Table</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
@@ -187,44 +101,41 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addsponsor.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
+                                <form action="php/upload.php" method="post" class="was-validated " enctype='multipart/form-data'>
+                                                
+                                    Select Image File to Upload:
+                                    <input type="file" name="fileToUpload">
+                                    <input type="submit" name="submit" value="Upload">
+                                    
+                                </form>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Image</th>
-                    <th>submit</th>
+                    <th>image</th>
+                    <th>name</th>
+                    <th>action</th>
                     
                     
                
                 </tr>
             </thead>
             <tbody>
-                <?php
-                
-                try{
-                
-              
-                $stmt = $pdo->prepare("SELECT * FROM sponsors_table ;");
-                $stmt->execute();
-                
-                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
-                   <tr>
-                      
-                       <td><?php echo $row["type"] ?></td>
-                       <td><input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $row["content"] ?>" required></td>
 
+                <?php
+
+                            foreach(glob("../../images/sponsors/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+                                echo '<tr>
+                                <td><img src="'.$image.'" alt="" style="height: 100px;"></td>
+                                <td>'.basename($image).'</td>
+                                <td><a onClick="return confirm("Do you want to delete?")" class="btn btn-danger text-white">Delete</td> <!-- Task 3 -->
+                            </tr>';
+                            } 
+
+                            ?>
+                
+</tbody>
                        
-                      
-                       <td><a  class="btn btn-primary text-white"  data-toggle="modal" data-target="#myModal1">Edit</td>
-                   </tr>
                     
-              <?php
-                }
-                }catch(PDOException $e) {
-                    echo "Error: " . $e->getMessage();
-                  }
-                ?>
                                     </table>
                                 </div>
                             </div>
