@@ -171,7 +171,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
-                      <form action="editinfo-admin.php?type=<?php echo $row['type']; ?>" method="POST">
+                   
+                      <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
                       <td><?php echo $row["type"] ?></td>
 
                        <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>
