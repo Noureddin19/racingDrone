@@ -4,7 +4,7 @@ require("../../../sql/connect.php");
 $statusMsg = '';
 
 // File upload path
-$target_dir = "../../../images/client-logo/";
+$target_dir = "../../../images/sponsors/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 echo($target_file." is the image");
 echo("<br>");

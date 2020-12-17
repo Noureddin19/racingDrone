@@ -141,32 +141,11 @@ if($_SESSION['register']){
                   <div class="d-flex  text-center align-items-center">
                     <div class="w-100 text-white my-5 py-5">
                         
-                      <p class=" my-2 pt-5 textVid"><?php 
-                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='about-header'");
-                     $statment->execute();
-                     
-                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
-                           echo $row["content"];
-                         }
-                    ?>
+                      <p class=" my-2 pt-5 textVid">PSU Drone Racing League
                     </p>
-                      <p class=" lead my-2 textVid2"><?php 
-                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='place'");
-                     $statment->execute();
-                     
-                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
-                           echo $row["content"];
-                         }
-                    ?>
+                      <p class=" lead my-2 textVid2">Prince Sultan University
                     </p>
-                    <p class=" lead my-2 textVid2"><?php 
-                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='date'");
-                     $statment->execute();
-                     
-                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
-                           echo $row["content"];
-                         }
-                    ?>
+                    <p class=" lead my-2 textVid2">21-23 January 2021
                     </p>
                     </div>
                   </div>
@@ -230,23 +209,17 @@ if($_SESSION['register']){
         <div class="row justify-content-center d-flex how-it-drone3">
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-left">
-            <?php  
-                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id`");                                               
-                                                $statment->execute();
-                                                $i=0;
-                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
-                                                ?>
-                                            
-                                            <div class="wt-box d-icon-box-two m-b40 mb-5">
+
+                <div class="wt-box d-icon-box-two m-b40 mb-5">
                     <div class="wt-icon-box-wraper right ">
 
                         <div class="icon-md inline-icon">
                             <span class="icon-cell site-text-secondry"><i
-                                    class="number-style"><?php echo "0".$row['id']; ?></i></span>
+                                    class="number-style">01</i></span>
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one"><?php echo $row['rule']; ?></h3>
+                                <h3 class="s-title-one">Racing drone size must be 5”</h3>
                             </div>
                             <div class="d-icon-box-content">
                                 
@@ -255,17 +228,59 @@ if($_SESSION['register']){
 
                     </div>
                 </div>
-                                                        
-                                                 
-                                               <?php $i++;
-                                                if($i == 4){
-                                                    break;
-                                                }
-                                                     endwhile; ?>
-               
 
-                
-               
+                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
+                    <div class="wt-icon-box-wraper right">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">02</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">There is a 5 second penalty for missing a gate</h3>
+                            </div> 
+
+                            <div class="d-icon-box-content">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
+                    <div class="wt-icon-box-wraper right">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">03</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">Must be an analog system</h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
+                    <div class="wt-icon-box-wraper right">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">04</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">4 racers per round</h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -279,22 +294,16 @@ if($_SESSION['register']){
             </div>
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-right">
-            <?php  
-                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id` dec" );                                               
-                                                $statment->execute();
-                                                $i=4;
-                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
-                                                ?>
-                                            
-                                            <div class="wt-box d-icon-box-two m-b40">
+
+                <div class="wt-box d-icon-box-two m-b40">
                     <div class="wt-icon-box-wraper left">
                         <div class="icon-md inline-icon">
                             <span class="icon-cell site-text-secondry"><i
-                                    class="number-style"><?php echo "0".$row['id']; ?></i></span>
+                                    class="number-style">05</i></span>
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one"><?php echo $row['rule']; ?></h3>
+                                <h3 class="s-title-one">Flip over crash is allowed</h3>
                                 
                                
                             </div>
@@ -304,19 +313,58 @@ if($_SESSION['register']){
                         </div>
                     </div>
                 </div>
-                                                        
-                                                 
-                                               <?php $i++;
-                                                if($i == 8){
-                                                    break;
-                                                }
-                                                     endwhile; ?>
-                
 
-                
+                <div class="wt-box d-icon-box-two m-b40">
+                    <div class="wt-icon-box-wraper left">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">06</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">The pilot must be able to change VTX transmission power quickly
+                          </h3>
+                            </div>
 
-               
-                
+                            <div class="d-icon-box-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wt-box d-icon-box-two m-b40">
+                    <div class="wt-icon-box-wraper left">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">07</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">The pilot must only use 25mw ransmison power</h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-box d-icon-box-two m-b40">
+                    <div class="wt-icon-box-wraper left">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style">08</i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one">Fail safe must be set and working</h3>
+                            </div>
+
+                            <div class="d-icon-box-content">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
 
             </div>
 
@@ -478,7 +526,7 @@ if($_SESSION['register']){
 
                         <?php
 
-                        foreach(glob("images/client-logo/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+                        foreach(glob("images/sponsors/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
                             // echo '<img src="'.$image.'">';
                             echo '<div class="item">
                             <div class="ow-client-logo">
@@ -539,7 +587,99 @@ if($_SESSION['register']){
         <!-- CONTENT END -->
 
        <!-- FOOTER START -->
-       <?php include("includes/footer.html") ?> 
+       <footer class="site-footer footer-large footer-dark text-white footer-style1">
+
+<!-- FOOTER BLOCKES START -->
+<div class="footer-top" id="contactus">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 " style="margin-right: 15%">
+
+                <div class="widget recent-posts-entry">
+                    <h3 class="widget-title">Get in Touch</h3>
+                    <ul class="widget_address">
+                        <li><i class="fa fa-map-marker"></i>P.O.Box No. 66833 Rafha Street, Riyadh </li>
+                        <li><i class="fa fa-envelope"></i>racing@psu.edu.sa</li>
+                        <li> <i class="fa fa-phone"></i>0114948851</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 "style="margin-right: 10%">
+                <div class="widget widget_services">
+                    <h3 class="widget-title">Useful links</h3>
+                    <ul>
+                        <li><a target="_blank" href="https://www.riotu-lab.org">RIOTU Lab</a></li>
+                        <li><a target="_blank" href="https://www.psu.edu.sa">Prince Sultan University</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 " style="margin-right: auto;">
+                <div class="widget recent-posts-entry">
+                    <h3 class="widget-title">Our Location</h3>
+                    <div class="section-content">
+                        <div class="widget-post-bx">
+                            <div class="widget-post clearfix">
+                                
+                               
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.731718429438!2d46.699132215759334!3d24.736089084112688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0292c1fb5529%3A0x3fbc5cb308e60dd8!2sPrince%20Sultan%20University!5e0!3m2!1sen!2ssa!4v1604594675336!5m2!1sen!2ssa" width="100%" height="200em" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="shadow-lg"></iframe>
+
+                                
+                            </div>
+                            <div class="widget-post clearfix">
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         
+
+        </div>
+    </div>
+</div>
+        <!-- FOOTER COPYRIGHT -->
+        
+        <div class="footer-middle">
+        
+            <div class="container">
+                <div class="footer-middle-content">
+                    <div class="logo-footer">
+                        <a href="index.html"><img src="images/logo-light.png" alt=""></a>
+                    </div>
+        
+                    <ul class="copyrights-nav">
+                            <li><a href="login.php">Log in</a></li>
+                            
+                        </ul>
+        
+                    <ul class="social-icons  wt-social-links footer-social-icon">
+                        <li><a target="_blank" href="https://instagram.com/psurdc?igshid=uafj76h5r67m" class="fa fa-instagram"></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/riotu.center" class="fa fa-facebook"></a></li>
+                        <li><a target="_blank" href="https://twitter.com/riotulab" class="fa fa-twitter"></a></li>
+                        <li><a target="_blank" href="http://linkedin.com/in/anis-koubaa-84aa4344" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="wt-footer-bot-left d-flex justify-content-center">
+                    <span class="copyrights-text">© 2020 RIOTU.</span>
+                </div>
+            </div>
+        </div>
+        
+        
+        </footer>
         <!-- FOOTER END -->
 
         <!-- BUTTON TOP START -->
