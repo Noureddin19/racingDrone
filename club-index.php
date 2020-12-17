@@ -898,21 +898,69 @@ require('sql/connect.php');
                                             <div class="pricing-table-top-section">
 
                                                 <div class="pricingtable-title">
-                                                    <h2 class="title-style-2">Building Racing Drone Workshop</h2>
+                                                    <h2 class="title-style-2"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='workshop-title'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></h2>
                                                 </div>
 
                                                 <div class="pricingtable-price">
                                                     <h2 class="pricingtable-bx" ><sup 
-                                                            class="pricingtable-sign">SAR</sup><span  id="price700">750</span></h2>
+                                                            class="pricingtable-sign">SAR</sup><span  id="price700"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='workshop-price'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></span></h2>
                                                 </div>
 
                                             </div>
 
                                             <ul class="pricingtable-features">
-                                                <li>How to Start in Racing Drones</li>
-                                                <li>Understanding of the racing drones Hardware</li>
-                                                <li>How to use Betaflight and BLHeliSuite</li>
-                                                <li>Buildinf Racing drone yourself</li>
+                                                <li><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='workshop-line1'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></li>
+                                                <li><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='workshop-line2'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></li>
+                                                <li><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='workshop-line3'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></li>
+                                                <li><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='workshop-line4'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></li>
                                                 
                                             </ul>
 
@@ -922,7 +970,15 @@ require('sql/connect.php');
                                             </div>
                                                 <div class="col-sm-12">
                                               
-                                                <a href="javascript:void(0);" class="site-button site-btn-effect justify-content-center col-sm-12 mt-4" data-target="#myModal1" data-toggle="modal">Register
+                                                <a href="javascript:void(0);" class="site-button site-btn-effect justify-content-center col-sm-12 mt-4" data-target="#myModal1" data-toggle="modal"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='workshop-button'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?>
                                                 </a>
                                                 
                                                            

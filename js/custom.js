@@ -6,6 +6,7 @@ function changePrice(){
 	if(document.getElementById("price700").innerHTML == "500"){
 		document.getElementById("price700").innerHTML = "750";
 		changeButton2();
+		
 		$('#objectID').css('transition-duration','1s');
 	}else{
 		document.getElementById("price700").innerHTML = "500";
