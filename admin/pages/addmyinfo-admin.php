@@ -121,7 +121,7 @@
 	<br/><br/>
 	
 	
-	<form action="add-displa-admin.php" method="post" class="was-validated ">
+	<form action="php/add-displa-admin.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
         <div class="form-group text-left">
                                                                 <label for="user" class="left">Username</label>
