@@ -121,7 +121,7 @@
 	<br/><br/>
 	
 	
-	<form action="add-display.php" method="post" class="was-validated ">
+	<form action="php/add-display.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
             <div class="form-group text-left">
                 <label for="fullname" class="left">Full Name</label>
