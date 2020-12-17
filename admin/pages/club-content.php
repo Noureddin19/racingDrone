@@ -35,64 +35,6 @@ header("location: ../../login.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
-
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="../../css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
-
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../ss/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
-    
 
 
 
@@ -144,7 +86,7 @@ header("location: ../../login.php");
         <!-- left sidebar -->
         <!-- ============================================================== -->
         <?php require 'includes/side.html';?>
-        
+
         <?php
 // including the database connection file
 
