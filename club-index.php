@@ -113,16 +113,25 @@ require('sql/connect.php');
                                 <span class="icon-bar icon-bar-two"></span>
                                 <span class="icon-bar icon-bar-three"></span>
                             </button> 
-                                                       
-                            <div class="extra-nav header-2-nav">
-                                
-                                <div class="extra-cell">
-                                    <div class="header-nav-request">
-                                        <a href="mailto:<?php echo $row['content'];?>" style="background-color: inherit"> <?php 
+                            <?php 
                      $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='email'");
                      $statment->execute();
                      
                      while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                         $_SESSION['email'] = $row["content"];
+                          
+                         }
+                    ?>
+                            <div class="extra-nav header-2-nav">
+                                
+                                <div class="extra-cell">
+                                    <div class="header-nav-request">
+                                        <a href="mailto:<?php echo $_SESSION['email'];?>" style="background-color: inherit"> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='email'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
                            echo $row["content"];
                          }
                     ?></a> 
@@ -276,7 +285,15 @@ require('sql/connect.php');
                                 font-weight: 700;
                                 color:#fff;
                                 border-width:0px; font-family: 'Rajdhani', sans-serif; text-transform:uppercase">
-                                    <div class="site-text-primary pb-3">PSU Drone Racing League</div>
+                                    <div class="site-text-primary pb-3"> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='header-title'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></div>
                                 </div>
 
                                 <!-- LAYER NR. 4 [ for paragraph] -->
@@ -295,7 +312,15 @@ require('sql/connect.php');
                                 font-weight: 500; 
                                 color:#d3d3d3;
                                 border-width:0px;font-family: 'Muli', sans-serif;">
-                                   Register Now
+                                   <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='header-text'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?>
                                 </div>
 
                                 <!-- LAYER NR. 5 [ for botton ] -->
@@ -312,7 +337,15 @@ require('sql/connect.php');
                                 ]' data-textAlign="['left','left','center','center']" data-paddingtop="[0,0,0,0]"
                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                     data-paddingleft="[0,0,0,0]" style="z-index:14; text-transform:uppercase;">
-                                    <a href="index.php" class="site-button">Register</a>
+                                    <a href="index.php" class="site-button"> <?php 
+                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='header-button'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                       
+                           echo $row["content"];
+                         }
+                    ?></a>
                                 </div>
 
 
