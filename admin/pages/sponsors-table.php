@@ -15,7 +15,7 @@ header("location: ../../login.php");
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Data Tables</title>
+    <title>Sponsors Tables</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -28,107 +28,7 @@ header("location: ../../login.php");
     <link rel="icon" href="../../mages/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
-    <!-- PAGE TITLE HERE -->
-    <title>Admin - Table</title>
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
-
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="../../css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
-
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../ss/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
     
-
-
-
-
-
-
-
-
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-
-
-
-
-
-
-
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -137,14 +37,18 @@ header("location: ../../login.php");
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
          <!-- ============================================================== -->
-         <?php require 'includes/navbar.php';?>
-
+         <!-- navbar -->
+        <!-- ============================================================== -->
+        <?php require 'includes/navbar.php';?>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
         <?php require 'includes/side.html';?>
-        
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
         <?php
 // including the database connection file
 
@@ -152,31 +56,20 @@ header("location: ../../login.php");
 if(isset($_POST['update']))
 {	
 	
-	$username = $_POST['username'];
-	$pass = $_POST['password'];
-	$category = $_POST['category'];
+	$content = $_POST['contents'];
+	
    
 	
 	// checking empty fields
-	if(empty($username) || empty($pass) || empty($category)) {	
+	if(empty($content)) {			
+			echo "<font color='red'>refill the content.</font><br/>";
 			
-		if(empty($username)) {
-			echo "<font color='red'>Name field is empty.</font><br/>";
-		}
-		
-		if(empty($pass)) {
-			echo "<font color='red'>Second Name Field.</font><br/>";
-		}
-		
-		if(empty($category)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}		
 	} else {	
 		//updating the table
 		
-		$stmt = $pdo->prepare("UPDATE adminTable SET username='$username', password='$pass', category='$category' WHERE username='$username';");
+		$stmt = $pdo->prepare("UPDATE club_content_table SET content='$content' WHERE type='$type';");
 		$stmt->execute();
-		header('Location: admin-tables.php');
+		header('Location: compition-table.php');
 		//redirectig to the display page. In our case, it is myinof.php
 		
 	}
@@ -185,20 +78,16 @@ if(isset($_POST['update']))
 
 
 //getting id from url
-$uname = $_GET['username']; 
 //selecting data associated with this particular id
 try{
 
 
-$stmt = $pdo->prepare("SELECT * FROM adminTable WHERE username='$username';");
+$stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-	$username = $row['username'];
-	$pass = $row['password'];
-	$category = $row['category'];
-	
-	  
+	$type = $row['type'];
+	$content = $row['content'];
   
 }
 
@@ -231,24 +120,19 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                             
                                                         <form action="admin-table.php" class="was-validated " method="POST">
                                                             <div class="form-group text-left">
-                                                                <label for="uname" class="left">Username</label>
-                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="username" value="<?php echo $username ?>" required>
+                                                                <label for="uname" class="left">type</label>
+                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="types" value="<?php echo $type ?>"  disabled>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
                                                            
                                                             <div class="form-group text-left">
-                                                                <label for="pwd">Password</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="password" value="<?php echo $pass ?>" required>
+                                                                <label for="pwd">content</label>
+                                                                <input type="textarea" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $content ?>" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
-                                                            <div class="form-group text-left">
-                                                                <label for="pwd">Category</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter Category" name="category" value="<?php echo $category ?>" required>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
+                                                            
                                                            
                                                           
                                                           
@@ -303,15 +187,14 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
+                                <a  href="addsponsor.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Catagory</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>submit</th>
+                    
                     
                
                 </tr>
@@ -322,19 +205,18 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM adminTable ORDER BY username;");
+                $stmt = $pdo->prepare("SELECT * FROM sponsors_table ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
                       
-                       <td><?php echo $row["username"] ?></td>
-                       <td><?php echo $row["password"] ?></td>
-                       <td><?php echo $row["category"] ?></td>
+                       <td><?php echo $row["type"] ?></td>
+                       <td><input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $row["content"] ?>" required></td>
+
                        
                       
-                       <td><a href="editinfo-admin.php?username=<?php echo $row['username']; ?>" class="btn btn-primary text-white" >Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="delete.php?username=<?php echo $row['username']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                       <td><a  class="btn btn-primary text-white"  data-toggle="modal" data-target="#myModal1">Edit</td>
                    </tr>
                     
               <?php
