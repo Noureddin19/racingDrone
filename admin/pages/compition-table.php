@@ -171,16 +171,20 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
-                      
-                       <td><?php echo $row["type"] ?></td>
+                      <form action="editinfo-admin.php?type=<?php echo $row['type']; ?>" method="POST">
+                      <td><?php echo $row["type"] ?></td>
+
                        <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>
 
                        </td>
 
                        
                       
-                       <td><a  class="btn btn-primary text-white"  data-toggle="modal" data-target="#myModal1">Edit</td>
+                       <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
                    </tr>
+                
+                </form>
+                       
                     
               <?php
                 }
