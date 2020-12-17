@@ -290,7 +290,7 @@ if($_SESSION['register']){
                     <div class="wt-icon-box-wraper left">
                         <div class="icon-md inline-icon">
                             <span class="icon-cell site-text-secondry"><i
-                                    class="number-style"><?php echo "0".$row['id']; ?></i></span>
+                                    class="number-style"><?php echo "0".($row['id']-1); ?></i></span>
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
