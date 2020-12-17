@@ -297,7 +297,7 @@ if($_SESSION['register']){
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
                                 <h3 class="s-title-one"><?php if($row['id']>$i){continue;}else{
-                                         echo $row['rule']; ;?></h3>
+                                         echo $row['rule'];}?></h3>
                                 
                                
                             </div>
