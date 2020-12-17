@@ -282,7 +282,7 @@ if($_SESSION['register']){
             <?php  
                                                 $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id` desc" );                                               
                                                 $statment->execute();
-                                                $i=4;
+                                                $i=5;
                                                while($row = $statment->fetch(PDO::FETCH_ASSOC)):
                                                 ?>
                                             
@@ -307,7 +307,7 @@ if($_SESSION['register']){
                                                         
                                                  
                                                <?php $i++;
-                                                if($i == 8){
+                                                if($i == 9){
                                                     break;
                                                 }
                                                      endwhile; ?>
