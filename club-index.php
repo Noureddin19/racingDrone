@@ -442,185 +442,115 @@ require('sql/connect.php');
             <!-- HOW IT WORK SECTION START -->
             <div class="section-full p-t80 p-b50">
 
-                <div class="container">
+<div class="container mt-5">
 
-                    <!-- TITLE START-->
-                    <div class="section-head center wt-small-separator-outer">    
-                        <h2>Saftey Regulations</h2>
+    <!-- TITLE START-->
+    <div class="section-head center wt-small-separator-outer mb-5">    
+        <h2>Safty Rules</h2>
+    </div>
+    <!-- TITLE END-->
+    <?php ?>
+    <div class="section-content">
+        <div class="row justify-content-center d-flex how-it-drone3">
+
+            <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-left">
+            <?php  
+                                                $statment = $pdo->prepare ("SELECT * FROM `safty` ORDER BY `id`");                                               
+                                                $statment->execute();
+                                                $i=0;
+                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                                ?>
+                                            
+                                            <div class="wt-box d-icon-box-two m-b40 mb-5">
+                    <div class="wt-icon-box-wraper right ">
+
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style"><?php echo "0".$row['id']; ?></i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one"><?php echo $row['safty']; ?></h3>
+                            </div>
+                            <div class="d-icon-box-content">
+                                
+                            </div>
+                        </div>
+
                     </div>
-                    <!-- TITLE END-->
+                </div>
+                                                        
+                                                 
+                                               <?php $i++;
+                                                if($i == 4){
+                                                    break;
+                                                }
+                                                     endwhile; ?>
+               
 
-                    <div class="section-content">
-                        <div class="row justify-content-center d-flex how-it-drone3">
+                
+               
 
-                            <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-left">
+            </div>
 
-                                <div class="wt-box d-icon-box-two m-b40">
-                                    <div class="wt-icon-box-wraper right ">
+            <div class="col-lg-4 col-md-12 m-b30 how-it-drone2-outer">
+                <div class="how-it-drone2-border">
+                    <div class="how-it-drone2">
+                        <div class="how-it-drone-media2"><img src="images/how-it-work/pngeggs.png" width="200%" height="200%"
+                                alt="" class="wave-effects"></div>
+                    </div>
+                </div>
+            </div>
 
-                                        <div class="icon-md inline-icon">
-                                            <span class="icon-cell site-text-secondry"><i
-                                                    class="number-style">01</i></span>
-                                        </div>
-                                        <div class="icon-content">
-                                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Take the Course</h3>
-                                            </div>
+            <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-right">
+            <?php  
+                                                $statment = $pdo->prepare ("SELECT * FROM `safty` ORDER BY `id` desc" );                                               
+                                                $statment->execute();
+                                                $i=5;
+                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                                ?>
+                                            
+                                            <div class="wt-box d-icon-box-two m-b40">
+                    <div class="wt-icon-box-wraper left">
+                        <div class="icon-md inline-icon">
+                            <span class="icon-cell site-text-secondry"><i
+                                    class="number-style"><?php echo "0".$i; ?></i></span>
+                        </div>
+                        <div class="icon-content">
+                            <div class="d-icon-box-title title-style-2 site-text-secondry">
+                                <h3 class="s-title-one"><?php echo $row['safty']; ?></h3>
 
-                                            <div class="d-icon-box-content">
-                                                <p>Students must take a drone building course before joining the club</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="wt-box d-icon-box-two m-b40">
-                                    <div class="wt-icon-box-wraper right">
-                                        <div class="icon-md inline-icon">
-                                            <span class="icon-cell site-text-secondry"><i
-                                                    class="number-style">02</i></span>
-                                        </div>
-                                        <div class="icon-content">
-                                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Fly With an Expert</h3>
-                                            </div>
-
-                                            <div class="d-icon-box-content">
-                                                <p>Beginners must fly with intermediate or expert level pilot</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="wt-box d-icon-box-two m-b40">
-                                    <div class="wt-icon-box-wraper right">
-                                        <div class="icon-md inline-icon">
-                                            <span class="icon-cell site-text-secondry"><i
-                                                    class="number-style">03</i></span>
-                                        </div>
-                                        <div class="icon-content">
-                                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Place of Training</h3>
-                                            </div>
-
-                                            <div class="d-icon-box-content">
-                                                <p>The football field is the only place allowed for flying drones inside PSU</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wt-box d-icon-box-two m-b40">
-                                    <div class="wt-icon-box-wraper right">
-                                        <div class="icon-md inline-icon">
-                                            <span class="icon-cell site-text-secondry"><i
-                                                    class="number-style">04</i></span>
-                                        </div>
-                                        <div class="icon-content">
-                                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Altitude Of Flying</h3>
-                                            </div>
-
-                                            <div class="d-icon-box-content">
-                                                <p>The maximum altitude for flying is 20m</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                
+                               
                             </div>
-
-                            <div class="col-lg-4 col-md-12 m-b30 how-it-drone2-outer">
-                                <div class="how-it-drone2-border">
-                                    <div class="how-it-drone2">
-                                        <div class="how-it-drone-media2"><img src="images/how-it-work/pngeggs.png" width="200%" height="200%"
-                                                alt="" class="wave-effects"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-right">
-
-                                <div class="wt-box d-icon-box-two m-b40">
-                                    <div class="wt-icon-box-wraper left">
-                                        <div class="icon-md inline-icon">
-                                            <span class="icon-cell site-text-secondry"><i
-                                                    class="number-style">05</i></span>
-                                        </div>
-                                        <div class="icon-content">
-                                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Stay Safe</h3>
-                                            </div>
-                                            <div class="d-icon-box-content">
-                                                <p>No one is allowed to enter or walk on the football field, while someone is flying a drone</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="wt-box d-icon-box-two m-b40">
-                                    <div class="wt-icon-box-wraper left">
-                                        <div class="icon-md inline-icon">
-                                            <span class="icon-cell site-text-secondry"><i
-                                                    class="number-style">06</i></span>
-                                        </div>
-                                        <div class="icon-content">
-                                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Make Sure</h3>
-                                            </div>
-
-                                            <div class="d-icon-box-content">
-                                                <p>Make sure before flying a drone that the football field is empty </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="wt-box d-icon-box-two m-b40">
-                                    <div class="wt-icon-box-wraper left">
-                                        <div class="icon-md inline-icon">
-                                            <span class="icon-cell site-text-secondry"><i
-                                                    class="number-style">07</i></span>
-                                        </div>
-                                        <div class="icon-content">
-                                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Who Is Allowed?</h3>
-                                            </div>
-
-                                            <div class="d-icon-box-content">
-                                                <p>No one is allowed to fly a drone inside PSU without a club membership card</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wt-box d-icon-box-two m-b40">
-                                    <div class="wt-icon-box-wraper left">
-                                        <div class="icon-md inline-icon">
-                                            <span class="icon-cell site-text-secondry"><i
-                                                    class="number-style">08</i></span>
-                                        </div>
-                                        <div class="icon-content">
-                                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                                <h3 class="s-title-one">Check Saftey</h3>
-                                            </div>
-
-                                            <div class="d-icon-box-content">
-                                                <p>Drone safety check must be completed prior to flying</p>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-
+                            <div class="d-icon-box-content">
+                                <p><?php echo $row['safty']; ?></p>
                             </div>
 
                         </div>
                     </div>
-
                 </div>
+                                                        
+                                                 
+                                               <?php $i++;
+                                                if($i == 9){
+                                                    break;
+                                                }
+                                                     endwhile; ?>
+                
+
+                
+
+               
+                
 
             </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
             <!-- HOW IT WORK  SECTION END -->
 
             <!-- GALLERY SECTION START -->
