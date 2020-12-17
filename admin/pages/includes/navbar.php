@@ -26,7 +26,17 @@
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name"><?php echo $row["username"]; ?></span><?php 
                                                     
-                                                    echo $row["notification"];
+                                                    if($row["notification"] == '0'){
+                                                        echo "A new Racer has registerd";
+                                                    }else if($row["notification"] == '1'){
+                                                        echo "A new member has registerd for the workshop";
+                                                    }else if($row["notification"] == '2'){
+                                                        echo $row["username"]." updated a member's info"; 
+                                                    }else if($row["notification"] == '3'){
+                                                        echo $row["username"]." deletd a member"; 
+                                                    }
+
+                                                    
                                                     
                                                     ?>
                                                         
