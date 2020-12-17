@@ -11,7 +11,7 @@ $stmt = $pdo->prepare("DELETE FROM membership_form where membershipid='$id';");
 $stmt->execute();
 try{
   
-$status = $uname. " your Record is added Successfully ";
+
 $notification = "3";
 $date = date("Y-m-d h:i");
 
