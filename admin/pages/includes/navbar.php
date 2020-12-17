@@ -28,7 +28,12 @@
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name"><?php
                                                     if(empty($row["username"])){
                                                         echo "Someone";
-                                                    }else{
+                                                    }else if($row["username"] ="d"){
+                                                        echo $_SESSION["userName"];
+                                                    }
+                                                    
+                                                    
+                                                    else{
                                                         echo $row["username"];
                                                     }
                                                     ?></span><?php 
