@@ -318,56 +318,9 @@ require('sql/connect.php');
         </div>
 
         <!-- CLIENT LOGO SECTION START -->
-        <div class="section-full bg-gray p-t50 p-b50 client-logo-outer-one">
-                <div class="container-fluid">
-
-                    <div class="section-content p-tb30 owl-btn-vertical-center">
-                        <div class="owl-carousel home-client-carousel-2">
-
-                            
-
-                    
-
-                            <div class="item">
-                                <div class="ow-client-logo">
-                                    <div class="client-logo client-logo-media">
-                                        <a href="javascript:void(0);"><img src="images/client-logo/Club Logo.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                             <div class="item">
-                                 <div class="ow-client-logo">
-                                     <div class="client-logo client-logo-media">
-                                         <a href="javascript:void(0);"><img
-                                                 src="images/client-logo/PSU Logo.png" alt=""></a>
-                                     </div>
-                                 </div>
-                             </div>
-                             
-                            
-                           
-
-                            <div class="item">
-                                <div class="ow-client-logo">
-                                    <div class="client-logo client-logo-media">
-                                        <a href="javascript:void(0);"><img src="images/client-logo/RIOTU Logo.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="ow-client-logo">
-                                    <div class="client-logo client-logo-media">
-                                        <a href="javascript:void(0);"><img src="images/client-logo/az logo .png" alt=""></a>
-                                    </div>
-                                </div>
-
-                           
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+        <?php
+           include("includes/sponsers.php");
+           ?>
             <!-- CLIENT LOGO  SECTION End -->
             </div>
         <!-- CONTENT END -->
