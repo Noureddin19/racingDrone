@@ -204,74 +204,9 @@ header("location: ../../login.php");
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
-       <div class="nav-left-sidebar sidebar-dark">
-            <div class="menu-list">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                   
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav flex-column">
-                            <li class="nav-divider">
-                                Menu
-                            </li>
-                           
-                          
-                          
-                           
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Tables</a>
-                                <div id="submenu-5" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="general-table.php">General Tables</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="data-tables.php">Data Tables</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                           
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Content</a>
-                                <div id="submenu-6" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="club-content.php">club content</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="compition-table.php">compition contnet</a>
-                                        </li>
-                                       
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Content</a>
-                                <div id="submenu-6" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">club content</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">compition contnet</a>
-                                        </li>
-                                       
-                                    </ul>
-                                </div>
-                            </li>
-                           
-                          
-                          
-                          
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
+       
+       <?php include 'includes/side.html';?>
+       
         <?php
 // including the database connection file
 
@@ -351,7 +286,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                                            
                                                             <div class="form-group text-left">
                                                                 <label for="pwd">content</label>
-                                                                <input type="textarea" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $content ?>" required>
+                                                                <textarea  class="form-control border" id="pwd" placeholder="Enter password" name="contents"  required><?php echo $content ?></textarea>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
@@ -435,7 +370,9 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                    <tr>
                       
                        <td><?php echo $row["type"] ?></td>
-                       <td><input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="contents" value="<?php echo $row["content"] ?>" required></td>
+                       <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>
+
+                       </td>
 
                        
                       
