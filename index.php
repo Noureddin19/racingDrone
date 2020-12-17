@@ -160,7 +160,7 @@ if($_SESSION['register']){
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30"></div>
                 <div class="col-lg-4 col-md-4 col-sm-4 m-b30">
                     <h2 class=" text-center"><?php 
-                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='about-header'");
+                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='about-header'");
                      $statment->execute();
                      
                      while($row = $statment->fetch(PDO::FETCH_ASSOC)){
@@ -168,7 +168,7 @@ if($_SESSION['register']){
                          }
                     ?></h2>
                     <p><?php 
-                     $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='about'");
+                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='about'");
                      $statment->execute();
                      
                      while($row = $statment->fetch(PDO::FETCH_ASSOC)){

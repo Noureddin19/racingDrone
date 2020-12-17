@@ -166,7 +166,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
+                $stmt = $pdo->prepare("SELECT * FROM compition_content_table ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
