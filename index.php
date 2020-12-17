@@ -280,7 +280,7 @@ if($_SESSION['register']){
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-right">
             <?php  
-                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id` dec" );                                               
+                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id` desc" );                                               
                                                 $statment->execute();
                                                 $i=4;
                                                while($row = $statment->fetch(PDO::FETCH_ASSOC)):
