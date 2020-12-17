@@ -473,7 +473,7 @@ require('sql/connect.php');
                                 <h3 class="s-title-one"><?php echo $row['safty']; ?></h3>
                             </div>
                             <div class="d-icon-box-content">
-                                
+                            <p><?php echo $row['detail']; ?></p>
                             </div>
                         </div>
 
@@ -524,7 +524,7 @@ require('sql/connect.php');
                                
                             </div>
                             <div class="d-icon-box-content">
-                                <p><?php echo $row['safty']; ?></p>
+                                <p><?php echo $row['detail']; ?></p>
                             </div>
 
                         </div>
