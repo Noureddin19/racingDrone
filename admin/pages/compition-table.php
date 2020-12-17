@@ -29,106 +29,13 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>Admin - Table</title>
+    <title>compition-table</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
-
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="../../css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
-
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../ss/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
     
-
-
-
-
-
-
-
-
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-
-
-
-
-
-
-
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -200,54 +107,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         <div class="container ">
                                               
                                               <!-- Button to Open the Modal -->
-                                            
-                                            
-                                              <!-- The Modal -->
-                                              <div class="modal fade" id="myModal1" >
-                                                <div class="modal-dialog" >
-                                                  <div class="modal-content">
-                                                  
-                                                    <!-- Modal Header -->
-                                                    <div class="modal-header" >
-                                                     
-                                                      <h3 class="modal-title" >Edit</h3>
-                                                        
-                                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                      
-                                                    </div>
-                                                    
-                                                    <!-- Modal body -->
-                                                    <div class="modal-body bg-white mt-4 z-index-2000000" >
-                                            
-                                                        <form action="admin-table.php" class="was-validated " method="POST">
-                                                            <div class="form-group text-left">
-                                                                <label for="uname" class="left">type</label>
-                                                                <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="types" value="<?php echo $type ?>"  disabled>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                           
-                                                            <div class="form-group text-left">
-                                                                <label for="pwd">content</label>
-                                                                <textarea  class="form-control border" id="pwd" placeholder="Enter password" name="contents"  required><?php echo $content ?></textarea>
-                                                                <div class="valid-feedback">Valid.</div>
-                                                                <div class="invalid-feedback">Please fill out this field.</div>
-                                                            </div>
-                                                            
-                                                           
-                                                          
-                                                          
-
-                                                            <button type="submit" class="btn btn-primary text-dark text-center" style="background: inherit; border-color: red;" name="update">Send</button>
-                                                        </form>
-                                                    </div>
-                                              
-                                              
-                                                      
-                                                      </div>
-                                                  
-                                                 </div>
-                                            </div>
+                                                                                          
         <!-- ============================================================== -->
         <!-- end left sidebar -->
         <!-- ============================================================== -->
@@ -306,21 +166,26 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
+                $stmt = $pdo->prepare("SELECT * FROM compition_content_table ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
-                      
-                       <td><?php echo $row["type"] ?></td>
+                   
+                      <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
+                      <td><?php echo $row["type"] ?></td>
+
                        <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>
 
                        </td>
 
                        
                       
-                       <td><a  class="btn btn-primary text-white"  data-toggle="modal" data-target="#myModal1">Edit</td>
+                       <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
                    </tr>
+                
+                </form>
+                       
                     
               <?php
                 }
@@ -345,27 +210,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                     <!-- ============================================================== -->
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <div class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="text-md-right footer-links d-none d-sm-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ============================================================== -->
-            <!-- end footer -->
+            
             <!-- ============================================================== -->
         </div>
     </div>
