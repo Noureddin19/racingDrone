@@ -141,11 +141,32 @@ if($_SESSION['register']){
                   <div class="d-flex  text-center align-items-center">
                     <div class="w-100 text-white my-5 py-5">
                         
-                      <p class=" my-2 pt-5 textVid">PSU Drone Racing League
+                      <p class=" my-2 pt-5 textVid"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='about-header'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?>
                     </p>
-                      <p class=" lead my-2 textVid2">Prince Sultan University
+                      <p class=" lead my-2 textVid2"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='place'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?>
                     </p>
-                    <p class=" lead my-2 textVid2">21-23 January 2021
+                    <p class=" lead my-2 textVid2"><?php 
+                     $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='date'");
+                     $statment->execute();
+                     
+                     while($row = $statment->fetch(PDO::FETCH_ASSOC)){
+                           echo $row["content"];
+                         }
+                    ?>
                     </p>
                     </div>
                   </div>
@@ -209,17 +230,23 @@ if($_SESSION['register']){
         <div class="row justify-content-center d-flex how-it-drone3">
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-left">
-
-                <div class="wt-box d-icon-box-two m-b40 mb-5">
+            <?php  
+                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id`");                                               
+                                                $statment->execute();
+                                                $i=0;
+                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                                ?>
+                                            
+                                            <div class="wt-box d-icon-box-two m-b40 mb-5">
                     <div class="wt-icon-box-wraper right ">
 
                         <div class="icon-md inline-icon">
                             <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">01</i></span>
+                                    class="number-style"><?php echo "0".$row['id']; ?></i></span>
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Racing drone size must be 5”</h3>
+                                <h3 class="s-title-one"><?php echo $row['rule']; ?></h3>
                             </div>
                             <div class="d-icon-box-content">
                                 
@@ -228,59 +255,17 @@ if($_SESSION['register']){
 
                     </div>
                 </div>
+                                                        
+                                                 
+                                               <?php $i++;
+                                                if($i == 4){
+                                                    break;
+                                                }
+                                                     endwhile; ?>
+               
 
-                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
-                    <div class="wt-icon-box-wraper right">
-                        <div class="icon-md inline-icon">
-                            <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">02</i></span>
-                        </div>
-                        <div class="icon-content">
-                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">There is a 5 second penalty for missing a gate</h3>
-                            </div> 
-
-                            <div class="d-icon-box-content">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
-                    <div class="wt-icon-box-wraper right">
-                        <div class="icon-md inline-icon">
-                            <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">03</i></span>
-                        </div>
-                        <div class="icon-content">
-                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Must be an analog system</h3>
-                            </div>
-
-                            <div class="d-icon-box-content">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wt-box d-icon-box-two m-b40 mb-5 mt-5 pt-3">
-                    <div class="wt-icon-box-wraper right">
-                        <div class="icon-md inline-icon">
-                            <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">04</i></span>
-                        </div>
-                        <div class="icon-content">
-                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">4 racers per round</h3>
-                            </div>
-
-                            <div class="d-icon-box-content">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+               
 
             </div>
 
@@ -294,16 +279,22 @@ if($_SESSION['register']){
             </div>
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-right">
-
-                <div class="wt-box d-icon-box-two m-b40">
+            <?php  
+                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id` dec" );                                               
+                                                $statment->execute();
+                                                $i=4;
+                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                                ?>
+                                            
+                                            <div class="wt-box d-icon-box-two m-b40">
                     <div class="wt-icon-box-wraper left">
                         <div class="icon-md inline-icon">
                             <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">05</i></span>
+                                    class="number-style"><?php echo "0".$row['id']; ?></i></span>
                         </div>
                         <div class="icon-content">
                             <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Flip over crash is allowed</h3>
+                                <h3 class="s-title-one"><?php echo $row['rule']; ?></h3>
                                 
                                
                             </div>
@@ -313,58 +304,19 @@ if($_SESSION['register']){
                         </div>
                     </div>
                 </div>
+                                                        
+                                                 
+                                               <?php $i++;
+                                                if($i == 8){
+                                                    break;
+                                                }
+                                                     endwhile; ?>
+                
 
-                <div class="wt-box d-icon-box-two m-b40">
-                    <div class="wt-icon-box-wraper left">
-                        <div class="icon-md inline-icon">
-                            <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">06</i></span>
-                        </div>
-                        <div class="icon-content">
-                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">The pilot must be able to change VTX transmission power quickly
-                          </h3>
-                            </div>
+                
 
-                            <div class="d-icon-box-content">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="wt-box d-icon-box-two m-b40">
-                    <div class="wt-icon-box-wraper left">
-                        <div class="icon-md inline-icon">
-                            <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">07</i></span>
-                        </div>
-                        <div class="icon-content">
-                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">The pilot must only use 25mw ransmison power</h3>
-                            </div>
-
-                            <div class="d-icon-box-content">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wt-box d-icon-box-two m-b40">
-                    <div class="wt-icon-box-wraper left">
-                        <div class="icon-md inline-icon">
-                            <span class="icon-cell site-text-secondry"><i
-                                    class="number-style">08</i></span>
-                        </div>
-                        <div class="icon-content">
-                            <div class="d-icon-box-title title-style-2 site-text-secondry">
-                                <h3 class="s-title-one">Fail safe must be set and working</h3>
-                            </div>
-
-                            <div class="d-icon-box-content">
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+               
+                
 
             </div>
 

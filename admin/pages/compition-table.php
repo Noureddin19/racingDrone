@@ -56,54 +56,7 @@ header("location: ../../login.php");
         <?php require 'includes/side.html';?>
         <!-- end left sidebar -->
         <!-- ============================================================== -->
-       
-        <?php
-// including the database connection file
-
-
-if(isset($_POST['update']))
-{	
-	
-	$content = $_POST['contents'];
-	
-   
-	
-	// checking empty fields
-	if(empty($content)) {			
-			echo "<font color='red'>refill the content.</font><br/>";
-			
-	} else {	
-		//updating the table
-		
-		$stmt = $pdo->prepare("UPDATE club_content_table SET content='$content' WHERE type='$type';");
-		$stmt->execute();
-		header('Location: compition-table.php');
-		//redirectig to the display page. In our case, it is myinof.php
-		
-	}
-}
-
-
-
-//getting id from url
-//selecting data associated with this particular id
-try{
-
-
-$stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
-$stmt->execute();
-
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-	$type = $row['type'];
-	$content = $row['content'];
-  
-}
-
- 
-}catch(PDOException $e) {
-	echo "Error: " . $e->getMessage();
-  }
-?>
+      
         <div class="container ">
                                               
                                               <!-- Button to Open the Modal -->
