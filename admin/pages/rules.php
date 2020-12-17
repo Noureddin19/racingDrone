@@ -106,7 +106,7 @@ header("location: ../../login.php");
                                     <thead>
                 <tr>
                     <th>type</th>
-                    <th>content</th>
+                    <th>contnet</th>
                     <th>submit</th>
                     
                     
