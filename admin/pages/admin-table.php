@@ -35,100 +35,7 @@ header("location: ../../login.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
-
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="../../css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
-
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../ss/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
     
-
-
-
-
-
-
-
-
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-
-
-
-
-
-
-
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/settings.css">
-    <!-- REVOLUTION NAVIGATION STYLE -->
-    <link rel="stylesheet" type="text/css" href="../../plugins/revolution/revolution/css/navigation.css">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -270,68 +177,11 @@ header("location: ../../login.php");
             </div>
         </div>
     
-        <?php
+  
 // including the database connection file
 
 
-if(isset($_POST['update']))
-{	
-	
-	$username = $_POST['username'];
-	$pass = $_POST['password'];
-	$category = $_POST['category'];
-   
-	
-	// checking empty fields
-	if(empty($username) || empty($pass) || empty($category)) {	
-			
-		if(empty($username)) {
-			echo "<font color='red'>Name field is empty.</font><br/>";
-		}
-		
-		if(empty($pass)) {
-			echo "<font color='red'>Second Name Field.</font><br/>";
-		}
-		
-		if(empty($category)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}		
-	} else {	
-		//updating the table
-		
-		$stmt = $pdo->prepare("UPDATE adminTable SET username='$username', password='$pass', category='$category' WHERE username='$username';");
-		$stmt->execute();
-		header('Location: admin-tables.php');
-		//redirectig to the display page. In our case, it is myinof.php
-		
-	}
-}
 
-
-
-//getting id from url
-$uname = $_GET['username']; 
-//selecting data associated with this particular id
-try{
-
-
-$stmt = $pdo->prepare("SELECT * FROM adminTable WHERE username='$username';");
-$stmt->execute();
-
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-	$username = $row['username'];
-	$pass = $row['password'];
-	$category = $row['category'];
-	
-	  
-  
-}
-
- 
-}catch(PDOException $e) {
-	echo "Error: " . $e->getMessage();
-  }
-?>
       
                                               
                                               <!-- Button to Open the Modal -->
@@ -356,9 +206,9 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tables</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
+                                        <li class="breadcrumb-item"><a href="../index.php" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="admin-table.php" class="breadcrumb-link">Admins</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Admin Table</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -377,10 +227,10 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo-admin.php<?php echo $row['id'];?>" class="btn btn-success">Add</a>
-                                    <table class="table table-striped table-bordered first">
+                                <a  href="php/addmyinfo-admin.php<?php echo $row['id'];?>" class="btn btn-success">Add</a>
+         <table class="table table-striped table-bordered first">
                                     <thead>
-                <tr>
+                    <tr>
 
                     <th>Username</th>
                     <th>Password</th>
@@ -389,9 +239,9 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                     <th>Delete</th>
                     
                
-                </tr>
+                    </tr>
                                       </thead>
-            <tbody>
+                <tbody>
                 <?php
                 
                 try{
@@ -408,8 +258,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                        <td><?php echo $row["category"] ?></td>
                        
                       
-                       <td><a href="editinfo-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-primary text-white" >Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="delete-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                       <td><a href="php/editinfo-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-primary text-white" >Edit</td>
+                       <td><a onClick="return confirm('Do you want to delete?')" href="php/delete-admin.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     </tbody>
               <?php
@@ -418,8 +268,10 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                     echo "Error: " . $e->getMessage();
                   }
                 ?>
-                                    </table>
+                     </table>
                               </div>
+                            </div>
+                            </div>
                             </div>
                             </div>
                             </div>
@@ -447,7 +299,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             <!-- end footer -->
             <!-- ============================================================== -->
        </div>
-       </div>
+       
     
     <!-- ============================================================== -->
     <!-- end main wrapper -->
