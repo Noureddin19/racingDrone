@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
    
         try{
             $pdo->exec($ins_query);
-            $notification = " new-racer";
+            $notification = "0";
             $date = date("Y-m-d h:i");
             $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
             $pdo->exec($nof_qury);
