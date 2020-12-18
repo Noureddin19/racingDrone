@@ -596,8 +596,8 @@ foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_B
     echo '<div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
        
-        <img class="d-block w-100"'.$image.'" alt="">
-        
+        <img class="d-block w-100" src="'.$image.'" alt="">
+      
     </div>
 </div>';
 } 
