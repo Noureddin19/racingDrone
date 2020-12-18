@@ -15,7 +15,7 @@ header("location: ../../login.php");
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Data Tables</title>
+    <title>compition commitee tables</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -29,7 +29,7 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>sponsors-table</title>
+    <title>compition-table</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,7 +75,7 @@ header("location: ../../login.php");
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Sponsors Table</h2>
+                            <h2 class="pageheader-title">Data Tables</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
@@ -101,41 +101,51 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <form action="php/upload.php" method="post" class="was-validated " enctype='multipart/form-data'>
-                                                
-                                    Select Image File to Upload:
-                                    <input type="file" name="fileToUpload">
-                                    <input type="submit" name="submit" value="Upload">
-                                    
-                                </form>
+                                <a  href="addmyinfo.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>image</th>
-                    <th>name</th>
-                    <th>delete</th>
+                    <th>type</th>
+                    <th>content</th>
+                    <th>submit</th>
                     
                     
                
                 </tr>
             </thead>
             <tbody>
-
                 <?php
-
-                            foreach(glob("../../images/sponsors/{*.gif,*.jpg,*.png,*.jpeg,*.bmp, *.GIF,*.JPG,*.PNG,*.JPEG,*.BMP}", GLOB_BRACE) as $image){
-                                echo '<tr>
-                                <td><img src="'.$image.'" alt="" style="height: 100px;"></td>
-                                <td>'.basename($image).'</td>
-                                <td><a onClick=return confirm("Do you want to delete?")" href="php/delete-sponsor.php?name='.$image.'" class="btn btn-danger text-white">Delete</td> <!-- Task 3 -->
-                            </tr>';
-                            } 
-
-                            ?>
                 
-</tbody>
+                try{
+                
+              
+                $stmt = $pdo->prepare("SELECT * FROM compition_content_table ;");
+                $stmt->execute();
+                
+                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
+                   <tr>
+                   
+                      <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
+                      <td><?php echo $row["type"] ?></td>
+
+                       <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>
+
+                       </td>
+
+                       
+                      
+                       <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
+                   </tr>
+                
+                </form>
                        
                     
+              <?php
+                }
+                }catch(PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                  }
+                ?>
                                     </table>
                                 </div>
                             </div>
