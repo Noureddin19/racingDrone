@@ -101,7 +101,7 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="add-commitee-form.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
+                                <a  href="add-commitee-form.php" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
