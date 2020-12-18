@@ -29,7 +29,7 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>compition-table</title>
+    <title>compition commitee tables</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,14 +75,14 @@ header("location: ../../login.php");
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Data Tables</h2>
+                            <h2 class="pageheader-title">compition commitee tables</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tables</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
+                                        <li class="breadcrumb-item active" aria-current="page">compition commitee tables</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -105,9 +105,14 @@ header("location: ../../login.php");
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>type</th>
-                    <th>content</th>
-                    <th>submit</th>
+                    <th>id</th>
+                    <th>Catagory</th>
+                    <th>name</th>
+                    <th>role</th>
+                    <th>twitter</th>
+                    <th>instagram</th>
+                    <th>linkedin</th>
+                    <th>facebook</th>
                     
                     
                
@@ -119,20 +124,21 @@ header("location: ../../login.php");
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM compition_content_table ;");
+                $stmt = $pdo->prepare("SELECT * FROM compition_commitee ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
                    
-                      <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
-                      <td><?php echo $row["type"] ?></td>
-
-                       <td><textarea type="text" class="form-control border" id="pwd"  name="contents"  required><?php echo $row["content"] ?></textarea>
-
-                       </td>
-
-                       
+                      <form action="php/update-compition-commitee.php?id=<?php echo $row['id']; ?>" method="POST">
+                      <td><?php echo $row["id"] ?></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="catagory" value="<?php echo $row["catagory"] ?>"  required></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="name" value="<?php echo $row["name"] ?>"  required></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="role" value="<?php echo $row["role"] ?>"  required></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="twitter" value="<?php echo $row["twitter"] ?>"  required></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="instagram" value="<?php echo $row["instagram"] ?>"  required></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="linkedin" value="<?php echo $row["linkedin"] ?>"  required></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="facebook" value="<?php echo $row["facebook"] ?>"  required></td>
                       
                        <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
                    </tr>
