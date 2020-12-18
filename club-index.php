@@ -590,20 +590,23 @@ require('sql/connect.php');
                         <!--Carousel Wrapper-->
 <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
     <!--Slides-->
+    
+    <div class="carousel-inner" role="listbox">
     <?php
 
 foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
-    echo '<div class="carousel-inner" role="listbox">
+    echo '
     <div class="carousel-item active">
        
         <img class="d-block w-100" src="'.$image.'" alt="">
       
     </div>
-</div>';
+';
 } 
 
 ?>
- 
+      
+    </div>
     <!--/.Slides-->
     <!--Controls-->
     
@@ -616,7 +619,7 @@ foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_B
       <span class="sr-only">Next</span>
     </a>
     <!--/.Controls-->
-
+    
     <ol class="carousel-indicators">
       <li data-target="#carousel-thumb" data-slide-to="0" class="active">
         <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" width="100">
