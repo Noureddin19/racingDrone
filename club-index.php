@@ -590,20 +590,23 @@ require('sql/connect.php');
                         <!--Carousel Wrapper-->
 <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
     <!--Slides-->
+    
+    <div class="carousel-inner" role="listbox">
     <?php
 
 foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
-    echo '<div class="carousel-inner" role="listbox">
+    echo '
     <div class="carousel-item active">
        
-        <img class="d-block w-100"'.$image.'" alt="">
-        
+        <img class="d-block w-100" src="'.$image.'" alt="">
+      
     </div>
-</div>';
+';
 } 
 
 ?>
- 
+      
+    </div>
     <!--/.Slides-->
     <!--Controls-->
     
@@ -616,21 +619,25 @@ foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_B
       <span class="sr-only">Next</span>
     </a>
     <!--/.Controls-->
-
+    
+   
     <ol class="carousel-indicators">
       <li data-target="#carousel-thumb" data-slide-to="0" class="active">
         <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" width="100">
       </li>
-      <li data-target="#carousel-thumb" data-slide-to="1">
-        <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" width="100">
-      </li>
-      <li data-target="#carousel-thumb" data-slide-to="2">
-        <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" width="100">
-      </li>
+    
+    <?php
+$i=0;
+foreach(glob("https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+    echo '<li data-target="#carousel-thumb" data-slide-to="'.$i.'" >
+    <img src="'.$image.'" width="100">
+  </li>'
+  ;
+  $i++;
+} 
 
-      <li data-target="#carousel-thumb" data-slide-to="3">
-        <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" width="100">
-      </li>
+?>
+   
     </ol>
   </div>
   <!--/.Carousel Wrapper-->
