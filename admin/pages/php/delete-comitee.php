@@ -3,7 +3,6 @@
 include '../../../sql/connect.php';
 $id = $_GET['id']; // get is super global
 
-echo $id;
 
 
 try{
@@ -17,6 +16,7 @@ $date = date("Y-m-d h:i");
 
 $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('d', '$notification', '$date')";
 $pdo->exec($nof_qury);
+header("location: ../compition-commitee.php");
 }catch(PDOException $e) {
   echo "database failed: " . $e->getMessage();
 

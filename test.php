@@ -1,8 +1,3 @@
 <?php 
-        $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='about-header'");
-        $statment->execute();
-        
-        while($row = $statment->fetch(PDO::FETCH_ASSOC)){
-              echo $row["content"];
-            }
+    mail('nfahad40@gmail.com', 'Subject Line Here', 'Body of Message Here', 'From: racing@psu.edu.sa');
                     ?>
