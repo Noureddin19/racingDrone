@@ -117,7 +117,7 @@
 </head>
 
 <body>
-	<a href="index.php">Home</a>
+	<a href="data-tables.php">Home</a>
 	<br/><br/>
 	
 	
