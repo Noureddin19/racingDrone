@@ -618,7 +618,7 @@ foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_B
     <!--/.Controls-->
     <?php
 
-foreach(glob("https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
     echo 'ol class="carousel-indicators">
     <li data-target="#carousel-thumb" data-slide-to="0" class="active">
       <img src="'.$image.'" width="100">
@@ -626,7 +626,21 @@ foreach(glob("https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/{*.gif,*
 } 
 
 ?>
-   
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-thumb" data-slide-to="0" class="active">
+        <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" width="100">
+      </li>
+      <li data-target="#carousel-thumb" data-slide-to="1">
+        <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" width="100">
+      </li>
+      <li data-target="#carousel-thumb" data-slide-to="2">
+        <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" width="100">
+      </li>
+
+      <li data-target="#carousel-thumb" data-slide-to="3">
+        <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" width="100">
+      </li>
+    </ol>
   </div>
   <!--/.Carousel Wrapper-->
                     </div>
