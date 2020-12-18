@@ -16,7 +16,7 @@ $linkedin = $_POST["linkedin"];
 $facebook = $_POST["facebook"];
 $id = $_GET["id"];
 $stmt = $pdo->prepare("UPDATE compition_commitee SET catagory='$catagory',name='$name',role='$role',
-twitter='$twitter',instagram='$instagram',linkedin='$linkedin',facebook='$facebook', WHERE id='$id';");
+twitter='$twitter',instagram='$instagram',linkedin='$linkedin',facebook='$facebook' WHERE id='$id';");
         $stmt->execute();
 		header('Location: ../compition-commitee.php');
 

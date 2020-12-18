@@ -132,13 +132,13 @@ header("location: ../../login.php");
                    
                       <form action="php/update-compition-commitee.php?id=<?php echo $row['id']; ?>" method="POST">
                       <td><?php echo $row["id"] ?></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="catagory" value="<?php echo $row["catagory"] ?>"  required></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="name" value="<?php echo $row["name"] ?>"  required></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="role" value="<?php echo $row["role"] ?>"  required></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="twitter" value="<?php echo $row["twitter"] ?>"  required></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="instagram" value="<?php echo $row["instagram"] ?>"  required></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="linkedin" value="<?php echo $row["linkedin"] ?>"  required></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="facebook" value="<?php echo $row["facebook"] ?>"  required></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="catagory" value="<?php echo $row["catagory"] ?>"  ></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="name" value="<?php echo $row["name"] ?>"  ></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="role" value="<?php echo $row["role"] ?>"  ></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="twitter" value="<?php echo $row["twitter"] ?>"  ></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="instagram" value="<?php echo $row["instagram"] ?>"  ></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="linkedin" value="<?php echo $row["linkedin"] ?>"  ></td>
+                       <td><input type="text" class="form-control border" id="pwd"  name="facebook" value="<?php echo $row["facebook"] ?>"  ></td>
                       
                        <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
                    </tr>
