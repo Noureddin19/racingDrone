@@ -64,7 +64,7 @@
                                         
                                 </li>
                                 <li>
-                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                    <div class="list-footer"> <a href="notification.php">View all notifications</a></div>
                                 </li>
                             </ul>
                         </li>

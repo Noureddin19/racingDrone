@@ -1,12 +1,9 @@
 <?php 
 session_start();
-require('../../sql/connect.php');
-echo "<h1>".$_SESSION['logged']."</h1>";
-if(!$_SESSION['logged']){
 
+require('../../sql/connect.php');
+if(!$_SESSION['logged']){
 header("location: ../../login.php");
-}else{
-    echo "sdfsd";
 }
 ?>
 
@@ -18,7 +15,7 @@ header("location: ../../login.php");
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Data Tables</title>
+    <title>Notification Table</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -28,6 +25,17 @@ header("location: ../../login.php");
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
+    <link rel="icon" href="../../mages/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
+
+    <!-- PAGE TITLE HERE -->
+    <title>Notification Table</title>
+
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    
 </head>
 
 <body>
@@ -48,6 +56,14 @@ header("location: ../../login.php");
         <?php require 'includes/side.html';?>
         <!-- end left sidebar -->
         <!-- ============================================================== -->
+      
+        <div class="container ">
+                                              
+                                              <!-- Button to Open the Modal -->
+                                                                                          
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- wrapper  -->
         <!-- ============================================================== -->
@@ -59,7 +75,7 @@ header("location: ../../login.php");
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Data Tables</h2>
+                            <h2 class="pageheader-title">Notification Table</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
@@ -82,72 +98,77 @@ header("location: ../../login.php");
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Basic Table</h5>
+                            <h5 class="card-header">notification Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo.php<?php echo $row['membershipid'];?>" class="btn btn-success">Add</a>
+                                <form method="post" action="php/delete-notifications.php">
+                                        <input type="submit" name="test" id="test" value="Delete all" class="btn btn-danger"/><br/>
+                                    </form>
+                                
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>id</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Age</th>
-                    <th>flightcontrollername</th>
-                    <th>organization</th>
+                    <th>type</th>
+                    <th>content</th>
                     
-                    <th>escamps</th>
-                    <th>nationality</th>
-                    <th>motorssizeandkv</th>
-                   
-                    <th>batterycellsnumber</th>
-                    <th>batterycellscapacity</th>
-                    <th>overallweight</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                
-                </th>
+                    
+                    
+               
                 </tr>
             </thead>
             <tbody>
+            
                 <?php
-                try{
-                    echo dirname('data-tables.php');
-                 
-                 }catch(PDOException $e) {
-                     echo "Error: " . $e->getMessage();
-                   }
-                try{
-                    $count =1;
-              
-                $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid;");
-                $stmt->execute();
                 
-                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
+                try{
+                
+              
+                    $statment = $pdo->prepare ("SELECT * FROM `notification` ORDER BY `creation` DESC");                                               
+                    $statment->execute();
+                
+                while($row = $statment->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
-                       <td><?php echo $count; ?></td>
-                       <td><?php echo $row["fullname"] ?></td>
-                       <td><?php echo $row["phonenumber"] ?></td>
-                       <td><?php echo $row["email"] ?></td>
-                       <td><?php echo $row["age"] ?></td>
-                       <td><?php echo $row["flightcontrollername"] ?></td>
-                       <td><?php echo $row["organization"] ?></td>
-                       
-                       <td><?php echo $row["escamps"] ?></td>
-                       <td><?php echo $row["nationality"] ?></td>
-                       <td><?php echo $row["motorssizeandkv"] ?></td>
-                       
-                       <td><?php echo $row["batterycellsnumber"] ?></td>
-                       <td><?php echo $row["batterycellscapacity"] ?></td>
-                       <td><?php echo $row["overallweight"] ?></td>
+                   
+                      <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
+                      <td><?php  if(empty($row["username"])){
+                                                        echo "Someone";
+                                                    }else if($row["username"] ="d"){
+                                                        echo $_SESSION["userName"];
+                                                    }
+                                                    
+                                                    
+                                                    else{
+                                                        echo $row["username"];
+                                                    } ?></td>
                       
-                       <td><a  href="editinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-primary">Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="php/delete.php?membershipid=<?php echo $row['membershipid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                       <td><input type="text" class="form-control border" id="pwd"  name="contents" disabled value="<?php 
+                                                    
+                                                    if($row["notification"] == '0'){
+                                                        echo "A new Racer has been registerd";
+                                                    }else if($row["notification"] == '1'){
+                                                        echo "A new member has registerd for the workshop";
+                                                    }else if($row["notification"] == '2'){
+                                                        echo "updated a member's info"; 
+                                                    }else if($row["notification"] == '3'){
+                                                        echo "deletd a member"; 
+                                                    }
+
+                                                    
+                                                    
+                                                    ?>" >
+
+                       </td>
+
+                       
+                      
+                       
                    </tr>
+                
+                </form>
+                       
                     
               <?php
-                  $count++;}
+                }
                 }catch(PDOException $e) {
                     echo "Error: " . $e->getMessage();
                   }
@@ -169,12 +190,7 @@ header("location: ../../login.php");
                     <!-- ============================================================== -->
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-          
-            <!-- ============================================================== -->
-            <!-- end footer -->
+            
             <!-- ============================================================== -->
         </div>
     </div>
