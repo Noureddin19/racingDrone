@@ -616,16 +616,7 @@ foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_B
       <span class="sr-only">Next</span>
     </a>
     <!--/.Controls-->
-    <?php
 
-foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
-    echo 'ol class="carousel-indicators">
-    <li data-target="#carousel-thumb" data-slide-to="0" class="active">
-      <img src="'.$image.'" width="100">
-    </li> </ol>';
-} 
-
-?>
     <ol class="carousel-indicators">
       <li data-target="#carousel-thumb" data-slide-to="0" class="active">
         <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" width="100">
