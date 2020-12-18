@@ -28,40 +28,8 @@ $dataPoints = array(
     array("x"=> 3, "y"=> $non, "indexLabel"=> "Non Saudi Registers")
 	
 );
-$age18=0;
-$age22=0;
-$age26=0;
-$age30=0;
-$other=0;
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $i++;
-    if(($row['age']>= 18) && ($row['age']< 22)){
-      $age18++;
-    $saudi++;
-    }else if (($row['age']>= 22) && ($row['age']< 26)){
-       
-        $age22++;
-    }
-    else if (($row['age']>= 26) && ($row['age']< 30)){
-       
-        $age26++;
-    }else if (($row['age']>= 30) && ($row['age']< 34)){
-       
-        $age30++;
-    }else{
-$other++;
-    }
-    }
-$dataPoints = array( 
-	array("label"=>"18<Age<22", "y"=>64.02),
-	array("label"=>"22<Age<26", "y"=>12.55),
-	array("label"=>"26<Age<30", "y"=>8.47),
-	array("label"=>"30<Age<34", "y"=>6.08),
-	array("label"=>">34", "y"=>4.29),
-
-)
+	
  
-?>
  
 ?>
 <!doctype html>
@@ -78,29 +46,6 @@ $dataPoints = array(
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
 </head>
-<script>
-window.onload = function() {
- 
- 
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	title: {
-		text: "Usage Share of Desktop Browsers"
-	},
-	subtitles: [{
-		text: "November 2017"
-	}],
-	data: [{
-		type: "pie",
-		yValueFormatString: "#,##0.00\"%\"",
-		indexLabel: "{label} ({y})",
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart.render();
- 
-}
-</script>
 <script>
 window.onload = function () {
  
@@ -183,13 +128,33 @@ chart.render();
                                 <h5 class="card-header">Basic Table</h5>
                                 <div class="card-body">
                                     <table class="table">
-                                     
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">First</th>
+                                                <th scope="col">Last</th>
+                                                <th scope="col">Handle</th>
+                                            </tr>
+                                        </thead>
                                         <tbody>
                                             <tr>
-                                            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
                                             </tr>
-                                            
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry</td>
+                                                <td>the Bird</td>
+                                                <td>@twitter</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
