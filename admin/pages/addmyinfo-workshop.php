@@ -117,7 +117,7 @@
 </head>
 
 <body>
-	<a href="index.php">Home</a>
+	<a href="workshop-table.php">Back</a>
 	<br/><br/>
 	
 	
