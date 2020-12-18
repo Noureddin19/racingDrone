@@ -101,7 +101,7 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
+                                <a  href="add-commitee-form.php<?php echo $row['username'];?>" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
@@ -113,6 +113,8 @@ header("location: ../../login.php");
                     <th>instagram</th>
                     <th>linkedin</th>
                     <th>facebook</th>
+                    <th>edit</th>
+                    <th>delete</th>
                     
                     
                
@@ -139,11 +141,15 @@ header("location: ../../login.php");
                        <td><input type="text" class="form-control border" id="pwd"  name="instagram" value="<?php echo $row["instagram"] ?>"  ></td>
                        <td><input type="text" class="form-control border" id="pwd"  name="linkedin" value="<?php echo $row["linkedin"] ?>"  ></td>
                        <td><input type="text" class="form-control border" id="pwd"  name="facebook" value="<?php echo $row["facebook"] ?>"  ></td>
-                      
+
+                       
                        <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
+                       </form>
+                       
+                       <td><a class="btn btn-danger text-white"  href="php/delete-comitee.php?id=<?php echo $row["id"] ?>"  >Delete </a></td>
+
                    </tr>
                 
-                </form>
                        
                     
               <?php
