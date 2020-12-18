@@ -590,26 +590,23 @@ require('sql/connect.php');
                         <!--Carousel Wrapper-->
 <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
     <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="images/gallery/landscape/RD2.png"
-          alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="images/gallery/landscape/RD1.png"
-          alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="images/gallery/landscape/RD4.png"
-          alt="Third slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="images/gallery/landscape/RD11.png"
-          alt="Fourth slide">
-      </div>
+    <?php
+
+foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+    echo '<div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+       
+        <img class="d-block w-100"'.$image.'" alt="">
+        
     </div>
+</div>';
+} 
+
+?>
+ 
     <!--/.Slides-->
     <!--Controls-->
+    
     <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -619,6 +616,7 @@ require('sql/connect.php');
       <span class="sr-only">Next</span>
     </a>
     <!--/.Controls-->
+
     <ol class="carousel-indicators">
       <li data-target="#carousel-thumb" data-slide-to="0" class="active">
         <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" width="100">

@@ -123,11 +123,11 @@ header("location: ../../login.php");
 
                 <?php
 
-                            foreach(glob("../../images/sponsors/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+                            foreach(glob("../../images/sponsors/{*.gif,*.jpg,*.png,*.jpeg,*.bmp, *.GIF,*.JPG,*.PNG,*.JPEG,*.BMP}", GLOB_BRACE) as $image){
                                 echo '<tr>
                                 <td><img src="'.$image.'" alt="" style="height: 100px;"></td>
                                 <td>'.basename($image).'</td>
-                                <td><a onClick="return confirm("Do you want to delete?")" class="btn btn-danger text-white">Delete</td> <!-- Task 3 -->
+                                <td><a onClick=return confirm("Do you want to delete?")" href="php/delete-sponsor.php?name='.$image.'" class="btn btn-danger text-white">Delete</td> <!-- Task 3 -->
                             </tr>';
                             } 
 
