@@ -117,7 +117,7 @@
 </head>
 
 <body>
-	<a href="index.php">Home</a>
+	<a href="admin-table.php">Back</a>
 	<br/><br/>
 	
 	
@@ -144,8 +144,10 @@
                                                             </div>
                                                             <td><input type="hidden" name="id1" value=<?php echo $_GET['id'];?>></td>
            
-            <button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Send</button>
-          
+<center>
+<button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Send</button>
+
+</center>          
         </form>
 </body>
 </html>
