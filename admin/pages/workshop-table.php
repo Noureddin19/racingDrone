@@ -83,25 +83,21 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo.php<?php echo $row['membershipid'];?>" class="btn btn-success">Add</a>
+                                <a  href="addmyinfo-workshop.php<?php echo $row['workshopid'];?>" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>id</th>
+                    <th>Number</th>
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
-                    <th>Age</th>
-                    <th>flightcontrollername</th>
-                    <th>organization</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>experience</th>
                     
-                    <th>escamps</th>
-                    <th>nationality</th>
-                    <th>motorssizeandkv</th>
-                   
-                    <th>batterycellsnumber</th>
-                    <th>batterycellscapacity</th>
-                    <th>overallweight</th>
+                    <th>affiliation</th>
+                    <th>Student?</th>
+                    
                     <th>Edit</th>
                     <th>Delete</th>
                 
@@ -110,16 +106,11 @@ header("location: ../../login.php");
             </thead>
             <tbody>
                 <?php
-                try{
-                    echo dirname('data-tables.php');
-                 
-                 }catch(PDOException $e) {
-                     echo "Error: " . $e->getMessage();
-                   }
+               
                 try{
                     $count =1;
               
-                $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid;");
+                $stmt = $pdo->prepare("SELECT * FROM workshop_form ORDER BY workshopid;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
@@ -128,20 +119,16 @@ header("location: ../../login.php");
                        <td><?php echo $row["fullname"] ?></td>
                        <td><?php echo $row["phonenumber"] ?></td>
                        <td><?php echo $row["email"] ?></td>
-                       <td><?php echo $row["age"] ?></td>
-                       <td><?php echo $row["flightcontrollername"] ?></td>
-                       <td><?php echo $row["organization"] ?></td>
+                       <td><?php echo $row["city"] ?></td>
+                       <td><?php echo $row["country"] ?></td>
+                       <td><?php echo $row["experience"] ?></td>
                        
-                       <td><?php echo $row["escamps"] ?></td>
-                       <td><?php echo $row["nationality"] ?></td>
-                       <td><?php echo $row["motorssizeandkv"] ?></td>
-                       
-                       <td><?php echo $row["batterycellsnumber"] ?></td>
-                       <td><?php echo $row["batterycellscapacity"] ?></td>
-                       <td><?php echo $row["overallweight"] ?></td>
+                       <td><?php echo $row["affiliation"] ?></td>
+                       <td><?php echo $row["student"] ?></td>
                       
-                       <td><a  href="editinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-primary">Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="php/delete.php?membershipid=<?php echo $row['membershipid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                      
+                       <td><a  href="editinfo-workshop.php?workshopid=<?php echo $row['workshopid'];?>" class="btn btn-primary">Edit</td>
+                       <td><a onClick="return confirm('Do you want to delete?')" href="php/delete-workshop.php?workshopid=<?php echo $row['workshopid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     
               <?php
