@@ -36,26 +36,45 @@ if(isset($_POST['submit'])){
     
         $to = $email;
         $subject = "registered successfully";
-        $message = " You have been registered successfully in PSU Racing Drone league  ";
-        $message .= " This is your registeraion information ";
-        $message .= " your full name is ". $uname;
-        $message .= " your phone number is ". $phoneNumber;
-        $message .= " your email is ". $email;
-        $message .= " your age is ". $age;
-        $message .= " your organization is ". $org;
-        $message .= " your nationality is ". $nationality;
-        $message .= " your drone flight controller name is ". $fcn;
-        $message .= " your drone escamps is ". $ea;
-        $message .= " your drone motors size and kv is ". $ms;
-        $message .= " your drone battery cells number is ". $bcn;
-        $message .= " your drone battery cells capacity is ". $bcc;
-        $message .= " your drone overall weight is ". $dow;
+        $message = "<center>"."<h1>"." You have been registered successfully in PSU Racing Drone league"."</h1>"."<br>";
+        $message .= "<h3>"." This is your registeraion information ";
+        $message .= "<h3>"." your full name is ". $uname."</h3>";
+        $message .= "<h3>"." your phone number is ". $phoneNumber."</h3>";
+        $message .= "<h3>"." your email is ". $email."</h3>";
+        $message .= "<h3>"." your age is ". $age."</h3>";
+        $message .= "<h3>"." your organization is ". $org."</h3>";
+        $message .= "<h3>"." your nationality is ". $nationality."</h3>";
+        
+        if(strlen($fcn)>3){
+            $message .= "<h3>"." your drone flight controller name is ". $fcn."</h3>";
+        }
+        if(strlen($ea)>3){
+            $message .= "<h3>"." your drone escamps is "."</h3>". $ea;
+        }
+        if(strlen($ms)>3){
+            $message .= "<h3>"." your drone motors size and kv is "."</h3>". $ms;
+        }
+        if(strlen($bcn)>3){
+            $message .= "<h3>"." your drone battery cells number is "."</h3>". $bcn;
+        }
+        if(strlen($bcc)>3){
+            $message .= "<h3>"." your drone battery cells capacity is "."</h3>". $bcc;
+        }
+        if(strlen($dow)>3){
+            $message .= "<h3>"." your drone overall weight is "."</h3>". $dow;
+        }
+        
+        
+        
+        $message .= "<h2>"."If there is any incorrect information contact us for editing"."</h3>"."</center>";
 
 // make sure each line doesn't exceed 70 characters
-        $message = wordwrap($message, 40);
+       
 
         $headers = "From: racing@psu.edu.sa" . "\r\n" .
         "CC: racing@psu.edu.sa";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 
         mail($to,$subject,$message,$headers);
         mail('aldhbge@gmail.com', 'Subject Line Here', 'Body of Message Here', 'From: racing@psu.edu.sa');
