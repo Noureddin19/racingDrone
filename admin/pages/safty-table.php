@@ -105,7 +105,8 @@ header("location: ../../login.php");
                                     <thead>
                 <tr>
                     <th>id</th>
-                    <th>rule</th>
+                    <th>safty rule</th>
+                    <th>discretion</th>
                     <th>edit</th>
                     
                     
@@ -118,18 +119,19 @@ header("location: ../../login.php");
                 try{
                 
               
-                $stmt = $pdo->prepare("SELECT * FROM rules ;");
+                $stmt = $pdo->prepare("SELECT * FROM safty ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
                    
-                      <form action="php/update-rules-table.php?id=<?php echo $row['id']; ?>" method="POST">
+                      <form action="php/update-safty-table.php?id=<?php echo $row['id']; ?>" method="POST">
                       <td><?php echo $row["id"] ?></td>
 
-                       <td><input type="text" class="form-control border" id="pwd"  name="rule" value="<?php echo $row["rule"] ?>" required>
+                       <td><input type="text" class="form-control border" id="pwd"  name="safty" value="<?php echo $row["safty"] ?>" required>
 
                        </td>
+                       <td><textarea type="text" class="form-control border" id="pwd"  name="detail"  required><?php echo $row["detail"] ?></textarea></td>
 
                        
                       

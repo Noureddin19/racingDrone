@@ -341,8 +341,7 @@ if($_SESSION['register']){
                                 <div class="team-detail">
 
                                     <h3 class="m-t0 team-name">Anis Koubaa </h3>
-                                    <h5>Director of the Robotics and Internet-of-Things Lab
- </h5>
+                                    <h5>Director of the Robotics and Internet-of-Things Lab</h5>
                                     
                                     <h5>Prince Sultan University</h5>      
 
