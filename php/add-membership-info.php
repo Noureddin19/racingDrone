@@ -36,23 +36,23 @@ if(isset($_POST['submit'])){
     
         $to = $email;
         $subject = "registered successfully";
-        $message = " You have been registered successfully in PSU Racing Drone league  ";
-        $message .= " This is your registeraion information ";
-        $message .= " your full name is ". $uname;
-        $message .= " your phone number is ". $phoneNumber;
-        $message .= " your email is ". $email;
-        $message .= " your age is ". $age;
-        $message .= " your organization is ". $org;
-        $message .= " your nationality is ". $nationality;
-        $message .= " your drone flight controller name is ". $fcn;
+        $message = " You have been registered successfully in PSU Racing Drone league"."<br>";
+        $message .= " This is your registeraion information "."<br>";
+        $message .= " your full name is ". $uname."<br>";
+        $message .= " your phone number is ". $phoneNumber."<br>";
+        $message .= " your email is ". $email."<br>";
+        $message .= " your age is ". $age."<br>";
+        $message .= " your organization is ". $org."<br>";
+        $message .= " your nationality is ". $nationality."<br>";
+        $message .= " your drone flight controller name is ". $fcn."<br>";
         $message .= " your drone escamps is ". $ea;
-        $message .= " your drone motors size and kv is ". $ms;
-        $message .= " your drone battery cells number is ". $bcn;
-        $message .= " your drone battery cells capacity is ". $bcc;
-        $message .= " your drone overall weight is ". $dow;
+        $message .= " your drone motors size and kv is ". $ms."<br>";
+        $message .= " your drone battery cells number is ". $bcn."<br>";
+        $message .= " your drone battery cells capacity is ". $bcc."<br>";
+        $message .= " your drone overall weight is ". $dow."<br>";
 
 // make sure each line doesn't exceed 70 characters
-        $message = wordwrap($message, 40);
+       
 
         $headers = "From: racing@psu.edu.sa" . "\r\n" .
         "CC: racing@psu.edu.sa";
