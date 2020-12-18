@@ -52,12 +52,13 @@ if(isset($_POST['submit'])){
         $message .= " your drone overall weight is ". $dow;
 
 // make sure each line doesn't exceed 70 characters
-        $message = wordwrap($message, 70);
+        $message = wordwrap($message, 40);
 
         $headers = "From: racing@psu.edu.sa" . "\r\n" .
         "CC: racing@psu.edu.sa";
 
         mail($to,$subject,$message,$headers);
+        mail('aldhbge@gmail.com', 'Subject Line Here', 'Body of Message Here', 'From: racing@psu.edu.sa');
 
         }catch(PDOException $e) {
             echo "database failed: " . $e->getMessage();
