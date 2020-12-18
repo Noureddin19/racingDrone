@@ -142,11 +142,13 @@ header("location: ../../login.php");
                        <td><input type="text" class="form-control border" id="pwd"  name="linkedin" value="<?php echo $row["linkedin"] ?>"  ></td>
                        <td><input type="text" class="form-control border" id="pwd"  name="facebook" value="<?php echo $row["facebook"] ?>"  ></td>
 
-                       <td><input class="btn btn-danger text-white" herf="php/delete-comitee.php?id="<?php echo $row["id"] ?> value="Delete"></td>
+                       
                        <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
+                       </form>
+                       <td><a class="btn btn-danger text-white"  href="php/delete-comitee.php?id="<?php echo $row["id"] ?>  >Delete </a></td>
+
                    </tr>
                 
-                </form>
                        
                     
               <?php

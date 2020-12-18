@@ -3,7 +3,7 @@
 include '../../../sql/connect.php';
 $id = $_GET['id']; // get is super global
 
-
+echo $id;
 
 
 try{
