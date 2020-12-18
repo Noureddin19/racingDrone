@@ -113,7 +113,7 @@ header("location: ../../login.php");
                 <tr>
                     <th>image</th>
                     <th>name</th>
-                    <th>action</th>
+                    <th>delete</th>
                     
                     
                
