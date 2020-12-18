@@ -179,7 +179,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 </head>
 
 <body>
-
+<a href="admin-table.php">Back</a>
+	<br/><br/>
 
 	
 	
@@ -206,8 +207,10 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                                             </div>
                                                             <td><input type="hidden" name="id1" value=<?php echo $_GET['id'];?>></td>
            
-            <button type="submit" name="update" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
-          
+<center>
+<button type="submit" name="update" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
+
+</center>          
         </form>
 </body>
 </html>
