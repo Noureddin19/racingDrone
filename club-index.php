@@ -590,7 +590,46 @@ require('sql/connect.php');
                         <!--Carousel Wrapper-->
 <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
     <!--Slides-->
+
     <div class="carousel-inner" role="listbox">
+
+        <!-- <div class="carousel-item active">
+            <img class="d-block w-100" src="'.$\"
+                alt="slide">
+                </div> -->
+
+        <?php
+
+        $count1 = 0;
+
+        foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+
+            if($count1 == 0){
+
+                echo '<div class="carousel-item active">
+            <img class="d-block w-100" src="'.$image.'"
+                alt="slide">
+                </div>';
+
+            }
+
+            else{
+
+                echo '<div class="carousel-item">
+                <img class="d-block w-100" src="'.$image.'"
+                alt="slide">
+                </div>';
+
+            }
+
+            $count1++;
+        } 
+
+        ?>
+
+    </div>
+    
+    <!-- <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
         <img class="d-block w-100" src="images/gallery/landscape/RD2.png"
           alt="First slide">
@@ -607,7 +646,7 @@ require('sql/connect.php');
         <img class="d-block w-100" src="images/gallery/landscape/RD11.png"
           alt="Fourth slide">
       </div>
-    </div>
+    </div> -->
     <!--/.Slides-->
     <!--Controls-->
     <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
@@ -619,7 +658,37 @@ require('sql/connect.php');
       <span class="sr-only">Next</span>
     </a>
     <!--/.Controls-->
+
     <ol class="carousel-indicators">
+
+    <?php
+
+    $count2 = 0;
+
+    foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp}", GLOB_BRACE) as $image){
+        
+        if($count2 == 0){
+
+            echo '<li data-target="#carousel-thumb" data-slide-to="'.$count2.'" class="active">
+            <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" width="100">
+          </li>';
+
+        }
+
+        else{
+            echo '<li data-target="#carousel-thumb" data-slide-to="'.$count2.'" class="">
+            <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" width="100">
+          </li>';
+        }
+
+      $count2++;
+    } 
+
+    ?>
+
+    </ol>
+
+    <!-- <ol class="carousel-indicators">
       <li data-target="#carousel-thumb" data-slide-to="0" class="active">
         <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" width="100">
       </li>
@@ -633,7 +702,7 @@ require('sql/connect.php');
       <li data-target="#carousel-thumb" data-slide-to="3">
         <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" width="100">
       </li>
-    </ol>
+    </ol> -->
   </div>
   <!--/.Carousel Wrapper-->
                     </div>
