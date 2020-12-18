@@ -21,7 +21,6 @@ $pdo->exec($nof_qury);
   echo "database failed: " . $e->getMessage();
 
 }
-header('Location: ../data-tables.php');
 }catch(PDOException $e) {
 	echo "Error: " . $e->getMessage();
   }
