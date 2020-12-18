@@ -5,16 +5,16 @@ require('../../sql/connect.php');
 if(isset($_POST['update']))
 {	
 	
-	$id = $_POST['workshopid'];
+	$id = $_POST['id'];
 	$fullname = $_POST['fullname'];
 	$phoneNumber = $_POST['pn'];
     $email = $_POST['email'];
-    $age = $_POST['city'];
-    $fcn = $_POST['country'];
-    $org = $_POST['experience'];
+    $city = $_POST['city'];
+    $country = $_POST['country'];
+    $exp = $_POST['exp'];
    
-    $ea = $_POST['affiliation'];
-    $nationality =$_POST['student'];
+    $aff = $_POST['aff'];
+    $student =$_POST['student'];
    
 	
 	// checking empty fields
@@ -22,7 +22,7 @@ if(isset($_POST['update']))
 		//updating the table
 		
 		$stmt = $pdo->prepare("UPDATE workshop_form SET fullname='$fullname',
-         city='$city', email='$email', phonenumber='$phoneNumber', counrty='$country', 
+         city='$city', email='$email', phonenumber='$phoneNumber', country='$country', 
          experience='$exp', affiliation='$aff',
 		student='$student' WHERE workshopid='$id';");
         $stmt->execute();
@@ -37,7 +37,7 @@ if(isset($_POST['update']))
                     echo "database failed: " . $e->getMessage();
             
                 }
-		header('Location: data-tables.php');
+		header('Location: workshop-table.php');
 		//redirectig to the display page. In our case, it is myinof.php
 		
 	
@@ -51,7 +51,7 @@ $id = $_GET['workshopid'];
 try{
 
 
-$stmt = $pdo->prepare("SELECT * FROM workshop_form WHERE workshopid=$id;");
+$stmt = $pdo->prepare("SELECT * FROM workshop_form WHERE workshopid='$id';");
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
@@ -201,38 +201,38 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     <form action="editinfo-workshop.php" class="was-validated " method="POST">
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Full Name</label>
-                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="fullname" required>
+                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="fullname" value="<?php echo $fullname ?>" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                              
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Mobile Number</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter your number" name="pn" required>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter your number" name="pn" value="<?php echo $phoneNumber ?>" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Email</label>
-                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter your email" name="email" required>
+                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter your email" name="email" value="<?php echo $email ?>" required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
                                                                 <label for="pwd">Affiliation/Employer</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your affiliation/employer" name="aff" required>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your affiliation/employer" name="aff" value="<?php echo $aff ?>" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
                                                             <div class="form-group text-left">
                                                                 <label for="pwd">Your City</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your city" name="city" required>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your city" name="city" value="<?php echo $city ?>" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
                                                             <div class="form-group text-left">
                                                                 <label for="pwd">Your Country</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your country" name="country" required>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your country" name="country" value="<?php echo $country ?>" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
@@ -255,14 +255,14 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                                                                 <label class="label" for="background-no">No</label>
                                                                 <input type="radio" id="background-other" name="background" value="other">
                                                                 <label class="label" for="background-other">Other</label>
-                                                                <input type="text" class="form-control border-bottom" id="pwd" placeholder="Enter your experience" name="exp">
+                                                                <input type="text" class="form-control border-bottom" id="pwd" placeholder="Enter your experience" name="exp" value="<?php echo $exp ?>">
                                                 
                                                             </div>  
-                                                            td><input type="hidden" name="id" value=<?php echo $_GET['workshopid'];?>></td>
+                                                            <td><input type="hidden" name="id" value=<?php echo $_GET['workshopid'];?>></td>
             <center>
             <button type="submit" name="update" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
             </center>
                                                           </form>
-        <
+        
 </body>
 </html>
