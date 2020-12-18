@@ -334,28 +334,37 @@ if($_SESSION['register']){
                 <div class="container mt-5 mb-5">
                   <h2 class=" text-center">Competition Chairs</h2>
                 <div class="row  justify-content-center">     
+               
+               
+                                    <?php
+                                        $statment = $pdo->prepare ("SELECT * FROM compition_commitee WHERE catagory='Chairs'");
+                                        
+                                        $statment->execute();
+                                        while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                    ?>
 
                     <div class=" m-b30 col-sm-5 col-xs-8">
                         <div class="wt-team-2 shadow-sm text-center ">
                             <div class="wt-info shadow-sm ">
                                 <div class="team-detail">
-
-                                    <h3 class="m-t0 team-name">Anis Koubaa </h3>
-                                    <h5>Director of the Robotics and Internet-of-Things Lab</h5>
+                                   
+                                    <h3 class="m-t0 team-name"><?php echo $row["name"] ?></h3>
+                                    <h5><?php echo $row["role"] ?></h5>
                                     
-                                    <h5>Prince Sultan University</h5>      
+                                    <h5><?php echo $row["orgnaization"] ?></h5>      
 
                                 </div>
                                 <div class="list-group">
                                     <div class="list-group">
                                         <center>
                                             <ul class="team-social-bar text-center" style="display: -webkit-inline-box; list-style-type:none">
-                                                  
-                                                <li><a href="https://twitter.com/riotulab" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                                <li > <a href="https://www.linkedin.com/in/anis-koubaa-84aa4344/" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                            
+                                            <li><a href="<?php echo $row["twitter"] ?>" target="_blank"><i class= "fa fa-twitter fa-2x" style="color: #00acee; margin: 5px" <?php if(strlen($row["twitter"])<5){echo " hidden ";}  ?>  ></i></a></li>
+                                                <li > <a href="<?php echo $row["linkedin"] ?>" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px" <?php if(strlen($row["linkedin"])<5){echo " hidden";} ?>></i></a></li>
                                                 
-                                                <li><a href="https://www.facebook.com/riotu.center" target="_blank"><i class="fa fa-facebook fa-2x" style="color: #0072b1; margin: 5px"></i></a></li>
-                                               
+                                                <li><a href="<?php echo $row["facebook"] ?>" target="_blank"><i class="fa fa-facebook fa-2x" style="color: #0072b1; margin: 5px" <?php if(strlen($row["facebook"])<5){echo " hidden ";} ?>></i></a></li>
+                                                <li > <a href="<?php echo $row["instagram"] ?>" target="_blank"><i class="fa fa-instagram fa-2x" style="color:red; margin: 5px" <?php if(strlen($row["instagram"])<5){echo " hidden ";} ?>></i></a></li>
+                                                
                                                 
                                             
                                         </ul>
@@ -365,99 +374,55 @@ if($_SESSION['register']){
                             </div>
                         </div>
                     </div>
+                    <?php endwhile; ?>
 
-                    <div class=" m-b30 col-md-5 col-xs-8">
-                        <div class="wt-team-2 shadow-sm text-center ">
-                            <div class="wt-info shadow-sm">
-                                <div class="team-detail">
-                                    <h3 class="m-t0 team-name">Abdelhedi Azzouz </h3>
-                                    <h5>UAV Expert at Zain/Part 107 Certified </h5>
-                                    <h5>Zain Drone</h5>
-                                </div>
-                                <div class="list-group">
-                                    <div class="list-group">
-                                        <center>
-                                            <ul class="team-social-bar text-center" style="display: -webkit-inline-box; list-style-type:none">
-                                                  
-                                            <li > <a href="https://www.linkedin.com/in/abdulhadi-“az”-azouz-85431285" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                                
-                                                <li><a href="https://instagram.com/az_rc_ksa?igshid=1ghh0cf0h40t6" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
-                                               
-                                                
-                                            
-                                        </ul>
-                                        </center>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                    
                     
                 </div>
 
                 <div class="section-content mt-5">
                     <h2 class=" text-center">Organization Committee</h2>
                   <div class="row justify-content-center">
-                      <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
-                          <div class="wt-team-2 shadow-sm">
-  
-                             
-  
-                              <div class="wt-info shadow-sm text-center">
-                                  <div class="team-detail">
-              
-                                      <h3 class="m-t0 team-name">Belal Kawaf </h3>
-                                      <h5>Racing drone team leader </h5>
-                                  </div>
-                                  <div class="list-group">
-                                    <center>
-                                        <ul class="team-social-bar text-left" style="display: -webkit-inline-box; list-style-type:none">
-                                      
-                                            <li><a href="https://twitter.com/BelalKawaf?s=09" target="_blank"><i class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"></i></a></li>
-                                            <li > <a href="https://www.linkedin.com/in/belal-kawaf-260434153" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
-                                            
-                                            <li><a href="https://instagram.com/belaldrones?igshid=njdllby9h7cz" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
-                                           
-                                            
+
+                      <?php
+                                        $statment = $pdo->prepare ("SELECT * FROM compition_commitee WHERE catagory='Committee'");
                                         
-                                    </ul>
-                                    </center>
+                                        $statment->execute();
+                                        while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                                    ?>
+
+                    <div class=" m-b30 col-sm-5 col-xs-8">
+                        <div class="wt-team-2 shadow-sm text-center ">
+                            <div class="wt-info shadow-sm ">
+                                <div class="team-detail">
+                                   
+                                    <h3 class="m-t0 team-name"><?php echo $row["name"] ?></h3>
+                                    <h5><?php echo $row["role"] ?></h5>
+                                    
+                                    <h5><?php echo $row["orgnaization"] ?></h5>      
+
                                 </div>
-                              </div>
-  
-                          </div>
-                      </div>
-  
-                      <div class="col-lg-5 col-md-5 col-xs-10 m-b30">
-                          <div class="wt-team-2 shadow-sm text-center">
-  
-                              
-  
-                              <div class="wt-info shadow-sm">
-                                  <div class="team-detail">
-                                  
-                                      <h3 class="m-t0 team-name">Rayan AlAkkad</h3>
-                                      <h5>UAV Expert at RIOTU Lab </h5>
-                                  </div>
-                                  <div class="list-group">
-                                    <center>
-                                        <ul class="team-social-bar text-center" style="display: -webkit-inline-box; list-style-type:none">
-                                              
-                                           
-                                            <li > <a href="https://www.linkedin.com/in/rayan-akkad" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"></i></a></li>
+                                <div class="list-group">
+                                    <div class="list-group">
+                                        <center>
+                                            <ul class="team-social-bar text-center" style="display: -webkit-inline-box; list-style-type:none">
                                             
-                                            <li><a href="https://instagram.com/rayan_fpv?igshid=7k77otdiuvgz" target="_blank"><i class="fa fa-instagram fa-2x" style="color: red; margin: 5px"></i></a></li>
-                                           
+                                            <li><a href="<?php echo $row["twitter"] ?>" target="_blank"><i class= "fa fa-twitter fa-2x" style="color: #00acee; margin: 5px" <?php if(strlen($row["twitter"])<5){echo " hidden ";}  ?>  ></i></a></li>
+                                                <li > <a href="<?php echo $row["linkedin"] ?>" target="_blank"><i class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px" <?php if(strlen($row["linkedin"])<5){echo " hidden";} ?>></i></a></li>
+                                                
+                                                <li><a href="<?php echo $row["facebook"] ?>" target="_blank"><i class="fa fa-facebook fa-2x" style="color: #0072b1; margin: 5px" <?php if(strlen($row["facebook"])<5){echo " hidden ";} ?>></i></a></li>
+                                                <li > <a href="<?php echo $row["instagram"] ?>" target="_blank"><i class="fa fa-instagram fa-2x" style="color:red; margin: 5px" <?php if(strlen($row["instagram"])<5){echo " hidden ";} ?>></i></a></li>
+                                                
                                             
-                                        
-                                    </ul>
-                                    </center>
-                                  </div>
-                              </div>
-  
-                          </div>
-                      </div>
+                                        </ul>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endwhile; ?>
+
                       
                       
                       
