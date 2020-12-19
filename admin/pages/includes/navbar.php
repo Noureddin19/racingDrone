@@ -81,7 +81,7 @@
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                
-                                <a class="dropdown-item" href="../php/logout.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="../pages/php/logout.php"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
