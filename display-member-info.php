@@ -164,7 +164,7 @@ $_SESSION['dow']= $_POST['dow'];
                             <div class="logo-header-inner logo-header-one  ">
                             <a class="ml-2" href="#" onclick="goBack()"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
-                                <a href="http://racing.riotu-lab.org/">
+                                <a href="http://racing.riotu-lab.org/club-index.php">
                                 <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
                                 <img class="hidden-sm hidden-md hidden-lg" src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt="" width="55px;">
                                     </a>
