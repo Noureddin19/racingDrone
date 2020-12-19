@@ -15,7 +15,7 @@ header("location: ../../login.php");
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>club members table</title>
+    <title>Gallery Table</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -29,7 +29,7 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>club members table</title>
+    <title>gallery-table</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,14 +75,14 @@ header("location: ../../login.php");
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">club members table</h2>
+                            <h2 class="pageheader-title">Gallery Table</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tables</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">club members table</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Gallery Table</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -101,58 +101,41 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="add-member-form.php" class="btn btn-success">Add</a>
+                                <form action="php/gallery-upload.php" method="post" class="was-validated " enctype='multipart/form-data'>
+                                                
+                                    Select Image File to Upload:
+                                    <input type="file" name="fileToUpload">
+                                    <input type="submit" name="submit" value="Upload">
+                                    
+                                </form>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
-                    <th>id</th>
+                    <th>image</th>
                     <th>name</th>
-                    <th>role</th>
-                    <th>twitter</th>
-                    <th>instagram</th>
-                    <th>linkedin</th>
-                    <th>facebook</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>delete</th>
                     
                     
                
                 </tr>
             </thead>
             <tbody>
+
                 <?php
+
+                            foreach(glob("../../images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp, *.GIF,*.JPG,*.PNG,*.JPEG,*.BMP}", GLOB_BRACE) as $image){
+                                echo '<tr>
+                                <td><img src="'.$image.'" alt="" style="height: 100px;"></td>
+                                <td>'.basename($image).'</td>
+                                <td><a onClick=return confirm("Do you want to delete?")" href="php/delete-gallery.php?name='.$image.'" class="btn btn-danger text-white">Delete</td> <!-- Task 3 -->
+                            </tr>';
+                            } 
+
+                            ?>
                 
-                try{
-                
-              
-                $stmt = $pdo->prepare("SELECT * FROM club_members ;");
-                $stmt->execute();
-                
-                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
-                   <tr>
-                   
-                      <form action="php/update-club-members.php?id=<?php echo $row['id']; ?>" method="POST">
-                      <td><?php echo $row["id"] ?></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="name" value="<?php echo $row["name"] ?>"  ></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="role" value="<?php echo $row["role"] ?>"  ></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="twitter" value="<?php echo $row["twitter"] ?>"  ></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="instagram" value="<?php echo $row["instagram"] ?>"  ></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="linkedin" value="<?php echo $row["linkedin"] ?>"  ></td>
-                       <td><input type="text" class="form-control border" id="pwd"  name="facebook" value="<?php echo $row["facebook"] ?>"  ></td>
-                      
-                       <td><input class="btn btn-primary text-white" type="submit" value="Edit"></td>
-                       <td><a class="btn btn-danger text-white"  href="php/delete-member.php?id=<?php echo $row["id"] ?>"  >Delete </a></td>
-                   </tr>
-                
-                </form>
+</tbody>
                        
                     
-              <?php
-                }
-                }catch(PDOException $e) {
-                    echo "Error: " . $e->getMessage();
-                  }
-                ?>
                                     </table>
                                 </div>
                             </div>
