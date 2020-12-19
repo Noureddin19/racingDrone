@@ -1,4 +1,11 @@
+<?php 
+session_start();
 
+require('../../sql/connect.php');
+if(!$_SESSION['logged']){
+header("location: ../../login.php");
+}
+?>
 <html>
 <head>	
 <meta charset="utf-8">

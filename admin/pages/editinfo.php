@@ -1,8 +1,16 @@
 <?php
+session_start();
+
 // including the database connection file
 
 require('../../sql/connect.php');
-if(isset($_POST['update']))
+ 
+
+if(!$_SESSION['logged']){
+
+header("location: ../../login.php");
+}
+
 {	
 	
 	$id = $_POST['id'];
