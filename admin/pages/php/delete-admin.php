@@ -1,5 +1,8 @@
 <?php
+include("../includes/logincheck.php");
+
 include '../../../sql/connect.php';
+
 $id = $_GET['id']; // get is super global
 
 

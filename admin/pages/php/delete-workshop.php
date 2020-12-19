@@ -1,6 +1,8 @@
 <?php
 include '../../../sql/connect.php';
 $id = $_GET['workshopid']; // get is super global
+include("../includes/logincheck.php");
+
 
 
 

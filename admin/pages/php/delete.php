@@ -2,6 +2,7 @@
 
 include '../../../sql/connect.php';
 $id = $_GET['membershipid']; // get is super global
+include("../includes/logincheck.php");
 
 
 

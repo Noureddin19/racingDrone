@@ -1,4 +1,6 @@
 <?php
+include("../includes/logincheck.php");
+
 require('../../../sql/connect.php');
 
     

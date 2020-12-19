@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+include("../includes/logincheck.php");
 
 unlink("../".$_GET['name']);
 
