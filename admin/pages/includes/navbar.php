@@ -46,6 +46,10 @@
                                                         echo "updated a member's info"; 
                                                     }else if($row["notification"] == '3'){
                                                         echo "deletd a member"; 
+                                                    }else if($row["notification"] == '6'){
+                                                        echo "A new comitee member has been added"; 
+                                                    }else if($row["notification"] == '7'){
+                                                        echo "deletd a commitee member"; 
                                                     }
 
                                                     
