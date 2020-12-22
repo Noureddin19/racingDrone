@@ -228,7 +228,7 @@ session_start();
         }}
 
         ?>
-
+        <!-- form start -->
         <form action="php/logincheck.php" method="post" class="was-validated "><!-- it go to php/logincheck to 
         check from user name and passwork -->
             <h3>Log in</h3>
@@ -257,7 +257,7 @@ session_start();
                     class="site-button site-btn-effect justify-content-center mt-4">Log in</button><!-- submit the form -->
             </center>
         </form>
-
+        <!-- from end -->
 
     </div>
 
