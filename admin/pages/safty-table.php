@@ -123,11 +123,12 @@ header("location: ../../login.php");
                 
                 try{
                 
-              
+            //   fetch safty from database 
                 $stmt = $pdo->prepare("SELECT * FROM safty ;");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
+                <!-- use while loop and PDO to fetch data -->
                    <tr>
                    
                       <form action="php/update-safty-table.php?id=<?php echo $row['id']; ?>" method="POST">
