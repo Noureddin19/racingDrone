@@ -1,7 +1,7 @@
 <?php
-include("../includes/logincheck.php");
+require("../includes/logincheck.php");
 
-include '../../../sql/connect.php';
+require '../../../sql/connect.php';
 $id = $_GET['id']; // get is super global
 
 
