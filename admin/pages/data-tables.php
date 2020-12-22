@@ -138,6 +138,7 @@ header("location: ../../login.php");
                        <td><?php echo $row["overallweight"] ?></td>
                       
                        <td><a  href="editinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-primary">Edit</td>
+                       <!-- delete button with alert to check before deleting -->
                        <td><a onClick="return confirm('Do you want to delete?')" href="php/delete.php?membershipid=<?php echo $row['membershipid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     
