@@ -1,4 +1,5 @@
 <?php
+//start the session to store upload status
 session_start();
 // Include the database configuration file
 require("../../../sql/connect.php");
