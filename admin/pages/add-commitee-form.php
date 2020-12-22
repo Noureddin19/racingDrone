@@ -98,7 +98,8 @@ header("location: ../../login.php");
 </head>
 
 <body>
-	<a href="index.php">Home</a>
+    <div class="row mt-5 justify-content-center">	<a href="index.php" class="btn btn-danger">Home</a>
+</div>
 	<br/><br/>
 	<div class="row">
 	<div class="container col-md-8 border p-3">
