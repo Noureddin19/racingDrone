@@ -1,11 +1,14 @@
 <?php
 //including the database connection file
 session_start();
+// No error logging in
 $_SESSION['login'] = true;
+// If the is not logged in this is set to false and user is kicked out of the page
 $_SESSION['logged'] = False;
 
 include("../sql/connect.php");
  
+//Check if the form is submitted
 if(isset($_POST['submit'])) {    
     $uname = $_POST['uname'];
     $pwd = $_POST['pass'];
@@ -24,6 +27,7 @@ try {
             $pass = $result['password'];
         }
         
+        //compare username and password to database (case insensitive)
         if( !(strcasecmp($un,"$uname"))  && $pass == "$pwd"){
             header('location: ../admin/pages/index.php');
             $_SESSION['login'] = true;
