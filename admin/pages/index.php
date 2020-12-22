@@ -34,8 +34,11 @@ $age22=0;
 $age26=0;
 $age30=0;
 $other=0;
+
+$stmt = $pdo->prepare("SELECT * FROM membership_form;");
+$stmt->execute();
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-    
+  
     if(($row['age']>= 18) && ($row['age']< 22)){
       $age18++;
         $total++;
@@ -59,12 +62,13 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     $pAge26= ($age26/ $total)*100;
     $pAge30= ($age30/ $total)*100;
     $pAgeOther= ($other/ $total)*100;
+  
 $dataPoints1 = array( 
 	array("label"=>"18<Age<22", "y"=>$pAge18),
-	array("label"=>"22<Age<26", "y"=>12.55),
-	array("label"=>"26<Age<30", "y"=>8.47),
-	array("label"=>"30<Age<34", "y"=>6.08),
-	array("label"=>">34", "y"=>4.29),
+	array("label"=>"22<Age<26", "y"=>$pAge22),
+	array("label"=>"26<Age<30", "y"=>$pAge26),
+	array("label"=>"30<Age<34", "y"=>$pAge30),
+	array("label"=>"Age > 34 or < 18", "y"=>$pAgeOther),
 
 )
  
@@ -89,7 +93,8 @@ $dataPoints1 = array(
 <script>
 window.onload = function () {
     var chart1 = new CanvasJS.Chart("chartContainer1", {
-	animationEnabled: true,
+    animationEnabled: true,
+    exportEnabled: true,
 	title: {
 		text: "Age of Registeres"
 	},
