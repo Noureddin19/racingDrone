@@ -1,8 +1,10 @@
-<?php 
-session_start();
+<?php
+// this page is for adding commite memebrs
 
-require('../../sql/connect.php');
-if(!$_SESSION['logged']){
+session_start(); // start session
+
+require('../../sql/connect.php'); // connect
+if(!$_SESSION['logged']){ // check if user is loged in, if not return to login page
 header("location: ../../login.php");
 }
 ?>

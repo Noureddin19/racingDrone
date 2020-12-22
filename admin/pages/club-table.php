@@ -1,5 +1,5 @@
-<?php 
-session_start();
+<?php // this page is for editing club page content
+session_start(); // start session
 
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
