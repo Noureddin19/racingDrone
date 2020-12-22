@@ -1,4 +1,5 @@
 <?php
+//start the session to store upload status
 session_start();
 // Include the database configuration file
 require("../../../sql/connect.php");
@@ -14,7 +15,6 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if(isset($_POST["submit"])) {
   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
   if($check !== false) {
-    // echo "File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
   } else {
     echo "File is not an image.";
@@ -24,7 +24,6 @@ if(isset($_POST["submit"])) {
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  // echo "Sorry, file already exists.";
   $_SESSION['exists'] = true;
   header("location: ../gallery-table.php");
   $uploadOk = 0;
@@ -32,7 +31,6 @@ if (file_exists($target_file)) {
 
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000000) {
-  // echo "Sorry, your file is too large.";
   $_SESSION['large'] = true;
   header("location: ../gallery-table.php");
   $uploadOk = 0;
@@ -41,7 +39,6 @@ if ($_FILES["fileToUpload"]["size"] > 500000000) {
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-  // echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $_SESSION['format'] = true;
   header("location: ../gallery-table.php");
   $uploadOk = 0;
@@ -53,7 +50,6 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
     header("location: ../gallery-table.php");
   } else {
     echo "Sorry, there was an error uploading your file.";

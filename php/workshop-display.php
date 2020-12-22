@@ -5,6 +5,7 @@
 $status = ""; # for user that message is successfully recorded in database
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
+    // Fetch user data from registration form
     #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
     $uname = $_REQUEST['uname'];
     $phoneNumber = $_REQUEST['pn'];
@@ -15,13 +16,14 @@ if(isset($_POST['submit'])){
     $student = $_REQUEST['student'];
     $exp = $_REQUEST['exp'];
     
+    //insert info into database
     $ins_query="insert into workshop_form(fullname, email, phonenumber, city, country,student, affiliation, experience)values('$uname','$email', '$phoneNumber','$city', '$country', '$student','$aff', '$exp' )";
     
    
     
+        //notify administration about registration
         try{
             $pdo->exec($ins_query);
-            $status = $uname. " your Record is added Successfully ";
             $notification = "1";
             $date = date("Y-m-d h:i");
             $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
@@ -31,9 +33,10 @@ if(isset($_POST['submit'])){
     
         }
 }
+
+//Go back to the club page
 header("Location: ../club-index.php");
 exit();
-
 
 
 ?>
