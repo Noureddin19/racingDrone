@@ -117,7 +117,6 @@
 </head>
 
 <body>
-	<a href="data-tables.php">Home</a>
 	<br/><br/>
 	
 	<div class="row">
