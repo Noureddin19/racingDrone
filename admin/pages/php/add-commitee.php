@@ -1,7 +1,7 @@
-<?php
-include("../includes/logincheck.php");
+<?php // this page is to add commitee members
+include("../includes/logincheck.php"); // checks if user is loged in
 try{
-    require('../../../sql/connect.php');
+    require('../../../sql/connect.php'); // connect
 }catch(PDOException $e) {
     echo "database failed: " . $e->getMessage();
 
@@ -10,7 +10,6 @@ try{
 //require('sql/league-table.php'); # allow you to add a php file
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
-    #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
     $catagory = $_POST['catagory'];
     $name = $_POST['name'];
     $role = $_POST['role'];
