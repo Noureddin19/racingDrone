@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-require('sql/connect.php');
+require('sql/connect.php'); // in order to connect with Database
 
 
 
@@ -104,7 +104,8 @@ require('sql/connect.php');
                             </div>  
                                                        
                             <div class="extra-nav header-2-nav">
-                                
+                                 <!-- make email clikble and send message when click -->
+
                                 <div class="extra-cell">
                                     <div class="header-nav-request">
                                         <a href="mailto:racing@psu.edu.sa" style="background-color: inherit">racing@psu.edu.sa</a> 
@@ -129,6 +130,7 @@ require('sql/connect.php');
         <!-- CONTENT START -->
             
             <header>
+                <!-- make background video -->
                 
                 <div class="overlay"></div>
                 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="100%" height="100%">
@@ -137,17 +139,18 @@ require('sql/connect.php');
                 <div class="container ">
                   <div class="d-flex  text-center align-items-center">
                     <div class="w-100 text-white my-5 py-5">
-                        
+                        <!--  we used php to get the content of text on video from database -->
                       <p class=" my-2 pt-5 textVid"><?php 
                      $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='about-header'");
                      $statment->execute();
-                     
+                    //  fetch from database
                      while($row = $statment->fetch(PDO::FETCH_ASSOC)){
                            echo $row["content"];
                          }
                     ?>
                     </p>
                       <p class=" lead my-2 textVid2"><?php 
+                      //  fetch from database
                      $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='place'");
                      $statment->execute();
                      
@@ -159,7 +162,7 @@ require('sql/connect.php');
                     <p class=" lead my-2 textVid2"><?php 
                      $statment = $pdo->prepare ("SELECT * FROM compition_content_table WHERE type='date'");
                      $statment->execute();
-                     
+                     //  fetch from database
                      while($row = $statment->fetch(PDO::FETCH_ASSOC)){
                            echo $row["content"];
                          }
