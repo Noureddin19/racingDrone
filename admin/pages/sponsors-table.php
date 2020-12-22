@@ -2,7 +2,11 @@
 session_start();
 
 require('../../sql/connect.php');
+// connect the database
+
 if(!$_SESSION['logged']){
+    // to check  if the user is logged in otherwise he will forward to login.php
+
 header("location: ../../login.php");
 }
 
