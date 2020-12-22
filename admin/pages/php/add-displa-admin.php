@@ -1,8 +1,7 @@
-<?php
-include("../includes/logincheck.php");
-
+<?php // this page is to add admins
+include("../includes/logincheck.php"); // checks if user is loged in
 try{
-    require('../../../sql/connect.php');
+    require('../../../sql/connect.php'); // connect
 }catch(PDOException $e) {
     echo "database failed: " . $e->getMessage();
 

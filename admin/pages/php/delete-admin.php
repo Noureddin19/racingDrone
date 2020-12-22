@@ -1,5 +1,5 @@
 <?php
-include("../includes/logincheck.php");
+include("../includes/logincheck.php");// checks if user is loged in
 
 include '../../../sql/connect.php';
 

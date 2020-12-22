@@ -1,4 +1,4 @@
-<?php
+<?php // this page is to add competition registers
 include("../includes/logincheck.php");
 
 try{
@@ -11,7 +11,6 @@ try{
 //require('sql/league-table.php'); # allow you to add a php file
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
-    #PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form
     $uname = $_POST['fullname'];
     $phoneNumber = $_POST['pn'];
     $email = $_POST['email'];
