@@ -152,7 +152,7 @@ require('sql/connect.php');
                             <div class="logo-header-inner logo-header-one  ">
                             <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
 
-                                <a href="http://racing.riotu-lab.org/club-index.php">
+                                <a href="club-index.php">
                                 <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
                                 <img class="hidden-sm hidden-md hidden-lg" src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt="" width="55px;">
                                     </a>
