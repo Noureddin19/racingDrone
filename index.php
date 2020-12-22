@@ -3,10 +3,7 @@
 session_start();
 require('sql/connect.php');
 
-if($_SESSION['register']){
-    echo "<script type='text/javascript'>alert('Registered Successfully!');</script>";
-    $_SESSION['register'] = false;
-}
+
 
 ?>
 
