@@ -180,7 +180,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-	<title>Lets Edit Data</title>
+	<title>Edit Admin</title>
 </head>
 
 <body>
@@ -188,7 +188,8 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	<br/><br/>
 
 	
-	
+	<div class="row">
+	<div class="container col-md-8 border p-3">
 	<form action="editinfo-admin.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
         <div class="form-group text-left">
@@ -217,5 +218,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 
 </center>          
         </form>
+        </div>
+        </div>
 </body>
 </html>

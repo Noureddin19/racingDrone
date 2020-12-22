@@ -20,7 +20,7 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>Workshop - Edititng</title>
+    <title>Workshop - Add info</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +53,7 @@ header("location: ../../login.php");
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -126,7 +126,8 @@ header("location: ../../login.php");
 <body>
 	<a href="workshop-table.php">Back</a>
 	<br/><br/>
-	
+	<div class="row">
+	<div class="container col-md-8 border p-3">
 	
     <form action="php/add-display-workshop.php" class="was-validated " method="POST">
                                                               <div class="form-group text-left">
@@ -193,5 +194,7 @@ header("location: ../../login.php");
             <button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
             </center>
                                                           </form>
+                                                        </div>
+                                                          </div>
 </body>
 </html>
