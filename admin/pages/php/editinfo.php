@@ -211,8 +211,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	
 	
 	<form action="editinfo.php" method="post" class="was-validated ">
-    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
-
+        <h3>Personal Information</h3>
             <div class="form-group text-left">
                 <label for="fullname" class="left">Full Name</label>
                 <input type="text" class="form-control border" id="fullname" placeholder="Enter Name" name="fullname" value="<?php echo $fullname ?>" required>

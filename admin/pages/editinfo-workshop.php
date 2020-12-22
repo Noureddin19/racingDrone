@@ -198,13 +198,12 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 </head>
 
 <body>
+<a href="workshop-table.php">Back</a>
 	<br/><br/>
 	<div class="row">
 	<div class="container col-md-8 border p-3">
 	
     <form action="editinfo-workshop.php" class="was-validated " method="POST">
-    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
-
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Full Name</label>
                                                                   <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="fullname" value="<?php echo $fullname ?>" required>
