@@ -380,23 +380,27 @@ require('sql/connect.php'); // in order to connect with Database
                                 <center>
                                     <ul class="team-social-bar text-center"
                                         style="display: -webkit-inline-box; list-style-type:none">
-                                                <!--  -->
+                                                <!-- get social media for each member -->
                                         <li><a href="<?php echo $row["twitter"] ?>" target="_blank"><i
                                                     class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"
                                                     <?php if(strlen($row["twitter"])<5){echo " hidden ";}  ?>></i></a>
+                                                    <!-- if the social media is is not exist it will be hidden since there is if condition -->
                                         </li>
                                         <li> <a href="<?php echo $row["linkedin"] ?>" target="_blank"><i
                                                     class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"
                                                     <?php if(strlen($row["linkedin"])<5){echo " hidden";} ?>></i></a>
+                                                    <!-- if the social media is is not exist it will be hidden since there is if condition -->
                                         </li>
 
                                         <li><a href="<?php echo $row["facebook"] ?>" target="_blank"><i
                                                     class="fa fa-facebook fa-2x" style="color: #0072b1; margin: 5px"
                                                     <?php if(strlen($row["facebook"])<5){echo " hidden ";} ?>></i></a>
+                                                    <!-- if the social media is is not exist it will be hidden since there is if condition -->
                                         </li>
                                         <li> <a href="<?php echo $row["instagram"] ?>" target="_blank"><i
                                                     class="fa fa-instagram fa-2x" style="color:red; margin: 5px"
                                                     <?php if(strlen($row["instagram"])<5){echo " hidden ";} ?>></i></a>
+                                                    <!-- if the social media is is not exist it will be hidden since there is if condition -->
                                         </li>
 
 
@@ -409,16 +413,20 @@ require('sql/connect.php'); // in order to connect with Database
                 </div>
             </div>
             <?php endwhile; ?>
+            <!-- end loop of comptioin chairs -->
 
 
 
         </div>
+    <!--Organization Committee SECTION start -->
 
         <div class="section-content mt-5">
             <h2 class=" text-center">Organization Committee</h2>
             <div class="row justify-content-center">
 
                 <?php
+                            // fetch comptiton Committee from database
+
                                         $statment = $pdo->prepare ("SELECT * FROM compition_commitee WHERE catagory='Committee'");
                                         
                                         $statment->execute();
@@ -429,7 +437,7 @@ require('sql/connect.php'); // in order to connect with Database
                     <div class="wt-team-2 shadow-sm text-center ">
                         <div class="wt-info shadow-sm ">
                             <div class="team-detail">
-
+                                <!-- print content that fetched above -->
                                 <h3 class="m-t0 team-name"><?php echo $row["name"] ?></h3>
                                 <h5><?php echo $row["role"] ?></h5>
 
@@ -446,19 +454,22 @@ require('sql/connect.php'); // in order to connect with Database
                                                         class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"
                                                         <?php if(strlen($row["twitter"])<5){echo " hidden ";}  ?>></i></a>
                                             </li>
+                                            <!-- if the social media is is not exist it will be hidden since there is if condition -->
                                             <li> <a href="<?php echo $row["linkedin"] ?>" target="_blank"><i
                                                         class="fa fa-linkedin fa-2x" style="color:#0072b1; margin: 5px"
                                                         <?php if(strlen($row["linkedin"])<5){echo " hidden";} ?>></i></a>
                                             </li>
-
+                                            <!-- if the social media is is not exist it will be hidden since there is if condition -->
                                             <li><a href="<?php echo $row["facebook"] ?>" target="_blank"><i
                                                         class="fa fa-facebook fa-2x" style="color: #0072b1; margin: 5px"
                                                         <?php if(strlen($row["facebook"])<5){echo " hidden ";} ?>></i></a>
                                             </li>
+                                            <!-- if the social media is is not exist it will be hidden since there is if condition -->
                                             <li> <a href="<?php echo $row["instagram"] ?>" target="_blank"><i
                                                         class="fa fa-instagram fa-2x" style="color:red; margin: 5px"
                                                         <?php if(strlen($row["instagram"])<5){echo " hidden ";} ?>></i></a>
                                             </li>
+                                            <!-- if the social media is is not exist it will be hidden since there is if condition -->
 
 
                                         </ul>
@@ -469,6 +480,7 @@ require('sql/connect.php'); // in order to connect with Database
                     </div>
                 </div>
                 <?php endwhile; ?>
+            <!-- end loop of comptioin chairs -->
 
 
 
