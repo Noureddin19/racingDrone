@@ -11,7 +11,7 @@ if(!$_SESSION['logged']){
 header("location: ../../login.php");
 }
 
-{	
+if(isset($_POST["update"])){	
 	
 	$id = $_POST['id'];
 	$fullname = $_POST['fullname'];
@@ -231,8 +231,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	<div class="row">
 	<div class="container col-md-8 border p-3">
 	<form action="editinfo.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
-            <div class="form-group text-left">
+    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>            <div class="form-group text-left">
                 <label for="fullname" class="left">Full Name</label>
                 <input type="text" class="form-control border" id="fullname" placeholder="Enter Name" name="fullname" value="<?php echo $fullname ?>" required>
                 <div class="valid-feedback">Valid</div>
