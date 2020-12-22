@@ -3,6 +3,7 @@
 session_start();
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
+//  check if the user is logged in 
 
     header("location: ../../login.php");
     }

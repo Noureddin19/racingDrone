@@ -3,6 +3,8 @@ session_start(); // start session
 
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
+    //  check if the user is logged in 
+
 header("location: ../../login.php");
 }
 ?>
@@ -84,6 +86,7 @@ header("location: ../../login.php");
                                 <a  href="addmyinfo.php" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
+                                        <!-- print firs row in table -->
                 <tr>
                     <th>id</th>
                     <th>Name</th>
