@@ -1,9 +1,11 @@
 <?php 
+// this page has the information for people who signed up in workshop form in club-index.php
 session_start();
-require('../../sql/connect.php');
+require('../../sql/connect.php'); 
+// connect the database
 
 if(!$_SESSION['logged']){
-
+// to check  if the user is logged in otherwise he will forward to login.php
 header("location: ../../login.php");
 }
 ?>
@@ -58,8 +60,6 @@ header("location: ../../login.php");
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
                             <h2 class="pageheader-title">Workshop Table</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce
-                                sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
@@ -78,17 +78,20 @@ header("location: ../../login.php");
                 <!-- ============================================================== -->
                 <div class="row">
                     <!-- ============================================================== -->
-                    <!-- basic table  -->
+                    <!-- workshop table  -->
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
+                                    <!-- start the form  that show the information of the workshoper -->
                                     <a href="addmyinfo-workshop.php" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                         <thead>
-                                            <tr>
+                                            <!-- the first row in the table  -->
+                                        <tr>
+                                            
                                                 <th>Number</th>
                                                 <th>Name</th>
                                                 <th>Phone Number</th>
@@ -114,7 +117,7 @@ header("location: ../../login.php");
               
                 $stmt = $pdo->prepare("SELECT * FROM workshop_form ORDER BY workshopid;");
                 $stmt->execute();
-                
+                // get data from data base and print it in table
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                                             <tr>
                                                 <td><?php echo $count; ?></td>
@@ -131,10 +134,12 @@ header("location: ../../login.php");
 
                                                 <td><a href="editinfo-workshop.php?workshopid=<?php echo $row['workshopid'];?>"
                                                         class="btn btn-primary">Edit</td>
+                                                        <!-- edit button that get the user to edit info fro people in the table and put the id in link to get by $_GET -->
                                                 <td><a onClick="return confirm('Do you want to delete?')"
                                                         href="php/delete-workshop.php?workshopid=<?php echo $row['workshopid']; ?>"
-                                                        class="btn btn-danger">Delete</td> <!-- Task 3 -->
-                                            </tr>
+                                                        class="btn btn-danger">Delete</td> 
+                                                        <!-- delete button that get the user to delete info fro people in the table and put the id in link to get by $_GET -->
+                                                        </tr>
 
                                             <?php
                   $count++;}
@@ -148,7 +153,7 @@ header("location: ../../login.php");
                         </div>
                     </div>
                     <!-- ============================================================== -->
-                    <!-- end basic table  -->
+                    <!-- end workshop table  -->
                     <!-- ============================================================== -->
                 </div>
 
@@ -159,13 +164,6 @@ header("location: ../../login.php");
                 <!-- ============================================================== -->
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-
-        <!-- ============================================================== -->
-        <!-- end footer -->
-        <!-- ============================================================== -->
     </div>
     </div>
     <!-- ============================================================== -->
