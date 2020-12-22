@@ -1,8 +1,9 @@
 <?php 
 session_start();
-
+// connect data base
 require('../../../sql/connect.php');
 if(!$_SESSION['logged']){
+    // check if the user is logged in
 header("location:../ ../../login.php");
 }
 ?>
@@ -14,6 +15,7 @@ $id = $_GET["id"];
 $detail = $_POST["detail"];
 $stmt = $pdo->prepare("UPDATE safty SET safty='$safty',detail='$detail' WHERE id='$id';");
         $stmt->execute();
+          // go to same page again
 		header('Location: ../safty-table.php');
 
 ?>
