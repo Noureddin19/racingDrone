@@ -11,7 +11,7 @@ if(!$_SESSION['logged']){
 header("location: ../../login.php");
 }
 
-if(isset($_POST["update"])){	
+{	
 	
 	$id = $_POST['id'];
 	$fullname = $_POST['fullname'];
@@ -20,9 +20,11 @@ if(isset($_POST["update"])){
     $age = $_POST['age'];
     $fcn = $_POST['fcn'];
     $org = $_POST['org'];
+   
     $ea = $_POST['ea'];
     $nationality =$_POST['nationality'];
-    $ms = $_POST['ms'];  
+    $ms = $_POST['ms'];
+    
     $bcn = $_POST['bcn'];
     $bcc = $_POST['bcc'];
     $dow = $_POST['dow'];
