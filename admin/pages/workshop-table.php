@@ -11,7 +11,7 @@ header("location: ../../login.php");
 
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -33,7 +33,7 @@ header("location: ../../login.php");
     <!-- main wrapper -->
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
-         <!-- ============================================================== -->
+        <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
         <?php require 'includes/navbar.php';?>
@@ -58,11 +58,13 @@ header("location: ../../login.php");
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
                             <h2 class="pageheader-title">Workshop Table</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce
+                                sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a>
+                                        </li>
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tables</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
                                     </ol>
@@ -83,29 +85,29 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo-workshop.php" class="btn btn-success">Add</a>
+                                    <a href="addmyinfo-workshop.php" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
-                                    <thead>
-                <tr>
-                    <th>Number</th>
-                    <th>Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>City</th>
-                    <th>Country</th>
-                    <th>experience</th>
-                    
-                    <th>affiliation</th>
-                    <th>Student?</th>
-                    
-                    <th>Edit</th>
-                    <th>Delete</th>
-                
-                </th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+                                        <thead>
+                                            <tr>
+                                                <th>Number</th>
+                                                <th>Name</th>
+                                                <th>Phone Number</th>
+                                                <th>Email</th>
+                                                <th>City</th>
+                                                <th>Country</th>
+                                                <th>experience</th>
+
+                                                <th>affiliation</th>
+                                                <th>Student?</th>
+
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
                
                 try{
                     $count =1;
@@ -114,24 +116,27 @@ header("location: ../../login.php");
                 $stmt->execute();
                 
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
-                   <tr>
-                       <td><?php echo $count; ?></td>
-                       <td><?php echo $row["fullname"] ?></td>
-                       <td><?php echo $row["phonenumber"] ?></td>
-                       <td><?php echo $row["email"] ?></td>
-                       <td><?php echo $row["city"] ?></td>
-                       <td><?php echo $row["country"] ?></td>
-                       <td><?php echo $row["experience"] ?></td>
-                       
-                       <td><?php echo $row["affiliation"] ?></td>
-                       <td><?php echo $row["student"] ?></td>
-                      
-                      
-                       <td><a  href="editinfo-workshop.php?workshopid=<?php echo $row['workshopid'];?>" class="btn btn-primary">Edit</td>
-                       <td><a onClick="return confirm('Do you want to delete?')" href="php/delete-workshop.php?workshopid=<?php echo $row['workshopid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
-                   </tr>
-                    
-              <?php
+                                            <tr>
+                                                <td><?php echo $count; ?></td>
+                                                <td><?php echo $row["fullname"] ?></td>
+                                                <td><?php echo $row["phonenumber"] ?></td>
+                                                <td><?php echo $row["email"] ?></td>
+                                                <td><?php echo $row["city"] ?></td>
+                                                <td><?php echo $row["country"] ?></td>
+                                                <td><?php echo $row["experience"] ?></td>
+
+                                                <td><?php echo $row["affiliation"] ?></td>
+                                                <td><?php echo $row["student"] ?></td>
+
+
+                                                <td><a href="editinfo-workshop.php?workshopid=<?php echo $row['workshopid'];?>"
+                                                        class="btn btn-primary">Edit</td>
+                                                <td><a onClick="return confirm('Do you want to delete?')"
+                                                        href="php/delete-workshop.php?workshopid=<?php echo $row['workshopid']; ?>"
+                                                        class="btn btn-danger">Delete</td> <!-- Task 3 -->
+                                            </tr>
+
+                                            <?php
                   $count++;}
                 }catch(PDOException $e) {
                     echo "Error: " . $e->getMessage();
@@ -146,22 +151,22 @@ header("location: ../../login.php");
                     <!-- end basic table  -->
                     <!-- ============================================================== -->
                 </div>
-              
-                
-                
-                    <!-- ============================================================== -->
-                    <!-- end data table multiselects  -->
-                    <!-- ============================================================== -->
-                </div>
+
+
+
+                <!-- ============================================================== -->
+                <!-- end data table multiselects  -->
+                <!-- ============================================================== -->
             </div>
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-          
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
         </div>
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+
+        <!-- ============================================================== -->
+        <!-- end footer -->
+        <!-- ============================================================== -->
+    </div>
     </div>
     <!-- ============================================================== -->
     <!-- end main wrapper -->
@@ -186,7 +191,7 @@ header("location: ../../login.php");
     <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
-    
+
 </body>
- 
+
 </html>

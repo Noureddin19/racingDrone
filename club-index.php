@@ -25,7 +25,8 @@ require('sql/connect.php');
     <link rel="shortcut icon" type="image/x-icon" href="images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title> <?php 
+    <title> <?php
+                // Run Selsct query to display title
                      $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='title'");
                      $statment->execute();
                      
@@ -114,6 +115,7 @@ require('sql/connect.php');
                                 <span class="icon-bar icon-bar-three"></span>
                             </button> 
                             <?php 
+                            // Run Select query to display the email
                      $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='email'");
                      $statment->execute();
                      
@@ -126,6 +128,7 @@ require('sql/connect.php');
                                 
                                 <div class="extra-cell">
                                     <div class="header-nav-request">
+                                    <!-- Run select query to fetch email to use it in the mailto -->
                                         <a href="mailto:<?php echo $_SESSION['email'];?>" style="background-color: inherit"> <?php 
                      $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='email'");
                      $statment->execute();
@@ -313,6 +316,7 @@ require('sql/connect.php');
                                 color:#d3d3d3;
                                 border-width:0px;font-family: 'Muli', sans-serif;">
                                    <?php 
+                                   // Select Query to display header text
                      $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='header-text'");
                      $statment->execute();
                      
@@ -454,7 +458,7 @@ require('sql/connect.php');
         <div class="row justify-content-center d-flex how-it-drone3">
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-left">
-            <?php  
+            <?php  // Select all from safty table to display the first 4 on the left
                                                 $statment = $pdo->prepare ("SELECT * FROM `safty` ORDER BY `id`");                                               
                                                 $statment->execute();
                                                 $i=0;
@@ -503,7 +507,7 @@ require('sql/connect.php');
             </div>
 
             <div class="col-lg-4 col-md-12 m-b30 how-it-drone3-right">
-            <?php  
+            <?php  // Select all from safty table to display the last 4 on the right
                                                 $statment = $pdo->prepare ("SELECT * FROM `safty` ORDER BY `id` desc" );                                               
                                                 $statment->execute();
                                                 $i=5;
@@ -594,7 +598,7 @@ require('sql/connect.php');
     <div class="carousel-inner" role="listbox">
 
         <?php
-
+        // Select all images in this path, display them in a coursel
         $count1 = 0;
 
         foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp, *.GIF,*.JPG,*.PNG,*.JPEG,*.BMP}", GLOB_BRACE) as $image){
@@ -643,7 +647,7 @@ require('sql/connect.php');
     <?php
 
     $count2 = 0;
-
+// this is for the indicators
     foreach(glob("images/gallery/landscape/{*.gif,*.jpg,*.png,*.jpeg,*.bmp, *.GIF,*.JPG,*.PNG,*.JPEG,*.BMP}", GLOB_BRACE) as $image){
         
         if(strcmp(basename($image), "aboutus.png")){
@@ -704,6 +708,7 @@ require('sql/connect.php');
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30 ">
                                     <div class="counter-box">
                                         <h2 class="counter"> <?php 
+                                       
                      $statment = $pdo->prepare ("SELECT * FROM club_content_table WHERE type='members'");
                      $statment->execute();
                      
@@ -1094,6 +1099,7 @@ require('sql/connect.php');
                         <div class="row justify-content-center">
 
                             <?php
+                            // run select query to get all members and their info
                                 $statment = $pdo->prepare ("SELECT * FROM club_members");
                                 
                                 $statment->execute();
@@ -1102,7 +1108,7 @@ require('sql/connect.php');
 
                             <div class="col-lg-4 col-md-6 col-sm-12 m-b30">
                                 <div class="wt-team-2 shadow-sm">
-
+                                    <!-- Display all members from club_members -->
                                     <div class="wt-info shadow-sm">
                                         <div class="team-detail">
                                             <span
@@ -1147,6 +1153,7 @@ require('sql/connect.php');
 
             <!-- CLIENT LOGO SECTION START -->
             <?php
+            // including a php file that has the sponsors display code
            include("includes/sponsers.php");
            ?>
             <!-- CLIENT LOGO  SECTION End -->
@@ -1155,7 +1162,11 @@ require('sql/connect.php');
         <!-- CONTENT END -->
 
        <!-- FOOTER START -->
-       <?php include("includes/footer.html") ?> 
+       
+       <?php
+       // includding the footer from a seperate php file
+       include("includes/footer.html") 
+       ?> 
         <!-- FOOTER END -->
 
 
