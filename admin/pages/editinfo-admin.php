@@ -191,7 +191,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	<div class="row">
 	<div class="container col-md-8 border p-3">
 	<form action="editinfo-admin.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
+    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
         <div class="form-group text-left">
                                                                 <label for="user" class="left">Username</label>
                                                                 <input type="text" class="form-control border" id="user" placeholder="Enter your name" name="user" value="<?php echo $username ?>" required>
