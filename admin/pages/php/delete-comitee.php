@@ -18,6 +18,7 @@ $date = date("Y-m-d h:i");
 // now date with time
 $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('d', '$notification', '$date')";
 $pdo->exec($nof_qury);
+// add notification to its table
 header("location: ../compition-commitee.php");
 }catch(PDOException $e) {
   echo "database failed: " . $e->getMessage();

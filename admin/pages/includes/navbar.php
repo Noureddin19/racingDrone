@@ -1,3 +1,4 @@
+<!-- this is a navbar -->
 <!-- navbar -->
         <!-- ============================================================== -->
         <div class="dashboard-header">
@@ -15,6 +16,7 @@
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
                                 <li>
                                     <div class="notification-title"> Notification</div>
+                                    <!-- this is a loop of  notification -->
                                     <div class="notification-list">
                                         <?php  
                                                 $statment = $pdo->prepare ("SELECT * FROM `notification` ORDER BY `creation` DESC");                                               
@@ -37,7 +39,7 @@
                                                         echo $row["username"];
                                                     }
                                                     ?></span><?php 
-                                                    
+                                                    // to write the notification depend on its number the it will be translated here
                                                     if($row["notification"] == '0'){
                                                         echo "A new Racer has been registerd";
                                                     }else if($row["notification"] == '1'){
@@ -59,6 +61,7 @@
                                                     </div>
                                                 </div>
                                             </a>
+                                            <!-- to stop the loop after show last five notification -->
                                                <?php $i++;
                                                 if($i == 5){
                                                     break;
@@ -68,6 +71,7 @@
                                         
                                 </li>
                                 <li>
+                                    <!-- to go to notification page -->
                                     <div class="list-footer"> <a href="notification.php">View all notifications</a></div>
                                 </li>
                             </ul>
@@ -77,6 +81,7 @@
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
+                                    <!-- to show the name for the account -->
                                     <h5 class="mb-0 text-white nav-user-name"><?php  echo $_SESSION["userName"];?></h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
