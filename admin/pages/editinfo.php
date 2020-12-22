@@ -7,7 +7,7 @@ require('../../sql/connect.php');
  
 
 if(!$_SESSION['logged']){
-
+//  check if the user is logged in 
 header("location: ../../login.php");
 }
 
@@ -55,7 +55,9 @@ header("location: ../../login.php");
         try{
           
             $status = $uname. " your Record is added Successfully ";
+            // add notification to notification table
             $notification = "2";
+            //  each notification has specific number 
             $date = date("Y-m-d h:i");
             $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
             $pdo->exec($nof_qury);
@@ -224,7 +226,6 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 </head>
 
 <body>
-<a href="data-tables.php">Home</a>
 	<br/><br/>
 	
 	<div class="row">
