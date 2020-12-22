@@ -5,6 +5,27 @@ require('../../sql/connect.php');
 if(!$_SESSION['logged']){
 header("location: ../../login.php");
 }
+
+if(isset($_SESSION['exists'])){
+    if($_SESSION['exists'] == true){
+        echo '<script>alert("Sorry, file already exists.");</script>';
+        $_SESSION['exists'] = false;
+    }
+}
+
+if(isset($_SESSION['large'])){
+    if($_SESSION['large'] == true){
+        echo '<script>alert("Sorry, your file is too large.");</script>';
+        $_SESSION['large'] = false;
+    }
+}
+
+if(isset($_SESSION['format'])){
+    if($_SESSION['format'] == true){
+        echo '<script>alert("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");</script>';
+        $_SESSION['format'] = false;
+    }
+}
 ?>
 
 
