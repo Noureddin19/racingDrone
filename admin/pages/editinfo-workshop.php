@@ -22,7 +22,7 @@ if(isset($_POST['update']))
     $student =$_POST['student'];
    
 	
-	// checking empty fields
+	
 		
 		//updating the table
 		
