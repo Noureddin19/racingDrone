@@ -360,7 +360,6 @@ require('sql/connect.php'); // in order to connect with Database
             <?php
             // fetch comptiton chares from database
                                         $statment = $pdo->prepare ("SELECT * FROM compition_commitee WHERE catagory='Chairs'");
-                                        
                                         $statment->execute();
                                         while($row = $statment->fetch(PDO::FETCH_ASSOC)):
                                     ?>
@@ -369,7 +368,7 @@ require('sql/connect.php'); // in order to connect with Database
                 <div class="wt-team-2 shadow-sm text-center ">
                     <div class="wt-info shadow-sm ">
                         <div class="team-detail">
-
+                                            <!-- print content that fetched above -->
                             <h3 class="m-t0 team-name"><?php echo $row["name"] ?></h3>
                             <h5><?php echo $row["role"] ?></h5>
 
@@ -381,7 +380,7 @@ require('sql/connect.php'); // in order to connect with Database
                                 <center>
                                     <ul class="team-social-bar text-center"
                                         style="display: -webkit-inline-box; list-style-type:none">
-
+                                                <!--  -->
                                         <li><a href="<?php echo $row["twitter"] ?>" target="_blank"><i
                                                     class="fa fa-twitter fa-2x" style="color: #00acee; margin: 5px"
                                                     <?php if(strlen($row["twitter"])<5){echo " hidden ";}  ?>></i></a>
