@@ -1,5 +1,5 @@
 <?php
-include("../includes/logincheck.php");
+include("../includes/logincheck.php");// checks if user is loged in
 
 include '../../../sql/connect.php';
 $id = $_GET['id']; // get is super global
@@ -7,6 +7,7 @@ $id = $_GET['id']; // get is super global
 
 
 try{
+ 
 $stmt = $pdo->prepare("DELETE FROM compition_commitee where id='$id';");
 $stmt->execute();
 try{
