@@ -124,7 +124,6 @@ header("location: ../../login.php");
 </head>
 
 <body>
-<button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Home</button>
 
 	<br/><br/>
 	<div class="row">
