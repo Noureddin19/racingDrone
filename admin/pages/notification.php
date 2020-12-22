@@ -122,17 +122,20 @@ header("location: ../../login.php");
                 
                 try{
                 
-              
+                    // fetch data from database descinding by the cration date of notification
                     $statment = $pdo->prepare ("SELECT * FROM `notification` ORDER BY `creation` DESC");                                               
                     $statment->execute();
                 
                 while($row = $statment->fetch(PDO::FETCH_ASSOC)){ ?>
                    <tr>
-                   
+                   <!--  show the field of notification to with the user name  -->
                       <form action="php/update-comptiton.php?type=<?php echo $row['type']; ?>" method="POST">
                       <td><?php  if(empty($row["username"])){
+                           // if the user empty in database print someone
+                                                        // this case happen if person sign in a form from user page
                                                         echo "Someone";
                                                     }else if($row["username"] ="d"){
+                                                        
                                                         echo $_SESSION["userName"];
                                                     }
                                                     
