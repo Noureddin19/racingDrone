@@ -7,6 +7,7 @@
 <body>
     <p>This is a page to create a database and table along with insert record</p>
     <?php
+    // connect
     require(connect.php);
     
     require(createDB.php);

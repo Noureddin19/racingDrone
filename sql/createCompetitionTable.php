@@ -1,4 +1,5 @@
 <?php
+// require php files to connect
     require('connect.php');
     
     require('createDB.php');

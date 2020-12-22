@@ -1,4 +1,5 @@
 <?php
+// coneect
        require('connect.php');
 
    //step4: create the database
