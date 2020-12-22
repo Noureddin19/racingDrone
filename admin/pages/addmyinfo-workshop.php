@@ -132,6 +132,7 @@ header("location: ../../login.php");
     
 	
     <form action="php/add-display-workshop.php" class="was-validated " method="POST">
+    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Full Name</label>
                                                                   <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="fullname"  required>

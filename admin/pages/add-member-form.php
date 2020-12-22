@@ -130,7 +130,7 @@ header("location: ../../login.php");
 	<div class="row">
 	<div class="container col-md-8 border p-3">
 	<form action="php/add-member.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
+        <h3> <a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
             
             <div class="form-group text-left">
                 <label for="phone">name</label>
