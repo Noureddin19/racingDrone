@@ -1,5 +1,5 @@
-<?php 
-session_start();
+<?php // this page is for modifying commitee members
+session_start(); // start session
 
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){

@@ -1,6 +1,7 @@
 <?php
-
+// Start of the the session to record input
 session_start();
+//Connect to database
 require('sql/connect.php');
 
 ?>
@@ -9,15 +10,18 @@ require('sql/connect.php');
 <html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG4JCWDBMK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GG4JCWDBMK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-GG4JCWDBMK');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GG4JCWDBMK');
+    </script>
 
     <!-- META -->
     <meta charset="utf-8">
@@ -95,7 +99,7 @@ require('sql/connect.php');
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
-    
+
 
 
 
@@ -147,173 +151,186 @@ require('sql/connect.php');
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
-                    <div class="row mb-3">
-                    <div class="logo-header col-sm-8 w-100 ">
-                            <div class="logo-header-inner logo-header-one  ">
-                            <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
+                        <div class="row mb-3">
+                            <div class="logo-header col-sm-8 w-100 ">
+                                <div class="logo-header-inner logo-header-one  ">
+                                    <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  "
+                                            style="color:white; font-size:25px"></i></a>
 
-                                <a href="club-index.php">
-                                <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
-                                <img class="hidden-sm hidden-md hidden-lg" src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt="" width="55px;">
+                                    <a href="club-index.php">
+                                        <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png"
+                                            alt="" width="300px;">
+                                        <img class="hidden-sm hidden-md hidden-lg"
+                                            src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt=""
+                                            width="55px;">
                                     </a>
                                 </div>
-                            </div>  
-                                                       
-                            <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
-                                
-                                <div class="extra-cell ">
-                                    <div class="header-nav-request">
-                                        <a href="mailto:racing@psu.edu.sa" style="background-color: inherit">racing@psu.edu.sa</a> 
-                                    </div>
-                                </div>                                
-                                 
-                            </div>  
-                    </div>
-                                                                                              
-
-                             
-                            <!-- MAIN Vav -->
-                            <div class="nav-animation header-nav navbar-collapse collapse  justify-content-center">
-                        
-    
                             </div>
 
+                            <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
+
+                                <div class="extra-cell ">
+                                    <div class="header-nav-request">
+                                        <a href="mailto:racing@psu.edu.sa"
+                                            style="background-color: inherit">racing@psu.edu.sa</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <!-- MAIN Vav -->
+                        <div class="nav-animation header-nav navbar-collapse collapse  justify-content-center">
+
+
+                        </div>
+
                     </div>
-                    
 
 
-                       
-                        
+
+
+
                 </div>
             </div>
         </header>
         <!-- HEADER END -->
-            <div class=" container-fluid pr-0 pl-0 shadow-lg m" >
-                <img src="images/background/the-price-of-a-racing-drone-varies.jpeg" alt="">
-            </div>
+        <div class=" container-fluid pr-0 pl-0 shadow-lg m">
+            <img src="images/background/the-price-of-a-racing-drone-varies.jpeg" alt="">
+        </div>
         <!-- CONTENT START -->
-        <div class="page-content container p-5" id="home1" >
+        <div class="page-content container p-5" id="home1">
 
-        <h2>PSU Drone Racing League Registration</h2>
-        <br>
-        <div class="rounded-0 text-dark">
-            <h3>Rules & Procedures</h3>
-            <div class="container text-dark">
-            <ol style="font-size: 1.2em;">
-                   
-                    <?php  
-                                                $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id`");                                               
-                                                $statment->execute();
-                                                $i=0;
-                                               while($row = $statment->fetch(PDO::FETCH_ASSOC)):
-                                                ?>
-                                           
-                                            <li><?php echo $row["rule"]; ?></li>
-                                               <?php $i++;
-                                                if($i == 8){
-                                                    break;
-                                                }
-                                                     endwhile; ?>
-                </ol>
-            </div>
-            </div>
-
-
-
-        <form action="display-member-info.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
-            <div class="form-group text-left">
-                <label for="uname" class="left">Full Name</label>
-                <input type="text" class="form-control border" id="uname" placeholder="Enter Name" name="uname" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            
-            <div class="form-group text-left">
-                <label for="phone">Phone Number</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="eg. 966xxxxxxxxx" name="pn" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="email">Email</label>
-                <input type="email" class="form-control border" id="pwd" placeholder="eg. email@example.com" name="email" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="nationality">Nationality</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Nationality" name="nationality" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="age">Age</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Age" name="age" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="org">Organization</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Organization" name="org" required>
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-
+            <h2>PSU Drone Racing League Registration</h2>
             <br>
-            <h3>Drone Information</h3>
-            <p>This section is optional. If your planning to participate using the similator you can skip it</p>
-            <div class="form-group text-left">
-                <label for="pwd">Flight Controller Name</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Flight Controller Name" name="fcn">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">ESC Amps (in ampere)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your ESC Amps" name="ea">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">Motor Size and KV</label>
-                <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Motor Size and KV" name="ms">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">Battery Cells</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Battery cells number" name="bcn">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">Battery Capacity (in milliampere)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Battery cells capacity" name="bcc">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            <div class="form-group text-left">
-                <label for="pwd">Drone Overall Weight with Battery (in grams)</label>
-                <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Drone's Overall Weight" name="dow">
-                <div class="valid-feedback">Valid</div>
-                <div class="invalid-feedback">Required</div>
-            </div>
-            
-            <center>
-            <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Confirm</button>
-            </center>
-        </form>
-        
-        <?php 
+            <div class="rounded-0 text-dark">
+                <h3>Rules & Procedures</h3>
+                <div class="container text-dark">
+                    <ol style="font-size: 1.2em;">
 
-// if(!$_SESSION['register']){
-//     $_SESSION['register'] = true;
-//     echo "<script type='text/javascript'>alert('Invalid registration: email already exists');</script>";
-// }
+                        <?php  
+                        //display the rules from database
+                        $statment = $pdo->prepare ("SELECT * FROM `rules` ORDER BY `id`");                                               
+                        $statment->execute();
+                        $i=0;
+                        while($row = $statment->fetch(PDO::FETCH_ASSOC)):
+                        ?>
 
-?>
+                            <li><?php echo $row["rule"]; ?></li>
+                            <?php $i++;
+                        if($i == 8){
+                            break;
+                        }
+                                endwhile; 
+                        ?>
 
+                    </ol>
+                </div>
+            </div>
+
+
+            <!--Competition registration form start-->
+            <form action="display-member-info.php" method="post" class="was-validated ">
+                <h3>Personal Information</h3>
+                <div class="form-group text-left">
+                    <label for="uname" class="left">Full Name</label>
+                    <input type="text" class="form-control border" id="uname" placeholder="Enter Name" name="uname"
+                        required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+
+                <div class="form-group text-left">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control border" id="pwd" placeholder="eg. 966xxxxxxxxx" name="pn"
+                        required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control border" id="pwd" placeholder="eg. email@example.com"
+                        name="email" required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Nationality"
+                        name="nationality" required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control border" id="pwd" placeholder="Enter Your Age" name="age"
+                        required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="org">Organization</label>
+                    <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Organization"
+                        name="org" required>
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+
+                <br>
+                <h3>Drone Information</h3>
+                <p>This section is optional. If your planning to participate using the similator you can skip it</p>
+                <div class="form-group text-left">
+                    <label for="pwd">Flight Controller Name</label>
+                    <input type="text" class="form-control border" id="pwd"
+                        placeholder="Enter Your Flight Controller Name" name="fcn">
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="pwd">ESC Amps (in ampere)</label>
+                    <input type="number" class="form-control border" id="pwd" placeholder="Enter Your ESC Amps"
+                        name="ea">
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="pwd">Motor Size and KV</label>
+                    <input type="text" class="form-control border" id="pwd" placeholder="Enter Your Motor Size and KV"
+                        name="ms">
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="pwd">Battery Cells</label>
+                    <input type="number" class="form-control border" id="pwd"
+                        placeholder="Enter Your Battery cells number" name="bcn">
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="pwd">Battery Capacity (in milliampere)</label>
+                    <input type="number" class="form-control border" id="pwd"
+                        placeholder="Enter Your Battery cells capacity" name="bcc">
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="form-group text-left">
+                    <label for="pwd">Drone Overall Weight with Battery (in grams)</label>
+                    <input type="number" class="form-control border" id="pwd"
+                        placeholder="Enter Your Drone's Overall Weight" name="dow">
+                    <div class="valid-feedback">Valid</div>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+
+                <center>
+                    <button type="submit" name="submit" value="submit"
+                        class="site-button site-btn-effect justify-content-center mt-4">Confirm</button>
+                </center>
+            </form>
+
+            <!-- Competiton registration end -->
 
         </div>
 
@@ -321,26 +338,26 @@ require('sql/connect.php');
         <?php
            include("includes/sponsers.php");
            ?>
-            <!-- CLIENT LOGO  SECTION End -->
-            </div>
-        <!-- CONTENT END -->
+        <!-- CLIENT LOGO  SECTION End -->
+    </div>
+    <!-- CONTENT END -->
 
-        <!-- FOOTER START -->
-            <?php include("includes/footer.html") ?> 
-        <!-- FOOTER END -->
+    <!-- FOOTER START -->
+    <?php include("includes/footer.html") ?>
+    <!-- FOOTER END -->
 
-<!-- BUTTON TOP START -->
-<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+    <!-- BUTTON TOP START -->
+    <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
 
-</div>
+    </div>
 
-<!-- LOADING AREA START ===== -->
-<div class="loading-area">
-<div class="loading-box"></div>
-<div class="loading-pic">
-<div class="cssload-loader"></div>
-</div>
-</div>
+    <!-- LOADING AREA START ===== -->
+    <div class="loading-area">
+        <div class="loading-box"></div>
+        <div class="loading-pic">
+            <div class="cssload-loader"></div>
+        </div>
+    </div>
     <!-- LOADING AREA  END ====== -->
 
     <!-- JAVASCRIPT  FILES ========================================= -->

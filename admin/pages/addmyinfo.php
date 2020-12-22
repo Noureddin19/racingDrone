@@ -1,4 +1,13 @@
 
+<?php // this page is for adding club members
+session_start(); // start session
+
+require('../../sql/connect.php');
+if(!$_SESSION['logged']){
+header("location: ../../login.php");
+}
+?>
+
 <html>
 <head>	
 <meta charset="utf-8">

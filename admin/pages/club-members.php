@@ -1,5 +1,5 @@
-<?php 
-session_start();
+<?php // this page is for displaying club members and modifying them
+session_start(); // start session
 
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
@@ -124,7 +124,7 @@ header("location: ../../login.php");
                 
                 try{
                 
-              
+              // run select query to display memebrs in the form 
                 $stmt = $pdo->prepare("SELECT * FROM club_members ;");
                 $stmt->execute();
                 

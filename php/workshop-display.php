@@ -1,8 +1,7 @@
 <?php
+//connect to database
  require('../sql/connect.php');
     
-//require('sql/createDB.php');
-//require('sql/createWorkshopTable.php'); # allow you to add a php file
 $status = ""; # for user that message is successfully recorded in database
 #isset : allows you to check that #it is decleard # it is not null
 if(isset($_POST['submit'])){
@@ -22,11 +21,11 @@ if(isset($_POST['submit'])){
     
         try{
             $pdo->exec($ins_query);
-    $status = $uname. " your Record is added Successfully ";
-    $notification = "1";
-    $date = date("Y-m-d h:i");
-    $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
-    $pdo->exec($nof_qury);
+            $status = $uname. " your Record is added Successfully ";
+            $notification = "1";
+            $date = date("Y-m-d h:i");
+            $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
+            $pdo->exec($nof_qury);
         }catch(PDOException $e) {
             echo "database failed: " . $e->getMessage();
     

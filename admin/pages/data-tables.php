@@ -1,13 +1,11 @@
-<?php 
-session_start();
+<?php // this page is for modifying registers for the competition
+session_start(); // start session
+
 require('../../sql/connect.php');
-
 if(!$_SESSION['logged']){
-
 header("location: ../../login.php");
 }
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -110,13 +108,9 @@ header("location: ../../login.php");
             </thead>
             <tbody>
                 <?php
+               
                 try{
-                    echo dirname('data-tables.php');
-                 
-                 }catch(PDOException $e) {
-                     echo "Error: " . $e->getMessage();
-                   }
-                try{
+                    // running the select query to display all registers in a table in a while loop
                     $count =1;
               
                 $stmt = $pdo->prepare("SELECT * FROM membership_form ORDER BY membershipid;");

@@ -1,5 +1,5 @@
-<?php 
-session_start();
+<?php // this page is for modifying the competition (index.php in racingDrone) content
+session_start(); // start session
 
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){

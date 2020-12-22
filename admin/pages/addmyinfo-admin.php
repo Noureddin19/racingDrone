@@ -1,11 +1,12 @@
-<?php 
-session_start();
+<?php // this page is for adding admins
+session_start(); // start session
 
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
 header("location: ../../login.php");
 }
 ?>
+
 <html>
 <head>	
 <meta charset="utf-8">
@@ -133,20 +134,20 @@ header("location: ../../login.php");
         <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
         <div class="form-group text-left">
                                                                 <label for="user" class="left">Username</label>
-                                                                <input type="text" class="form-control border" id="user" placeholder="Enter your name" name="user" value="<?php echo $username ?>" required>
+                                                                <input type="text" class="form-control border" id="user" placeholder="Enter your name" name="user" required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
                                                            
                                                             <div class="form-group text-left">
                                                                 <label for="pwd">Password</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="password" value="<?php echo $pass ?>" required>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter password" name="password"  required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
                                                             <div class="form-group text-left">
                                                                 <label for="pwd">Category</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter Category" name="category" value="<?php echo $category ?>" required>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter Category" name="category"  required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>

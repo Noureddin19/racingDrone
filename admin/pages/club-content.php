@@ -1,5 +1,5 @@
-<?php 
-session_start();
+<?php // this page is for editing club page content
+session_start(); // start session
 
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
@@ -118,7 +118,7 @@ header("location: ../../login.php");
                 
                 try{
                 
-              
+              // run select query for content_table to display then in the form
                 $stmt = $pdo->prepare("SELECT * FROM club_content_table ;");
                 $stmt->execute();
                 
