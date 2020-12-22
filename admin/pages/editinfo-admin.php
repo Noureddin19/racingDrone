@@ -1,5 +1,5 @@
-<?php
-session_start();
+<?php // this a page for edititng admins info
+session_start(); // start session
 // including the database connection file
 
 require('../../sql/connect.php');

@@ -1,33 +1,40 @@
-<?php 
-session_start();
+<?php // this page is for showing stats
+session_start(); // start session
+
+require('../../sql/connect.php');
 if(!$_SESSION['logged']){
 header("location: ../../login.php");
 }
+
 require('../../sql/connect.php');
+// run select query to get members info
 $stmt = $pdo->prepare("SELECT * FROM membership_form;");
 $stmt->execute();
+// intialize variables
 $i=0;
 $saudi= 0;
 $non =0;
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 $i++;
+// check if it's saudi or not
 if(!strcasecmp($row['nationality'],'Saudi')){
-  
+  // if saudi increamnt $saudi
 $saudi++;
 }else{
-   
+   // increamnt $non
     $non++;
 }
 }
-
+// intialize $totalVisitors to number of members which is $i
 $totalVisitors = $i;
- 
+ // choose the x point and y point
 $dataPoints = array(
 	array("x"=> 1, "y"=> $totalVisitors, "indexLabel"=> "TotalRegisters" ),
 	array("x"=> 2, "y"=> $saudi, "indexLabel"=> "Saudi Registers"),
     array("x"=> 3, "y"=> $non, "indexLabel"=> "Non Saudi Registers")
 	
 );
+// intialaize variables
 $total =0;
 $age18=0;
 $age22=0;
@@ -38,7 +45,7 @@ $other=0;
 $stmt = $pdo->prepare("SELECT * FROM membership_form;");
 $stmt->execute();
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-  
+  // increamnt variable based on age range
     if(($row['age']>= 18) && ($row['age']< 22)){
       $age18++;
         $total++;
@@ -57,12 +64,13 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         $other++;
     }
     }
+    // turn it in to a precentage
     $pAge18= ($age18/ $total)*100;
     $pAge22= ($age22/ $total)*100;
     $pAge26= ($age26/ $total)*100;
     $pAge30= ($age30/ $total)*100;
     $pAgeOther= ($other/ $total)*100;
-  
+  // assign lables and the percentages
 $dataPoints1 = array( 
 	array("label"=>"18<Age<22", "y"=>$pAge18),
 	array("label"=>"22<Age<26", "y"=>$pAge22),
@@ -91,7 +99,9 @@ $dataPoints1 = array(
 </head>
 
 <script>
+// load on start
 window.onload = function () {
+    // create a new chart
     var chart1 = new CanvasJS.Chart("chartContainer1", {
     animationEnabled: true,
     exportEnabled: true,
@@ -105,6 +115,7 @@ window.onload = function () {
 		type: "pie",
 		yValueFormatString: "#,##0.00\"%\"",
 		indexLabel: "{label} ({y})",
+        // enter the datapoints array as a parameter
 		dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
 	}]
 });
