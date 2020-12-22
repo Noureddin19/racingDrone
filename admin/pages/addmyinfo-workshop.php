@@ -192,9 +192,9 @@ header("location: ../../login.php");
                                                                 <input type="text" class="form-control border-bottom" id="pwd" placeholder="Enter your experience" name="exp" >
                                                 
                                                             </div>  
-                                                            <td><input type="hidden" name="id" value=<?php echo $_GET['workshopid'];?>></td>
+                                                         
             <center>
-            <button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
+            <button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Add</button>
             </center>
                                                           </form>
                                                         </div>
