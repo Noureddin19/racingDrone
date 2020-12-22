@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Include the database configuration file
 require("../../../sql/connect.php");
 $statusMsg = '';
@@ -23,20 +24,26 @@ if(isset($_POST["submit"])) {
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  echo "Sorry, file already exists.";
+  // echo "Sorry, file already exists.";
+  $_SESSION['exists'] = true;
+  header("location: ../gallery-table.php");
   $uploadOk = 0;
 }
 
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 500000000) {
-  echo "Sorry, your file is too large.";
+  // echo "Sorry, your file is too large.";
+  $_SESSION['large'] = true;
+  header("location: ../gallery-table.php");
   $uploadOk = 0;
 }
 
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  // echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $_SESSION['format'] = true;
+  header("location: ../gallery-table.php");
   $uploadOk = 0;
 }
 

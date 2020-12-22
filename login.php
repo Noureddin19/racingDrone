@@ -11,14 +11,17 @@ session_start();
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG4JCWDBMK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GG4JCWDBMK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-GG4JCWDBMK');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GG4JCWDBMK');
+    </script>
     <!-- META -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -95,7 +98,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- THEME COLOR CHANGE STYLE SHEET -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
-    
+
 
 
 
@@ -148,129 +151,139 @@ session_start();
             <div class="sticky-header main-bar-wraper  navbar-expand-lg ">
                 <div class="main-bar">
                     <div class="container-fluid clearfix">
-                    <div class="row mb-4">
-                    <div class="logo-header col-sm-8 w-100 ">
-                            <div class="logo-header-inner logo-header-one  ">
-                            <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  " style="color:white; font-size:25px"></i></a>
+                        <div class="row mb-4">
+                            <div class="logo-header col-sm-8 w-100 ">
+                                <div class="logo-header-inner logo-header-one  ">
+                                    <a class="ml-2" href="index.php"><i class="fa fa-chevron-left  "
+                                            style="color:white; font-size:25px"></i></a>
 
-                                <a href="club-index.php">
-                                <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png" alt="" width="300px;">
-                                <img class="hidden-sm hidden-md hidden-lg" src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt="" width="55px;">
+                                    <a href="club-index.php">
+                                        <img class="hidden-xs" src="images/client-logo/PSU Drone Racing Club-02.png"
+                                            alt="" width="300px;">
+                                        <img class="hidden-sm hidden-md hidden-lg"
+                                            src="images/client-logo/PSU Drone Racing Club-02-no-text.png" alt=""
+                                            width="55px;">
                                     </a>
                                 </div>
-                            </div>  
-                                                       
+                            </div>
+
                             <div class="extra-nav header-2-nav col-sm-4 hidden-xs">
-                                
+                                <!-- make email clikble and send message when click -->
                                 <div class="extra-cell ">
                                     <div class="header-nav-request ">
-                                        <a href="mailto:racing@psu.edu.sa" style="background-color: inherit">racing@psu.edu.sa</a> 
+                                        <a href="mailto:racing@psu.edu.sa"
+                                            style="background-color: inherit">racing@psu.edu.sa</a>
                                     </div>
-                                </div>                                
-                                 
-                             </div>  
-                    </div>
-                                                                                              
+                                </div>
 
-                             
-                            <!-- MAIN Vav -->
-                            <div class="nav-animation header-nav navbar-collapse collapse  justify-content-center">
-                        
-    
-                            </div>
-
-                        </div>
-
-
-                       
-                        <!-- SITE Search -->
-                        <div id="search-toggle-block">
-                            <div id="search">
-                                <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                                    <div class="input-group">
-                                        <input class="form-control" value="" name="q" type="search"
-                                            placeholder="Type to search" />
-                                        <span class="input-group-append"><button type="button" class="search-btn"><i
-                                                    class="fa fa-search"></i></button></span>
-                                    </div>
-                                </form>
                             </div>
                         </div>
 
+
+
+                        <!-- MAIN Vav -->
+                        <div class="nav-animation header-nav navbar-collapse collapse  justify-content-center">
+
+
+                        </div>
+
                     </div>
+
+
+
+                    <!-- SITE Search -->
+                    <div id="search-toggle-block">
+                        <div id="search">
+                            <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                                <div class="input-group">
+                                    <input class="form-control" value="" name="q" type="search"
+                                        placeholder="Type to search" />
+                                    <span class="input-group-append"><button type="button" class="search-btn"><i
+                                                class="fa fa-search"></i></button></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
 
-        </header>
-        <!-- HEADER END -->
-            <div class=" container-fluid pr-0 pl-0 shadow-lg m" >
-                <img src="images/background/the-price-of-a-racing-drone-varies.jpeg" alt="">
-            </div>
-        <!-- CONTENT START -->
-        <div class="page-content container p-5" id="home1" >
+    </div>
+
+    </header>
+    <!-- HEADER END -->
+    <div class=" container-fluid pr-0 pl-0 shadow-lg m">
+        <img src="images/background/the-price-of-a-racing-drone-varies.jpeg" alt="">
+    </div>
+    <!-- CONTENT START -->
+    <div class="page-content container p-5" id="home1">
 
         <?php 
-        if( isset($_SESSION['login'])){
+        // to show error message if the name or password are incrroect
+        if( isset($_SESSION['login'])){//it comes php/logincheck.php
         if(!($_SESSION['login'])){
 
-            $_SESSION['login'] = true;
+            $_SESSION['login'] = true; // make it true to let website check again
             echo "<script type='text/javascript'>alert('Invalid login: incorrect username or password');</script>";
         }}
 
         ?>
-
-        <form action="php/logincheck.php" method="post" class="was-validated ">
-        <h3>Log in</h3>
-                                                              <div class="form-group text-left">
-                                                                  <label for="uname" class="left">Username</label>
-                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter Your Username" name="uname" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please Enter Your Username</div>
-                                                              </div>
-                                                             
-                                                              <div class="form-group text-left">
-                                                                  <label for="pwd">Password</label>
-                                                                  <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Password" name="pass" required>
-                                                                  <div class="valid-feedback">Valid.</div>
-                                                                  <div class="invalid-feedback">Please Enter Your Password</div>
-                                                              </div>
-                                                             
-
-                                                              <br>
-                                                           
-                                                             
-                                                              <center>
-                                                              <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Log in</button>
-                                                              </center>
-                                                          </form>
-
-
-        </div>
-
-        <!-- CLIENT LOGO SECTION START -->
-        <?php
-           include("includes/sponsers.php");
-           ?>
-            <!-- CLIENT LOGO  SECTION End -->
+        <!-- form start -->
+        <form action="php/logincheck.php" method="post" class="was-validated "><!-- it go to php/logincheck to 
+        check from user name and passwork -->
+            <h3>Log in</h3>
+            <div class="form-group text-left">
+                <label for="uname" class="left">Username</label>
+                <input type="text" class="form-control border" id="uname" placeholder="Enter Your Username" name="uname"
+                    required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please Enter Your Username</div>
             </div>
-        <!-- CONTENT END -->
 
-        <!-- FOOTER START -->
-        <?php include("includes/footer.html") ?> 
-        <!-- FOOTER END -->
-<!-- BUTTON TOP START -->
-<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+            <div class="form-group text-left">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control border" id="pwd" placeholder="Enter Your Password"
+                    name="pass" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please Enter Your Password</div>
+            </div>
 
-</div>
 
-<!-- LOADING AREA START ===== -->
-<div class="loading-area">
-<div class="loading-box"></div>
-<div class="loading-pic">
-<div class="cssload-loader"></div>
-</div>
-</div>
+            <br>
+
+
+            <center>
+                <button type="submit" name="submit" value="submit" 
+                    class="site-button site-btn-effect justify-content-center mt-4">Log in</button><!-- submit the form -->
+            </center>
+        </form>
+        <!-- from end -->
+
+    </div>
+
+    <!-- CLIENT LOGO SECTION START -->
+    <?php
+           include("includes/sponsers.php"); 
+           ?>
+    <!-- CLIENT LOGO  SECTION End -->
+    </div>
+    <!-- CONTENT END -->
+
+    <!-- FOOTER START -->
+    <?php include("includes/footer.html") ?>
+    <!-- FOOTER END -->
+    <!-- BUTTON TOP START -->
+    <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+    </div>
+
+    <!-- LOADING AREA START ===== -->
+    <div class="loading-area">
+        <div class="loading-box"></div>
+        <div class="loading-pic">
+            <div class="cssload-loader"></div>
+        </div>
+    </div>
     <!-- LOADING AREA  END ====== -->
 
     <!-- JAVASCRIPT  FILES ========================================= -->

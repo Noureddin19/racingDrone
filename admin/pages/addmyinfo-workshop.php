@@ -125,90 +125,80 @@ header("location: ../../login.php");
 </head>
 
 <body>
-    <button type="submit" name="submit" value="update"
-        class="site-button site-btn-effect justify-content-center mt-4">Home</button>
 
-    <br /><br />
-    <div class="row">
-        <div class="container col-md-8 border p-3">
-
-
-            <form action="php/add-display-workshop.php" class="was-validated " method="POST">
-                <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
-                <div class="form-group text-left">
-                    <label for="uname" class="left">Full Name</label>
-                    <input type="text" class="form-control border" id="uname" placeholder="Enter your name"
-                        name="fullname" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-
-                <div class="form-group text-left">
-                    <label for="pwd">Mobile Number</label>
-                    <input type="text" class="form-control border" id="pwd" placeholder="Enter your number" name="pn"
-                        required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-                <div class="form-group text-left">
-                    <label for="pwd">Email</label>
-                    <input type="email" class="form-control border" id="pwd" placeholder="Enter your email" name="email"
-                        required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-                <div class="form-group text-left">
-                    <label for="pwd">Affiliation/Employer</label>
-                    <input type="text" class="form-control border" id="pwd"
-                        placeholder="Enter your affiliation/employer" name="aff" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-                <div class="form-group text-left">
-                    <label for="pwd">Your City</label>
-                    <input type="text" class="form-control border" id="pwd" placeholder="Enter your city" name="city"
-                        required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-                <div class="form-group text-left">
-                    <label for="pwd">Your Country</label>
-                    <input type="text" class="form-control border" id="pwd" placeholder="Enter your country"
-                        name="country" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-                <div class="form-group text-left">
-                    <label for="pwd">Are you a university Student?</label>
-                    <input type="radio" id="student-yes" name="student" value="yes">
-                    <label class="label" for="student-yes">Yes</label>
-                    <input type="radio" id="student-no" name="student" value="no">
-                    <label for="student-no">No</label>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-                <div class="form-group text-left">
-                    <label for="pwd">Do you have any prior background on drones?</label>
-                    <input type="radio" id="background-yes" name="background" value="yes">
-                    <label class="label" for="background-yes">Yes</label>
-                    <input type="radio" id="background-little" name="background" value="little">
-                    <label for="background-little">A little</label>
-                    <input type="radio" id="background-no" name="background" value="no">
-                    <label class="label" for="background-no">No</label>
-                    <input type="radio" id="background-other" name="background" value="other">
-                    <label class="label" for="background-other">Other</label>
-                    <input type="text" class="form-control border-bottom" id="pwd" placeholder="Enter your experience"
-                        name="exp">
-
-                </div>
-
-                <center>
-                    <button type="submit" name="submit" value="update"
-                        class="site-button site-btn-effect justify-content-center mt-4">Add</button>
-                </center>
-            </form>
-        </div>
-    </div>
+	<br/><br/>
+	<div class="row">
+	<div class="container col-md-8 border p-3">
+    
+	
+    <form action="php/add-display-workshop.php" class="was-validated " method="POST">
+    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
+                                                              <div class="form-group text-left">
+                                                                  <label for="uname" class="left">Full Name</label>
+                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="fullname"  required>
+                                                                  <div class="valid-feedback">Valid.</div>
+                                                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                                              </div>
+                                                             
+                                                              <div class="form-group text-left">
+                                                                  <label for="pwd">Mobile Number</label>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter your number" name="pn"  required>
+                                                                  <div class="valid-feedback">Valid.</div>
+                                                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                                              </div>
+                                                              <div class="form-group text-left">
+                                                                  <label for="pwd">Email</label>
+                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter your email" name="email"  required>
+                                                                  <div class="valid-feedback">Valid.</div>
+                                                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                                              </div>
+                                                              <div class="form-group text-left">
+                                                                <label for="pwd">Affiliation/Employer</label>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your affiliation/employer" name="aff"  required>
+                                                                <div class="valid-feedback">Valid.</div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                            <div class="form-group text-left">
+                                                                <label for="pwd">Your City</label>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your city" name="city"  required>
+                                                                <div class="valid-feedback">Valid.</div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                            <div class="form-group text-left">
+                                                                <label for="pwd">Your Country</label>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your country" name="country"  required>
+                                                                <div class="valid-feedback">Valid.</div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                            <div class="form-group text-left">
+                                                                <label for="pwd">Are you a university Student?</label>
+                                                                <input type="radio" id="student-yes" name="student" value="yes">
+                                                                <label class="label" for="student-yes">Yes</label>
+                                                                <input type="radio" id="student-no" name="student" value="no">
+                                                                <label for="student-no">No</label>
+                                                                <div class="valid-feedback">Valid.</div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                            <div class="form-group text-left">
+                                                                <label for="pwd">Do you have any prior background on drones?</label>
+                                                                <input type="radio" id="background-yes" name="background" value="yes">
+                                                                <label class="label" for="background-yes">Yes</label>
+                                                                <input type="radio" id="background-little" name="background" value="little">
+                                                                <label for="background-little">A little</label>
+                                                                <input type="radio" id="background-no" name="background" value="no">
+                                                                <label class="label" for="background-no">No</label>
+                                                                <input type="radio" id="background-other" name="background" value="other">
+                                                                <label class="label" for="background-other">Other</label>
+                                                                <input type="text" class="form-control border-bottom" id="pwd" placeholder="Enter your experience" name="exp" >
+                                                
+                                                            </div>  
+                                                         
+            <center>
+            <button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Add</button>
+            </center>
+                                                          </form>
+                                                        </div>
+                                                          </div>
 </body>
 
 </html>
