@@ -3,6 +3,7 @@
 session_start();
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
+//  check if the user is logged in 
 
     header("location: ../../login.php");
     }
@@ -21,7 +22,7 @@ if(isset($_POST['update']))
     $student =$_POST['student'];
    
 	
-	// checking empty fields
+	
 		
 		//updating the table
 		
@@ -202,7 +203,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	<br/><br/>
 	<div class="row">
 	<div class="container col-md-8 border p-3">
-	
+	<h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
     <form action="editinfo-workshop.php" class="was-validated " method="POST">
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Full Name</label>

@@ -1,12 +1,14 @@
 <?php
-include("../includes/logincheck.php");
+include("../includes/logincheck.php");// checks if user is loged in
 
-include '../../../sql/connect.php';
+
+include '../../../sql/connect.php';// connect
 $id = $_GET['id']; // get is super global
 
 
 
 try{
+  // delete spicfic club member by id
 $stmt = $pdo->prepare("DELETE FROM club_members where id='$id';");
 $stmt->execute();
 try{

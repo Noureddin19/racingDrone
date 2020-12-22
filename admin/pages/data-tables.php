@@ -3,6 +3,8 @@ session_start(); // start session
 
 require('../../sql/connect.php');
 if(!$_SESSION['logged']){
+    //  check if the user is logged in 
+
 header("location: ../../login.php");
 }
 ?>
@@ -84,6 +86,7 @@ header("location: ../../login.php");
                                 <a  href="addmyinfo.php" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
+                                        <!-- print firs row in table -->
                 <tr>
                     <th>id</th>
                     <th>Name</th>
@@ -135,6 +138,7 @@ header("location: ../../login.php");
                        <td><?php echo $row["overallweight"] ?></td>
                       
                        <td><a  href="editinfo.php?membershipid=<?php echo $row['membershipid'];?>" class="btn btn-primary">Edit</td>
+                       <!-- delete button with alert to check before deleting -->
                        <td><a onClick="return confirm('Do you want to delete?')" href="php/delete.php?membershipid=<?php echo $row['membershipid']; ?>" class="btn btn-danger">Delete</td> <!-- Task 3 -->
                    </tr>
                     

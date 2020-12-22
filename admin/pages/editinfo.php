@@ -7,11 +7,11 @@ require('../../sql/connect.php');
  
 
 if(!$_SESSION['logged']){
-
+//  check if the user is logged in 
 header("location: ../../login.php");
 }
 
-{	
+if(isset($_POST["update"])){	
 	
 	$id = $_POST['id'];
 	$fullname = $_POST['fullname'];
@@ -55,7 +55,9 @@ header("location: ../../login.php");
         try{
           
             $status = $uname. " your Record is added Successfully ";
+            // add notification to notification table
             $notification = "2";
+            //  each notification has specific number 
             $date = date("Y-m-d h:i");
             $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
             $pdo->exec($nof_qury);
@@ -224,14 +226,13 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 </head>
 
 <body>
-<a href="data-tables.php">Home</a>
 	<br/><br/>
 	
 	<div class="row">
 	<div class="container col-md-8 border p-3">
 	<form action="editinfo.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
-            <div class="form-group text-left">
+    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>       
+         <div class="form-group text-left">
                 <label for="fullname" class="left">Full Name</label>
                 <input type="text" class="form-control border" id="fullname" placeholder="Enter Name" name="fullname" value="<?php echo $fullname ?>" required>
                 <div class="valid-feedback">Valid</div>

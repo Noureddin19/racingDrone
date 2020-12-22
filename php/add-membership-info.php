@@ -28,7 +28,9 @@ if(isset($_POST['submit'])){
             $pdo->exec($ins_query);
             $status = $uname. " your Record is added Successfully ";
             $notification = "0";
-            $date = date("Y-m-d h:i");
+            // notification will add to notification table
+            $date = date("Y-m-d h:i"); 
+            // today date and time
             $nof_qury = "INSERT INTO `notification` (`username`, `notification`, `creation`) VALUES ('$uname', '$notification', '$date')";
             $pdo->exec($nof_qury);
 

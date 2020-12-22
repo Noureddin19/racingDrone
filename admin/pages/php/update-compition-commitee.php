@@ -1,12 +1,17 @@
 <?php 
 session_start();
+// connect data base
 
 require('../../../sql/connect.php');
 if(!$_SESSION['logged']){
+// check if the user is logged in
+
 header("location:../ ../../login.php");
 }
 ?>
 <?php 
+// update club-commitee table by getting the info from compition-commitee-table.php
+
 $catagory = $_POST["catagory"];
 $name = $_POST["name"];
 $role = $_POST["role"];
