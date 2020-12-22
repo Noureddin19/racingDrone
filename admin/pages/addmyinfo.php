@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>PSU Drone Racing League - Registration</title>
+  
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,7 +46,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add info</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -113,16 +113,16 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-	<title>Lets Add Data</title>
+	<title>Add info</title>
 </head>
 
 <body>
-	<a href="data-tables.php">Home</a>
 	<br/><br/>
 	
-	
+	<div class="row">
+	<div class="container col-md-8 border p-3">
 	<form action="php/add-display.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
+    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
             <div class="form-group text-left">
                 <label for="fullname" class="left">Full Name</label>
                 <input type="text" class="form-control border" id="fullname" placeholder="Enter Name" name="fullname"  required>
@@ -205,5 +205,7 @@
             <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Add</button>
             </center>
         </form>
+        </div>
+        </div>
 </body>
 </html>

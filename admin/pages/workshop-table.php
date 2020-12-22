@@ -83,7 +83,7 @@ header("location: ../../login.php");
                             <h5 class="card-header">Basic Table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                <a  href="addmyinfo-workshop.php<?php echo $row['workshopid'];?>" class="btn btn-success">Add</a>
+                                <a  href="addmyinfo-workshop.php" class="btn btn-success">Add</a>
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>

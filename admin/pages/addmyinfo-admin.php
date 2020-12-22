@@ -20,7 +20,7 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>PSU Drone Racing League - Registration</title>
+   
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +53,7 @@ header("location: ../../login.php");
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add info - Admin</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -127,9 +127,10 @@ header("location: ../../login.php");
 	<a href="admin-table.php">Back</a>
 	<br/><br/>
 	
-	
+	<div class="row">
+	<div class="container col-md-8 border p-3">
 	<form action="php/add-displa-admin.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
+        <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
         <div class="form-group text-left">
                                                                 <label for="user" class="left">Username</label>
                                                                 <input type="text" class="form-control border" id="user" placeholder="Enter your name" name="user" value="<?php echo $username ?>" required>
@@ -156,5 +157,7 @@ header("location: ../../login.php");
 
 </center>          
         </form>
+        </div>
+        </div>
 </body>
 </html>

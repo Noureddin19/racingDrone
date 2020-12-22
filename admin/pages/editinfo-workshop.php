@@ -194,13 +194,14 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-	<title>Lets Edit Data</title>
+	<title>Editing - Workshop</title>
 </head>
 
 <body>
 <a href="workshop-table.php">Back</a>
 	<br/><br/>
-	
+	<div class="row">
+	<div class="container col-md-8 border p-3">
 	
     <form action="editinfo-workshop.php" class="was-validated " method="POST">
                                                               <div class="form-group text-left">
@@ -267,6 +268,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             <button type="submit" name="update" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
             </center>
                                                           </form>
+                                                          </div>
         
 </body>
 </html>

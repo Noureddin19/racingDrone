@@ -121,8 +121,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>PSU Drone Racing League - Registration</title>
-
+    
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -221,14 +220,15 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-	<title>Lets Edit Data</title>
+	<title>Edit info</title>
 </head>
 
 <body>
 <a href="data-tables.php">Home</a>
 	<br/><br/>
 	
-	
+	<div class="row">
+	<div class="container col-md-8 border p-3">
 	<form action="editinfo.php" method="post" class="was-validated ">
         <h3>Personal Information</h3>
             <div class="form-group text-left">
@@ -313,5 +313,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             <button type="submit" name="update" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
             </center>
         </form>
+        </div>
+        </div>
 </body>
 </html>

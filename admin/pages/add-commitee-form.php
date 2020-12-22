@@ -31,33 +31,7 @@ header("location: ../../login.php");
     <!-- FONTAWESOME STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="../../css/fontawesome/css/font-awesome.min.css" />
 
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css">
-
-    <!-- SLICK SLIDER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
-    <link rel="stylesheet" type="text/css" href="../../css/slick-theme.css">
-
-    <!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/loader.min.css">
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="../../css/flaticon.min.css">
-    <!-- THEME COLOR CHANGE STYLE SHEET -->
-    <link rel="stylesheet" class="skin" type="text/css" href="../../css/skin/skin-1.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
 
     <!-- BOOTSTRAP STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
@@ -124,12 +98,12 @@ header("location: ../../login.php");
 </head>
 
 <body>
-	<a href="index.php">Home</a>
 	<br/><br/>
-	
-	
+	<div class="row">
+	<div class="container col-md-8 border p-3">
+   
 	<form action="php/add-commitee.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
+        <h3>	<a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
             <div class="form-group text-left">
                 <label for="fullname" class="left">catagory</label>
                 <input type="text" class="form-control border" id="fullname" placeholder="catagory" name="catagory"  required>
@@ -182,5 +156,7 @@ header("location: ../../login.php");
             <button type="submit" name="submit" value ="submit" class="site-button site-btn-effect justify-content-center mt-4">Add</button>
             </center>
         </form>
+        </div>
+    </div>
 </body>
 </html>

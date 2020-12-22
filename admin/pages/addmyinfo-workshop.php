@@ -20,7 +20,7 @@ header("location: ../../login.php");
     <link rel="shortcut icon" type="image/x-icon" href="../../images/client-logo/racinglabWhite.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>Workshop - Edititng</title>
+    <title>Workshop - Add info</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +53,7 @@ header("location: ../../login.php");
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -124,45 +124,48 @@ header("location: ../../login.php");
 </head>
 
 <body>
-	<a href="workshop-table.php">Back</a>
+
 	<br/><br/>
-	
+	<div class="row">
+	<div class="container col-md-8 border p-3">
+    
 	
     <form action="php/add-display-workshop.php" class="was-validated " method="POST">
+    <h3><a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
                                                               <div class="form-group text-left">
                                                                   <label for="uname" class="left">Full Name</label>
-                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="fullname" value="<?php echo $fullname ?>" required>
+                                                                  <input type="text" class="form-control border" id="uname" placeholder="Enter your name" name="fullname"  required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                              
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Mobile Number</label>
-                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter your number" name="pn" value="<?php echo $phoneNumber ?>" required>
+                                                                  <input type="text" class="form-control border" id="pwd" placeholder="Enter your number" name="pn"  required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
                                                                   <label for="pwd">Email</label>
-                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter your email" name="email" value="<?php echo $email ?>" required>
+                                                                  <input type="email" class="form-control border" id="pwd" placeholder="Enter your email" name="email"  required>
                                                                   <div class="valid-feedback">Valid.</div>
                                                                   <div class="invalid-feedback">Please fill out this field.</div>
                                                               </div>
                                                               <div class="form-group text-left">
                                                                 <label for="pwd">Affiliation/Employer</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your affiliation/employer" name="aff" value="<?php echo $aff ?>" required>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your affiliation/employer" name="aff"  required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
                                                             <div class="form-group text-left">
                                                                 <label for="pwd">Your City</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your city" name="city" value="<?php echo $city ?>" required>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your city" name="city"  required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
                                                             <div class="form-group text-left">
                                                                 <label for="pwd">Your Country</label>
-                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your country" name="country" value="<?php echo $country ?>" required>
+                                                                <input type="text" class="form-control border" id="pwd" placeholder="Enter your country" name="country"  required>
                                                                 <div class="valid-feedback">Valid.</div>
                                                                 <div class="invalid-feedback">Please fill out this field.</div>
                                                             </div>
@@ -185,13 +188,15 @@ header("location: ../../login.php");
                                                                 <label class="label" for="background-no">No</label>
                                                                 <input type="radio" id="background-other" name="background" value="other">
                                                                 <label class="label" for="background-other">Other</label>
-                                                                <input type="text" class="form-control border-bottom" id="pwd" placeholder="Enter your experience" name="exp" value="<?php echo $exp ?>">
+                                                                <input type="text" class="form-control border-bottom" id="pwd" placeholder="Enter your experience" name="exp" >
                                                 
                                                             </div>  
-                                                            <td><input type="hidden" name="id" value=<?php echo $_GET['workshopid'];?>></td>
+                                                         
             <center>
-            <button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Update</button>
+            <button type="submit" name="submit" value ="update" class="site-button site-btn-effect justify-content-center mt-4">Add</button>
             </center>
                                                           </form>
+                                                        </div>
+                                                          </div>
 </body>
 </html>
