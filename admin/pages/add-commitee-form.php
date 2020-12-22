@@ -98,13 +98,12 @@ header("location: ../../login.php");
 </head>
 
 <body>
-    <div class="row mt-5 justify-content-center">	<a href="index.php" class="btn btn-danger">Home</a>
-</div>
 	<br/><br/>
 	<div class="row">
 	<div class="container col-md-8 border p-3">
+   
 	<form action="php/add-commitee.php" method="post" class="was-validated ">
-        <h3>Personal Information</h3>
+        <h3>	<a href="index.php" class="btn btn-danger">Back</a> Personal Information</h3>
             <div class="form-group text-left">
                 <label for="fullname" class="left">catagory</label>
                 <input type="text" class="form-control border" id="fullname" placeholder="catagory" name="catagory"  required>
