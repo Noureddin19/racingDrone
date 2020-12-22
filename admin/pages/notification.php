@@ -1,4 +1,5 @@
 <?php 
+// this page show all notifiaction to user and he can delete all of them
 session_start();
 
 require('../../sql/connect.php');
@@ -76,7 +77,6 @@ header("location: ../../login.php");
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
                             <h2 class="pageheader-title">Notification Table</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">

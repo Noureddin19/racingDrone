@@ -1,4 +1,5 @@
 <?php 
+// this page to see safty table the is in club-index.php and to edit them directly
 session_start();
 
 require('../../sql/connect.php');
@@ -81,7 +82,6 @@ header("location: ../../login.php");
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
                             <h2 class="pageheader-title">rules table</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
@@ -101,6 +101,8 @@ header("location: ../../login.php");
                     <!-- ============================================================== -->
                     <!-- basic table  -->
                     <!-- ============================================================== -->
+                                    <!-- start the form  that show the information of the workshoper -->
+
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
                             <h5 class="card-header">rules table</h5>
@@ -109,6 +111,7 @@ header("location: ../../login.php");
                                     <table class="table table-striped table-bordered first">
                                     <thead>
                 <tr>
+                    <!-- the first row in the table  -->
                     <th>id</th>
                     <th>safty rule</th>
                     <th>discretion</th>
@@ -130,7 +133,8 @@ header("location: ../../login.php");
                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
                 <!-- use while loop and PDO to fetch data -->
                    <tr>
-                   
+                        <!--  using form to submit the data by post to update-safty-table.php  -->
+                        <!-- the user can edit the content directly in same page without need to go other page -->
                       <form action="php/update-safty-table.php?id=<?php echo $row['id']; ?>" method="POST">
                       <td><?php echo $row["id"] ?></td>
 
@@ -138,6 +142,7 @@ header("location: ../../login.php");
 
                        </td>
                        <td><textarea type="text" class="form-control border" id="pwd"  name="detail"  required><?php echo $row["detail"] ?></textarea></td>
+                       <!-- text are to let user edit info directly -->
 
                        
                       
