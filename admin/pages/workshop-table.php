@@ -90,19 +90,18 @@ header("location: ../../login.php");
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <!-- the first row in the table  -->
-                                        <tr>
-                                            
+                                            <tr>
+
                                                 <th>Number</th>
                                                 <th>Name</th>
                                                 <th>Phone Number</th>
                                                 <th>Email</th>
                                                 <th>City</th>
                                                 <th>Country</th>
-                                                <th>experience</th>
-
                                                 <th>affiliation</th>
+                                                <th>Background</th>
+                                                <th>experience</th>
                                                 <th>Student?</th>
-
                                                 <th>Edit</th>
                                                 <th>Delete</th>
 
@@ -126,20 +125,20 @@ header("location: ../../login.php");
                                                 <td><?php echo $row["email"] ?></td>
                                                 <td><?php echo $row["city"] ?></td>
                                                 <td><?php echo $row["country"] ?></td>
-                                                <td><?php echo $row["experience"] ?></td>
-
                                                 <td><?php echo $row["affiliation"] ?></td>
+                                                <td><?php echo $row["background"] ?></td>
+                                                <td><?php echo $row["experience"] ?></td>
                                                 <td><?php echo $row["student"] ?></td>
 
 
                                                 <td><a href="editinfo-workshop.php?workshopid=<?php echo $row['workshopid'];?>"
                                                         class="btn btn-primary">Edit</td>
-                                                        <!-- edit button that get the user to edit info fro people in the table and put the id in link to get by $_GET -->
+                                                <!-- edit button that get the user to edit info fro people in the table and put the id in link to get by $_GET -->
                                                 <td><a onClick="return confirm('Do you want to delete?')"
                                                         href="php/delete-workshop.php?workshopid=<?php echo $row['workshopid']; ?>"
-                                                        class="btn btn-danger">Delete</td> 
-                                                        <!-- delete button that get the user to delete info fro people in the table and put the id in link to get by $_GET -->
-                                                        </tr>
+                                                        class="btn btn-danger">Delete</td>
+                                                <!-- delete button that get the user to delete info fro people in the table and put the id in link to get by $_GET -->
+                                            </tr>
 
                                             <?php
                   $count++;}
